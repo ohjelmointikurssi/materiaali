@@ -1,0 +1,23 @@
+language: ruby
+rvm:
+  - 2.2.0
+cache: bundler
+branches:
+  only:
+  - master
+before_script:
+- git config --global user.name "hnbot"
+- git config --global user.email "nygrenh+hnbot@gmail.com"
+script:
+- bundle exec middleman build
+after_success:
+- git clone https://github.com/ohjelmointikurssi/ohjelmointikurssi.github.io.git
+- cp -r build/* ohjelmointikurssi.github.io
+- cd ohjelmointikurssi.github.io
+- git add .
+- git commit -m "Update material"
+- git push "https://hnbot:$GITHUB_API_KEY@github.com/ohjelmointikurssi/ohjelmointikurssi.github.io"
+  master:master 2>&1 | sed "s/$GITHUB_API_KEY/<confidential>/g"
+env:
+  global:
+    secure: Pokv0n1srAmMasaQp8xy/1LVpALwi+dgdYBHkLaUBiPWTwcyE7HmMVLYleJbAB0woZ786/nVi0x9Acp7jksmB+q53/m2tfz9BWft/hgB6hdTMCAa3GzddSFD8vQQ8QIwhzenDhyXBBNhd4XZVc6iQPRaB8nM7lRGmh1N86Y16x0BnqtERt/55Ab4jTm1Oaj5wSULwTCd0yvtUmQC4juQwknAZdZIcROgl7p+Z9krPZMBvxsNNVVOzY3iPlGgsfAknIdyUHp+U7O7NdrXzmK2IHQUTcTCbJV9N023bZaQLlBR7YoRGoxIQ1SwuU3OeHkAiOYHsixFJ09K4tfU7w9Lus9yxV496YL5zEhqLiLAbW9mQOVd27MtKh+ra9OG9vYyGacs3scz2SnSFVFAO9qLxfZBLZpsh7e2DQiXRnhmR/g4G/51c55yYTYh9LBi8PpBU60GaA5/zPfhQaNNHf/VhlAenqW7+ZADG2zeAVzY9Up0Pt+sqGqda5Pw38Dg9CLzJdfZdCZIODl9dE3ODoPTPuVOxQj7x1fNNLBeIgXxgvBgTiIeFBvb67AyoLsA7qW9YDK67sR/HByU32RyZke1FmLjQdCogsGjDzlvcUw1w3cS6tNBGIAXt/W+qFkqEO2BVz4ExuBb0pymbDqCGpJN3VNV3UieHd/Tsih+34uNaOw=

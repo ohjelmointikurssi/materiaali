@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+nav {
+  height: 50px;
+  background-color: #fafcfa;
+  line-height: 50px;
+  padding: 0 15px;
+
+  a {
+    text-decoration: none;
+    margin: 0 20px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.active {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px 0;
+  color: #fff;
+  background-color: #282626;
+  text-align: center;
+
+  a {
+    color: #aad8ec;
+    text-decoration: none;
+  }
+}
+
+h3 {
+  margin-bottom: 0;
+}
