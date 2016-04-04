@@ -11,10 +11,10 @@ before_script:
 script:
 - bundle exec middleman build
 after_success:
+- export COMMIT_MESSAGE=Update:\ $(git log -1 --pretty=%s)
 - git clone https://github.com/ohjelmointikurssi/ohjelmointikurssi.github.io.git
 - cp -r build/* ohjelmointikurssi.github.io
 - cd ohjelmointikurssi.github.io
-- export COMMIT_MESSAGE=Update:\ $(git log -1 --pretty=%s)
 - git add .
 - git commit -m "$COMMIT_MESSAGE"
 - git push "https://hnbot:$GITHUB_API_KEY@github.com/ohjelmointikurssi/ohjelmointikurssi.github.io"
