@@ -20,16 +20,16 @@ exercise_page: true
       Kuten viime viikon piirtotehtävissä, koordinaatisto alkaa pelialueen vasemmasta yläkulmasta. Pelialueella x-koordinaatti voi saada arvoja välillä <code>0..39</code> ja y-koordinaatti voi saada arvoja välillä <code>0..29</code>. Jos esimerkiksi haluaisit lisätä madon osan pelialueen vasempaan yläkulmaan, se onnistuisi komennolla: <code>luoMadonOsa(0, 0)</code>. Madon osan piirtäminen pelialueen oikeaan alakulmaan onnistuu komennolle <code>luoMadonOsa(39, 29)</code>.
   </p>
   <p>
-      <strong>Tehtävä:</strong> Mato lähtee liikkelle vähäsen hassusta paikasta. Pystytykö muuttamaan sen? Lisäksi mato voisi alkaa likkumaan eri suuntaan.
+      <strong>Tehtävä:</strong> Mato lähtee liikkelle vähäsen hassusta paikasta. Saatko madon lähtemään liikkumaan pelialueen keskeltä. Lisäksi keksitkö miten mato alkaa liikkumaan oikealle pelin alussa?
   </p>
 
-  <div data-type='tmc-exercise' data-id='2729'></div>
+  <div data-type='tmc-exercise' data-id='2796'></div>
 
   <p>
       Alla olevassa tehtäväpohjassa on pieni ongelma käyettävyyden kannalta. Pystytkö löytämään sen? Kun olet löytänyt ongelman, kokeile muuttaa <code>this.game.time.slowMotion</code>:in arvoa. Saatko pelistä toimivan?
   </p>
 
-  <div data-type='tmc-exercise' data-id='214'></div>
+  <div data-type='tmc-exercise' data-id='2797'></div>
 
   <p>
       Toteutetaan seuraavaksi madon liikkumisen. Haluamme saada madon muuttamaan suuntaansa, kun pelaaja painaa nuolinäppäintä. Emme kuitenkaan halua mahdollistaa madolle mahdottomia käännöksiä, esim. jos mato on menossa oikealle, emme voi lähteä menemään vasemmalle.
@@ -39,7 +39,7 @@ exercise_page: true
       Olemme toteuttaneet suunnan muutoksen metodiin lueSuunta. Alla olevassa tehtävässä voit muuttaa kyseisen metodin sisältöä. Osa suunnanmuutoksista on jo totutettu valmiiksi. Toteuta loput muutokset.
   </p>
 
-  <div data-type='tmc-exercise' data-id='1114'></div>
+  <div data-type='tmc-exercise' data-id='2798'></div>
 
   <p>
       Haluasimme tunnistaa, kun mato saa syötyä omenan. Olemme luoneet <code>törmäykset</code>-tiedostoon metodin <code>törmääOmenaan</code>, joka kertoo onko mato törmännyt omenaan. Jos mato on törmännyt omenaan, pelistä poistetaan nykyinen omena, pelin pisteitä kasvatetaan ja luodaan uusi omena.
@@ -54,7 +54,7 @@ exercise_page: true
     Mato on syönyt omenan, kun madon pään ja omenan sekä x että y-koordinaatit ovat samoja.
   </p>
 
-  <div data-type='tmc-exercise' data-id='1132'></div>
+  <div data-type='tmc-exercise' data-id='2799'></div>
 
   <p>
       Pelimme toimiin nyt hyvin, mutta haluamme sen myös loppuvan joskus. Toteutetaan seuraavaksi toiminnallisuus, jossa peli loppuu madon törmättyä seinään.
@@ -88,7 +88,7 @@ exercise_page: true
     <strong>Tehtävä:</strong> alla olevassa tehtävä pohjassa on runko seinään törmäksen tunnistamiseksi. Täydennä loput rajojen yli menemiset koodiin. Metodissa oleva ehtolause tarkistaa onko mikään ehtomuuttujista totta, ja kertoo mahdollisesta törmäyksestä sen mukaisesti.
   </p>
 
-  <div data-type='tmc-exercise' data-id='1118'></div>
+  <div data-type='tmc-exercise' data-id='2800'></div>
 
   <p>
     Pelin pitäisi myös loppua, kun mato törmää itseensä. Mato on törmännyt itseensä, silloin kun sen pää on osunut samoihin koordinaatteihin kun mikään sen osista. Tämä on kuitenkin hankalampaa kuin edelliset tarkistuksemme, sillä matopelin mato pidentyy pelin kuluessa ja emme voi tietää kuinka monta tarkastelua meidän täytyy tehdä.
@@ -117,7 +117,7 @@ exercise_page: true
     <strong>Tehtävä:</strong> toteuta metodiiin <code>onTörmännytItseensä</code> tarkistus, onko mato törmännyt itseensä.
   </p>
 
-  <div data-type='tmc-exercise' data-id='132'></div>
+  <div data-type='tmc-exercise' data-id='2801'></div>
 
   <p>Tässä vaiheessa saamme lopun pelistä helposti tehtyä tehtyä. Tämän todistaminen on jätetty harjoitukseksi lukijalle.</p>
 
