@@ -1,0 +1,128 @@
+---
+title: Viikko 3
+exercise_page: true
+---
+
+<div id='container'>
+
+  <a href="#" class='tmc-exercise-logout' title='Logout'>Logout</a>
+
+  <h1>Viikko 3</h1>
+
+  <p>
+      Lähdetään työstämään viime viikon piirtohjelmaa. Yritetään saada siitä aikaiseksi matopeli. Aletaan ratkoa ongelmaa pienissä helpoissa osissa.
+  </p>
+  <h2>Madon luonti</h2>
+  <p>
+      Alla on tehtävä, johon pudotetaan yksi madon osa. Pelin alussa mato kasvaa kunnes siitä tulee koko:n pituinen. Mato alkaa kasvamaan suunta-muuttujan mukaiseen suuntaan.
+  </p>
+  <p>
+      Kuten viime viikon piirtotehtävissä, koordinaatisto alkaa pelialueen vasemmasta yläkulmasta. Pelialueella x-koordinaatti voi saada arvoja välillä <code>0..39</code> ja y-koordinaatti voi saada arvoja välillä <code>0..29</code>. Jos esimerkiksi haluaisit lisätä madon osan pelialueen vasempaan yläkulmaan, se onnistuisi komennolla: <code>luoMadonOsa(0, 0)</code>. Madon osan piirtäminen pelialueen oikeaan alakulmaan onnistuu komennolle <code>luoMadonOsa(39, 29)</code>.
+  </p>
+  <p>
+      <strong>Tehtävä:</strong> Mato lähtee liikkelle vähäsen hassusta paikasta. Pystytykö muuttamaan sen? Lisäksi mato voisi alkaa likkumaan eri suuntaan.
+  </p>
+
+  <div data-type='tmc-exercise' data-id='2729'></div>
+
+  <p>
+      Alla olevassa tehtäväpohjassa on pieni ongelma käyettävyyden kannalta. Pystytkö löytämään sen? Kun olet löytänyt ongelman, kokeile muuttaa <code>this.game.time.slowMotion</code>:in arvoa. Saatko pelistä toimivan?
+  </p>
+
+  <div data-type='tmc-exercise' data-id='214'></div>
+
+  <p>
+      Toteutetaan seuraavaksi madon liikkumisen. Haluamme saada madon muuttamaan suuntaansa, kun pelaaja painaa nuolinäppäintä. Emme kuitenkaan halua mahdollistaa madolle mahdottomia käännöksiä, esim. jos mato on menossa oikealle, emme voi lähteä menemään vasemmalle.
+  </p>
+
+  <p>
+      Olemme toteuttaneet suunnan muutoksen metodiin lueSuunta. Alla olevassa tehtävässä voit muuttaa kyseisen metodin sisältöä. Osa suunnanmuutoksista on jo totutettu valmiiksi. Toteuta loput muutokset.
+  </p>
+
+  <div data-type='tmc-exercise' data-id='1114'></div>
+
+  <p>
+      Haluasimme tunnistaa, kun mato saa syötyä omenan. Olemme luoneet <code>törmäykset</code>-tiedostoon metodin <code>törmääOmenaan</code>, joka kertoo onko mato törmännyt omenaan. Jos mato on törmännyt omenaan, pelistä poistetaan nykyinen omena, pelin pisteitä kasvatetaan ja luodaan uusi omena.
+  </p>
+
+  <p>
+    Pääsemme omenan x- ja y-koordinaatteihin käsiksi koodinpätkillä <code>omena.x</code> ja <code>omena.y</code>. Voimme käyttää omenaa suoraan näin, koska omena-muuttuja on määritelty create.js-tiedostossa kaiken mahdollisen ulkopuolella.
+  </p>
+
+  <p>
+    Funktiossa <code>törmääOmenaan</code> on madon pää otettu muuttujaan <code>madonPää</code>. Saamme madon pään x-koordinaatin komennolla <code>madonPää.x</code> ja y-koordinaatin komennolla <code>madonPää.y</code>.
+    Mato on syönyt omenan, kun madon pään ja omenan sekä x että y-koordinaatit ovat samoja.
+  </p>
+
+  <div data-type='tmc-exercise' data-id='1132'></div>
+
+  <p>
+      Pelimme toimiin nyt hyvin, mutta haluamme sen myös loppuvan joskus. Toteutetaan seuraavaksi toiminnallisuus, jossa peli loppuu madon törmättyä seinään.
+  </p>
+
+  <p>
+      Tunnistaaksemme seinään törmäyksen meidän täytyy joka kierroksella tarkistaa, onko törmäys tapahtunut. Tarkastus on yksinkertaista tehdä tarkastamalla yrittääkö madon pää mennä pelialueen ulkopuolelle.
+  </p>
+
+  <p>
+      Törmäykset-tiedostossa olemme toteuttaneet metodin seiniintörmäysen varaalle. Metodi toimii eräänlaisena kysymyksenä: "Onko mato törmäännyt seinään". Jos törmäys on tapahtunut, metodi sanoo joo eli "<code>return true;</code>". Jos törmäystä ei ole tapahtunut, metodi sanoo että ei ole tapahtunut eli: "<code>return false;</code>". Eli käytännössä metodissa olevan if-ehdon toteutuessa todetaan törmäyksen tapahtuneen.
+  </p>
+
+  <p>
+      Olemme ottaneet madon pään talteen muuttujaaan <code>madonPää</code>. Saat madon pään nykyisen x-koordinaatin komennolla: <code>madonPää.x</code> ja y-koordinaatin komennolla <code>madonPää.y</code>.
+  </p>
+
+  <p>
+    Tunnistaaksemme madon menemisen pelialueeen ulkopuolelle, meidän täytyy tarkistaa erikseen onko se mennyt vasemman laidan yli, onko se mennyt oikean laidan yli, onko se mennyt ylälaidan yli ja onko se mennyt alalaidan yli. Tämä tapahtuu vertailemalla madon pään sijaintia pelialueen rajoihin.
+  </p>
+
+  <p>
+    Esimerkki: tarkistetaan onko mato mennyt pelialueen oikean laidan yli. Mennäkseen oikean laidan yli, madon täytyy kulkea vaakatasossa, joka on x-akselin suuntainen. Olemme siis kiinnostuneet tarkistelemaan miten suureksi miten pitkällä madon pää on x-akselin suhteen. Mato on mennyt oikean laidan yli, kun madon pää on mennyt enemmän oikealle kuin pelialueen raja. Koska oikealle mennessä x-akselin arvo kasvaa, haluamme tarkistaa onko nykyinen x-akslin arvo suurempi kuin pelin rajat. Tämä onnistuu koodissa lauseella <code>var onMennytOikealtaYli = madonPää.x >= pelinLeveys</code>. Tällä koodilla muuttujan <code>onMennytOikealtaYli</code> arvoksi tulee totta, jos mato on mennyt oikean laidan yli ja ei totta jos näin ei ole tapahtunut. Voimme käyttää tätä muttujaa myehemmin  ehdon vertailussa.
+  </p>
+
+  <p>
+    Vastaavasti jos haluamme tarkistaa onko mato mennyt vasemmasta reunasta yli, huomaamme että haluamme tässäkin tarkastella x-akselin arvoa. Koska pelin vasen reuna alkaa nollasta ja vasemmalle mentäessä x-koordinaatin arvot pienenevät, haluamme tarkastella onko x-akselin arvo päässyt pienemmäksi kuin 0. Koodina tämä onnistuisi lausekkeella: <code>var onMennytVasemmaltaYli = madonPää.x < 0;</code>
+  </p>
+
+  <p>
+    <strong>Tehtävä:</strong> alla olevassa tehtävä pohjassa on runko seinään törmäksen tunnistamiseksi. Täydennä loput rajojen yli menemiset koodiin. Metodissa oleva ehtolause tarkistaa onko mikään ehtomuuttujista totta, ja kertoo mahdollisesta törmäyksestä sen mukaisesti.
+  </p>
+
+  <div data-type='tmc-exercise' data-id='1118'></div>
+
+  <p>
+    Pelin pitäisi myös loppua, kun mato törmää itseensä. Mato on törmännyt itseensä, silloin kun sen pää on osunut samoihin koordinaatteihin kun mikään sen osista. Tämä on kuitenkin hankalampaa kuin edelliset tarkistuksemme, sillä matopelin mato pidentyy pelin kuluessa ja emme voi tietää kuinka monta tarkastelua meidän täytyy tehdä.
+  </p>
+
+  <p>
+    Toistolauseet pelastavat meidät hankalasta tilanteesta. Saamme kaikki muut madon osat taulukkoon paitsi pään koodilla: <code>var madonOsat = mato.slice(1)</code>. Voimme tehdä tarkistuksen jokaisessa taulukossa olevalla madon osalla <code>forEach</code>-toistorakenteella.
+  </p>
+
+  <p>
+    <code>
+      <pre>
+        var madonOsat = mato.slice(1);
+        madonOsat.forEach(function(osa) {
+          // Jokainen madon osa käsitellään kerran täällä yksi kerrallaan.
+        });
+      </pre>
+    </code>
+  </p>
+
+  <p>
+    Koodi käy jokaisen madon osan peräkkäin läpi toistorakenteen sisällä. Tämä on siis ihanteellinen paikka tarkistaa onko madon pää törmännyt johonkin madon osaan. Pääsemme madon osiin toistolauseessa käsiksi <code>osa</code>-muuttujan kautta käsiksi.
+  </p>
+
+  <p>
+    <strong>Tehtävä:</strong> toteuta metodiiin <code>onTörmännytItseensä</code> tarkistus, onko mato törmännyt itseensä.
+  </p>
+
+  <div data-type='tmc-exercise' data-id='132'></div>
+
+  <p>Tässä vaiheessa saamme lopun pelistä helposti tehtyä tehtyä. Tämän todistaminen on jätetty harjoitukseksi lukijalle.</p>
+
+  <div data-type='tmc-exercise' data-id='2714'></div>
+
+  <p>Olemme saaneet matopelin valmiiksi. Hienoa työtä!</p>
+
+</div>
