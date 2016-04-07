@@ -17,7 +17,8 @@ exercise_page: true
     <h2>Tulostaminen</h2>
 
     <p>
-      Yksi tärkeimmistä ohjelmoinnin perustaidoista on oppia tulostamaan tekstiä. Tekstin tulostamisella voi esimerkiksi selvittää mikä on ohjelman suorituksen tila jossain suoritusvaiheessa. Javascriptissä tulostus onnistuu komennolla <code>console.log("Tulostettava asia");</code>. Mitä halutaan tulostettavan laitetaan lainausmerkeissä <code>console.log</code>:lle. Lainausemerkit kertovat ohjelman tulkitsialle, konsolille annettu asia on merkkijonosarja.
+      Yksi tärkeimmistä ohjelmoinnin perustaidoista on oppia tulostamaan tekstiä näytölle. Javascriptissä tulostus onnistuu komennolla <code>console.log("Tulostettava asia");</code>.
+      Lainausmerkit tulostettavan lauseen ympärillä tarkoittavat, että tulostettava asia on tekstiä.
     </p>
 
     <p>
@@ -33,7 +34,7 @@ exercise_page: true
     </p>
 
     <p>
-      Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa palkkeja tippuu alaspäin ja pelaajan on tarkoitus napata niitä. Kokeile peliä painamalla run-painiketta.
+      Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa palkkeja tippuu alaspäin ja pelaajan on tarkoitus napata niitä liikkumalla nuolinäppäimillä. Kokeile peliä painamalla run-painiketta.
     </p>
 
     <p>
@@ -50,12 +51,12 @@ exercise_page: true
     </p>
 
     <p>
-      Ohjelmoinnissa muuttujat pitää luoda eli <i>alustaa</i> (englanniksi initialize) ennen kuin niitä voi käyttää. JavaScriptissä muuttujat alustetaan kirjoittamalla <code>var muuttujanNimi = muuttujanArvo;</code>. Aluksi määritellään, että nyt luodaan uusi muuttuja kirjoittamalla sana 'var' (tulee sanasta variable). Seuraavaksi määritellään muuttujalle nimi. Muuttujan nimessä ei saa olla välilyöntejä, minkä takia muuttujat yleensä nimetään ns. camelCasella. CamelCasessa jokaisen sanan ensimmäinen kirjain kirjoitetaan isolla kirjaimella ja muut pienellä. Yhtäsuuruus-merkillä annetaan muuttujalle arvo, ja itse arvo kirjoitetaan yhtäsuuruus-merkin oikealle puolelle. Jokainen JavaScript-koodirivi pitää vielä lopettaa puolipisteellä. Merkkijonon sisältävän muuttujan voi alustaa kirjoittamalla <code>var merkkijono = "Terve, mitä kuuluu?";</code>. Huomaa, että merkkijono-tyylisiä muuttujia alustaessa pitää käyttää lainausmerkkejä muuttujan arvon ympärillä.
+      Ohjelmoinnissa muuttujat pitää luoda eli <i>alustaa</i> (englanniksi initialize) ennen kuin niitä voi käyttää. JavaScriptissä muuttujat alustetaan kirjoittamalla <code>var muuttujanNimi = muuttujanArvo;</code>. Aluksi määritellään, että nyt luodaan uusi muuttuja kirjoittamalla sana 'var' (tulee sanasta variable). Seuraavaksi määritellään muuttujalle nimi. Muuttujan nimessä ei saa olla välilyöntejä, minkä takia muuttujat yleensä nimetään ns. camelCasella. CamelCasessa lauseen ensimmäinen kirjain kirjoitetaan pienellä, minkä jälkeen jokaisen muun sanan ensimmäinen kirjain kirjoitetaan isolla kirjaimella ja muut pienellä. Esimerkiksi lause "ohjelmointi on kivaa" kirjoitettaisiin camelCasessa "ohjelmointiOnKivaa". Yhtäsuuruus-merkillä annetaan muuttujalle arvo, ja itse arvo kirjoitetaan yhtäsuuruus-merkin oikealle puolelle. Jokainen JavaScript-koodirivi pitää vielä lopettaa puolipisteellä. Merkkijonon sisältävän muuttujan voi alustaa kirjoittamalla <code>var merkkijono = "Terve, mitä kuuluu?";</code>. Huomaa, että merkkijono-tyylisiä muuttujia alustaessa pitää käyttää lainausmerkkejä muuttujan arvon ympärillä.
     </p>
 
     <h4>Muuttujien harjoittelua</h4>
     <p>
-      Harjoitellaan seuraavaksi hiukan muuttujien käyttöä. Tässä tehtävässä luodaan aluksi muuttuja <i>etunimi</i>, johon talletetaan merkkijono. Sen jälkeen tulostetaan etunimi näytölle. Tehtäväpohjassa on valmiiksi kirjoitettu muuttujan <i>etunimi</i> tulostus: <code>console.log(etunimi);</code>. Tehtävänäsi on lisätä tiedoston ensimmäiselle riville muuttujan alustus eli luonti.
+      Harjoitellaan seuraavaksi hiukan muuttujien käyttöä. Tässä tehtävässä luodaan aluksi muuttuja <i>etunimi</i>, johon talletetaan merkkijono. Sen jälkeen tulostetaan etunimi näytölle. Tehtäväpohjassa on valmiiksi kirjoitettu muuttujan <i>etunimi</i> tulostus: <code>console.log(etunimi);</code>. Tehtävänäsi on lisätä tiedoston ensimmäiselle riville muuttujan alustus eli luonti. Tässä ja useissa myöhemmissä tehtävistä osa koodista on lukittu ja voit editoida vain vapaita alueita. Lukitun alueen tunnistaa harmaasta taustaväristä, kun taas lukitsemattoman alueen taustaväri on valkoinen.
     </p>
     <h4>Odotettu vastaus</h4>
     <p>
@@ -94,7 +95,7 @@ exercise_page: true
 
     <h3>Muuttujien operaatiot</h3>
     <p>
-      Muuttujilla voidaan tehdä <i>operaatioita</i>. Operaatiot ovat erilaisia toimintoja. Numeroillä ne mahdollistavat esimerkiksi muuttujien yhteenlaskun, vähennyslaskun, kertolaskun ja jakolaskun. Lukujen laskutoimitukset toimivat täysin samalla tavalla kuin matematiikassa. Esimerkiksi:
+      Muuttujilla voidaan tehdä <i>operaatioita</i>. Operaatiot ovat erilaisia toimintoja. Numeroilla ne mahdollistavat esimerkiksi muuttujien yhteenlaskun, vähennyslaskun, kertolaskun ja jakolaskun. Lukujen laskutoimitukset toimivat täysin samalla tavalla kuin matematiikassa. Esimerkiksi:
     </p>
     <p>
       <code>
@@ -111,13 +112,13 @@ exercise_page: true
     </p>
     <p>
       <code>
-        console.log("Hei " + ", mitä kuuluu?"); // tulostaa "Hei, mitä kuuluu?"
+        console.log("Hei" + ", mitä kuuluu?"); // tulostaa "Hei, mitä kuuluu?"
       </code>
     </p>
     <h4>Operaatioden harjoittelua</h4>
 
     <p>
-      Alla olevassa tehtäväpohjassa on alustettu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tässä tehtävässä tehdään näillä muuttujilla laskutoimituksia. Tulosta laskutoimituksen tulos, joka on <code>30</code>.
+      Alla olevassa tehtäväpohjassa on alustettu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tässä tehtävässä tehdään näillä muuttujilla laskutoimituksia. Tee joku laskutoimitus, jonka tulos on <code>30</code>.
     </p>
 
     <div class="code-area" data-type='tmc-exercise' data-id='2780'></div>
@@ -126,7 +127,7 @@ exercise_page: true
     <h2>Listat</h2>
 
     <p>
-      Lista on objekti, joka voi sisältää useita useita eri objekteja. Tyhjä lista luodaan merkinnällä <code>var lista = [];</code>. Listan sisällä voi olla muita objekteja. Merkintä <code>var lista = [1, 2, 3, 4];</code> luo uuden listan, jonka sisällä on numerot 1, 2, 3 ja 4. Listoihin voi laittaan kaikentyypisiä objekteja, kuten vaikka sanoja. Koodi <code>var lista = ["hei", "maailma"];</code> luo listan, jonka sisällä on merkkjonot <code>"hei"</code> ja <code>"maailma"</code>.
+      Lista on objekti, joka voi sisältää useita useita eri objekteja. Tyhjä lista luodaan merkinnällä <code>var lista = [];</code>. Listan sisällä voi olla muita objekteja. Merkintä <code>var lista = [1, 2, 3, 4];</code> luo uuden listan, jonka sisällä on numerot 1, 2, 3 ja 4. Listoihin voi laittaan kaikentyyppisiä objekteja, kuten vaikka sanoja. Koodi <code>var lista = ["JavaScript", "Ohjelmointi"];</code> luo listan, jonka sisällä on merkkjonot <code>"JavaScript"</code> ja <code>"Ohjelmointi"</code>.
     </p>
 
     <p>
@@ -142,7 +143,7 @@ exercise_page: true
       </pre>
     </code>
       <p>
-        luo uden taulukon, jonka sisältö on 1, 3 ja kissa. Voimme merkitä tälläistä listaa merkinnällä <code>[1, 3, "kissa"]</code>.
+        luo uuden taulukon, jonka sisältö on 1, 3 ja kissa. Voimme merkitä tälläistä listaa merkinnällä <code>[1, 3, "kissa"]</code>.
       </p>
 
       <h4>Listojen harjoittelua</h4>
@@ -153,7 +154,7 @@ exercise_page: true
       <div class="code-area" data-type='tmc-exercise' data-id='2781'></div>
 
     <p>
-      Listojen luonti sujuu melko näppärästi, mutta usein ohjelmoinnissa haluamme muokata listoja jotenkin. Olisi hyvä jos voisimme lisätä lisää alkioita listaan, ottaa niitä pois ja niin edelleen.
+      Listojen luonti sujuu melko näppärästi, mutta usein ohjelmoinnissa haluamme muokata listoja jotenkin. Olisi hyvä jos voisimme lisätä alkioita listaan, ottaa niitä pois ja niin edelleen.
     </p>
 
     <h3>Listan loppuun lisääminen</h3>
@@ -165,8 +166,8 @@ exercise_page: true
         <code>
           <pre>
             var lista = [3];
-            lista.push(7);
-            lista.push(4);
+            lista.push(7); // Listan sisältö on nyt [3, 7]
+            lista.push(4); // Listan sisältö on nyt [3, 7, 4]
           </pre>
         </code>
 
@@ -179,19 +180,19 @@ exercise_page: true
         <h3>Listan alkuun lisääminen</h3>
 
         <p>
-          Nyt pystymme luomaan listoja ja lisäämään niiden loppuun lisää alkiota. Valitettavasti kuitenkin tämä ei aina riitä. Mitä jos haluaisimme lisätä alkiota listan alkkuun. Javascriptissä on onneksi ratkaisu tähänkin ongelmaan. Koodi <code>lista.unshift(lisättävä_alkio)</code> tomii samalla tavalla kuin <code>lista.push</code>, mutta se lisää alkiota listan alkuun eikä loppuun. Alla oleva koodi luo listan, jonka sisältö on [9, 5, 1].
+          Nyt pystymme luomaan listoja ja lisäämään niiden loppuun alkiota. Valitettavasti kuitenkin tämä ei aina riitä. Tietyissä tilanteissa voitaisiin haluta lisätä alkioita listan alkuun. Javascriptissä on onneksi ratkaisu tähän ongelmaan. Koodi <code>lista.unshift(lisättävä_alkio)</code> tomii samalla tavalla kuin <code>lista.push</code>, mutta se lisää alkiota listan alkuun eikä loppuun. Alla oleva koodi luo listan, jonka sisältö on [9, 5, 1].
         </p>
 
         <code>
           <pre>
             var lista = [1];
-            lista.unshift(5);
-            lista.unshift(9);
+            lista.unshift(5); // Listan sisältö on nyt [5, 1]
+            lista.unshift(9); // Listan sisältö on nyt [9, 5, 1]
           </pre>
         </code>
 
         <p>
-          Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan loppuun alkiota niin, että listan sisällöksi tulee 2, 3, 4.
+          Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan alkuun alkiota niin, että listan sisällöksi tulee 2, 3, 4.
         </p>
 
         <div data-type='tmc-exercise' data-id='2793'></div>
@@ -199,7 +200,7 @@ exercise_page: true
         <h3>Listasta poistaminen</h3>
 
         <p>
-          Voimme myös haluta poistaa listasta alkiota. Kuten varmaan jo edellisistä tehtävistä arvasitkin, voimme poistaa alkiota joko listan alusta tai listan lopusta. Koodi <code>lista.pop()</code> poistaa viimeisen elementin listan lopusta ja koodi <code>lista.shift()</code> poistaa listan ensimmäisen alkion.
+          Voimme myös haluta poistaa listasta alkiota. Kuten varmaan jo edellisistä tehtävistä arvasitkin, voimme poistaa alkiota joko listan alusta tai listan lopusta. Koodi <code>lista.pop()</code> poistaa elementin listan lopusta ja koodi <code>lista.shift()</code> poistaa listan ensimmäisen alkion.
         </p>
 
         <p>Tehtävä: Poista listan alusta kaksi elementtiä ja lopusta yksi elementti. Mikä tulee tulokseksi?</p>
@@ -210,16 +211,31 @@ exercise_page: true
         <h2>Funktiot</h2>
 
         <p>
-          Ylllä olevissa materiaalissa kaikki koodi suoritettiin heti, kun suoritus osuu koodin kohdalle. Haluamme kuitenkin usein siirtää koodin suoritusta tulevaisuuteen, johonkin tiettyyn tapahtumaan. Tätä varten on olemassa funktiot. Funktioilla määritellään ohjelmakoodia, joka suoritetaan myöhemmin.
+          Yllä olevassa materiaalissa kaikki koodi suoritettiin heti, kun suoritus osuu koodin kohdalle. Haluamme kuitenkin usein siirtää koodin suoritusta tulevaisuuteen johonkin tiettyyn tapahtumaan. Tätä varten on olemassa funktiot. Funktioilla määritellään ohjelmakoodia, joka suoritetaan myöhemmin.
         </p>
 
         <p>
-          Funktio määritellään merkkijonolla <code>function funktionNimi() { suoritettava koodi }</code>. Ensin on siis avainsana <code>function</code>, joka kertoo että seuraavaksi on tulossa funktion määrittely. Tätä seuraa funktion nimi, ja sulut, joita seuraa aukeava alltosulku <code>{</code>. Aaltosulun jälkeen tulee funktiota kutsuttaessa suoritettava ohjelmakoodi, jonka jälkeen tulee sulkeva aaltosulku <code>}</code>.
+          Funktio määritellään kirjoittamalla <code>function funktionNimi() { koodi }</code>. Esimerkiksi voitaisiin määritellä funktio, joka tulostaa tervehdyksen.
         </p>
+          <code>
+            <pre>
+              function tervehdi() {
+                console.log("Terve!");
+              }
+            </pre>
+          </code>
+
 
         <p>
-          Kun haluamme suorittaa aikaisemmin määritellyn funktion, joudumme kutsumaan sitä. Kutsuminen onnistuu koodilla: <code>kutsutavanFunktionNimi();</code>. Tämä komento ajaisi koodin, joka on määritelty kutsuttavan funktion sisällä.
+          Kun haluamme suorittaa aikaisemmin määritellyn funktion, joudumme kutsumaan sitä. Kutsuminen onnistuu koodilla: <code>kutsutavanFunktionNimi();</code>. Esimerkiksi yllä olevaa tervehdys-funktiota kutsuttaisiin kirjoittamalla <code>tervehdi();</code>. Funktion kutsuminen suorittaa sen sisällä määritellyn koodin. Esimerkiksi alla oleva koodi tulostaisi kahdesti "Terve!".
         </p>
+
+        <code>
+          <pre>
+            tervehdi(); // Tulostaa "Terve!"
+            tervehdi(); // Tulostaa "Terve!"
+          </pre>
+        </code>
 
         <p>
           Tehtävä: Alla on määritelty funktio. Kutsu sitä.
@@ -230,21 +246,32 @@ exercise_page: true
         <h2>Ehtolauseet: if, else</h2>
 
         <p>
-          Usein halutaan että ohjelman sisäinen tila vaikuttaa ohjelman suoritukseen. Voisimme esimerkiksi haluta että jos luku on suurempi kun 5, voisimme esimerkiksi haluta tulostaa että luku on isompi kuin 5.
+          Usein halutaan, että ohjelman sisäinen tila vaikuttaa ohjelman suoritukseen. Voitaisiin esimerkiksi haluta, että ohjelma tulostaa erilaisen tulosteen riippuen jonkin muuttujan arvosta. Esimerkiksi alla oleva ohjelma tulostaa eri tekstin riippuen muuttujan ika arvosta.
         </p>
 
+        <code>
+          <pre>
+            var ika = 14;
+            if (ika < 18) {                         // Jos ikä on alle 18, suoritetaan aaltosulkeiden sisällä eli if-lohkossa oleva koodi
+              console.log("Olet alaikäinen!");
+            } else {                                // Muuten suoritetaan else-lohkossa oleva koodi
+              console.log("Olet täysi-ikäinen!");
+            }
+          </pre>
+        </code>
+
         <p>
-          Koodin ehdollinen suoritus onnistuu <code>if</code>-avainsanan avulla. If-ehtolauseen rakenne on <code> if ( ehto ) { koodi, joka suoritetaan ehdon ollessa tosi }</code>. Eli if-avainsanan jälkeen laitetaan jonkin ehto, jonka totuutta tarkastellaan ja sen jälkeen kirjoitetaan aaltosulkuihin koodi, mikä tulee suorittaa ehdon ollesssa tosi.
+          Koodin ehdollinen suoritus onnistuu <code>if</code>-avainsanan avulla. If-ehtolauseen rakenne on <code> if ( ehto ) { koodi, joka suoritetaan ehdon ollessa tosi }</code>. Eli if-avainsanan jälkeen laitetaan jonkin ehto, jonka totuutta tarkastellaan ja sen jälkeen kirjoitetaan aaltosulkuihin koodi, joka tulee suorittaa ehdon ollesssa tosi. If-ehtolauseen jälkeen voi halutessaan kirjoittaa perään else-lohkon kuten yllä olevassa esimerkissä. Else-lohko suoritetaan siinä tapauksessa, että ehto ei ole tosi.
         </p>
 
         <h3>Ehdot</h3>
 
         <p>
-          Jotta voimme käyttää edellä esiteltyjä ehtolauseita, meidän täytyy osata kirjoittaa joitain ehtoja niille. Yksi yksinkertainen ehto on yhtäsuuruden vertailu. Se onnistuu merkinnällä <code>==</code>. Ehtolauseen <code>if (muuttuja == toinenMuuttuja ) { }</code> koodi suoritetaan, jos <code>muuttuja</code> ja <code>toinenMuuttuja</code> sisältävät saman arvon.
+          Jotta voimme käyttää edellä esiteltyjä ehtolauseita, meidän täytyy osata kirjoittaa joitain ehtoja niille. Eräs yksinkertainen ehto on yhtäsuuruden vertailu. Se onnistuu merkinnällä <code>==</code>. Ehtolauseen <code>if (muuttuja == toinenMuuttuja ) { koodi }</code> koodi suoritetaan, jos <code>muuttuja</code> ja <code>toinenMuuttuja</code> sisältävät saman arvon.
         </p>
 
         <p>
-          Luvuilla voimme yhtäsuuruuden lisäksi tarkastella niiden suuruuksia. Voimme esimerkiksi tarkistaa, onko luku pienempi tai suurempi kuin toinen luku. Suuruuden vertailu onnisttuu operaattoreilla <code><</code>, <code>></code>, <code><=</code> ja <code>>=</code>. Operaattorit <code><</code> ja <code>>></code> eivät ota yhtäsuuruutta huomioon kun taas operaattorit <code><=</code> ja <code>>=</code> ottavat.
+          Luvuilla voimme yhtäsuuruuden lisäksi tarkastella niiden suuruuksia. Voimme esimerkiksi tarkistaa, onko luku pienempi tai suurempi kuin toinen luku. Suuruuden vertailu onnisttuu operaattoreilla <code><</code>, <code>></code>, <code><=</code> ja <code>>=</code>. Operaattorit <code><</code> ja <code>></code> eivät ota yhtäsuuruutta huomioon kun taas operaattorit <code><=</code> ja <code>>=</code> ottavat.
         </p>
 
         <h3>Esimerkkejä ehdoista</h3>
@@ -270,35 +297,35 @@ exercise_page: true
           </div>
         </div>
 
-        Seuraavassa koodinpätkässä ehto on totta ja suoritetaan ainoastaan if-lohkon sisällä oleva koodi:
+        Seuraavassa koodinpätkässä ehto on totta, joten vain if-lohkon sisällä oleva koodi suoritetaan:
 
         <code>
           <pre>
             var luku = 8;
             var toinenLuku = 7;
             if (luku >= toinenLuku) {
-              // If-lohko
+              // If-lohko                   // Tämä suoritetaan
             } else {
-              // Else-lohko
+              // Else-lohko                 // Tätä ei suoriteta
             }
           </pre>
         </code>
 
-        Seuraavassa koodinpätkässä ei ole totta ja vain else:n sisällä oleva koodi suoritetaan;
+        Seuraavassa koodinpätkässä ehto on epätosi ja vain else:n sisällä oleva koodi suoritetaan;
 
         <code>
           <pre>
             var luku = 6;
             var toinenLuku = 7;
             if (luku >= toinenLuku) {
-              // If-lohko
+              // If-lohko                    // Tätä ei suoriteta
             } else {
-              // Else-lohko
+              // Else-lohko                  // Tämä suoritetaan
             }
           </pre>
         </code>
 
-        <p>Tehtävä: Muuta muuttujan a arvoa niin, että tehtävässä oleva ehto on totta.</p>
+        <p>Tehtävä: Muuta muuttujan a arvoa niin, että tehtävässä oleva ehto on totta. Tulostuksen pitäisi siis olla "Totta".</p>
 
         <div data-type='tmc-exercise' data-id='2791'></div>
       </div>
