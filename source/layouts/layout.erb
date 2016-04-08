@@ -10,6 +10,7 @@
     <link rel='stylesheet' href='//ohjelmointikurssi.github.io/cdn/tmc-web-client.css' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/color-brewer.min.css">
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :all %>
   </head>
@@ -36,10 +37,12 @@
       <script src='//cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch.js'></script>
       <script src='//cdnjs.cloudflare.com/ajax/libs/phaser/2.4.3/phaser.min.js'></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
       <script src='//ohjelmointikurssi.github.io/cdn/tmc-web-client-min.js'></script>
 
       <script>
         $(document).ready(function() {
+          hljs.initHighlightingOnLoad();
           TMCWebClient.initialise();
         });
       </script>

@@ -76,7 +76,6 @@ exercise_page: true
 
     <div class="code-area" data-type='tmc-exercise' data-id='2289'></div>
 
-
     <h4>Muuttujat pelissä</h4>
     <p>
       Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne. Katso tarvittaessa apua ensimmäisestä tehtävästä tai editorin alla olevista vihjeistä.
@@ -98,22 +97,16 @@ exercise_page: true
       Muuttujilla voidaan tehdä <i>operaatioita</i>. Operaatiot ovat erilaisia toimintoja. Numeroilla ne mahdollistavat esimerkiksi muuttujien yhteenlaskun, vähennyslaskun, kertolaskun ja jakolaskun. Lukujen laskutoimitukset toimivat täysin samalla tavalla kuin matematiikassa. Esimerkiksi:
     </p>
     <p>
-      <code>
-        <pre>
-          console.log(5 + 2); // tulostaa luvun 7
-          console.log(5 - 7); // tulostaa luvun -2
-          console.log(2 * 6); // tulostaa luvun 12
-          console.log(8 / 4); // tulostaa luvun 2
-        </pre>
-      </code>
+      <pre><code class="javascript">console.log(5 + 2); // tulostaa luvun 7
+console.log(5 - 7); // tulostaa luvun -2
+console.log(2 * 6); // tulostaa luvun 12
+console.log(8 / 4); // tulostaa luvun 2</code></pre>
     </p>
     <p>
       Operaattoreilla voidaan myös yhdistää merkkijonoja. Se onnistuu ketjuttamalla halutut merkkijonot <code>+</code>-operattorilla, kuten yhteenlaskussa. Esimerkki:
     </p>
     <p>
-      <code>
-        console.log("Hei" + ", mitä kuuluu?"); // tulostaa "Hei, mitä kuuluu?"
-      </code>
+      <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?"); // tulostaa "Hei, mitä kuuluu?"</code></pre>
     </p>
     <h4>Operaatioden harjoittelua</h4>
 
@@ -134,14 +127,10 @@ exercise_page: true
       Listaan voi myös laittaa muiden objektien arvoja. Koodi:
     </p>
 
-    <code>
-      <pre>
-        var a = 1;
-        var b = 3;
-        var c = "kissa";
-        var lista = [a, b, c];
-      </pre>
-    </code>
+    <pre><code class="javascript">var a = 1;
+var b = 3;
+var c = "kissa";
+var lista = [a, b, c];</code></pre>
       <p>
         luo uuden taulukon, jonka sisältö on 1, 3 ja kissa. Voimme merkitä tälläistä listaa merkinnällä <code>[1, 3, "kissa"]</code>.
       </p>
@@ -163,13 +152,9 @@ exercise_page: true
       Olemassa olevan listan loppuun voidaan lisätä uusi alkio komennolla <code>lista.push(lisättävä_alkio);</code>. Jos haluamme vaikka lisätä listaan numeron 3, se onnistuu koodilla: <code>lista.push(3);</code>. Alla olevan koodin suorituksen jälkeen listan sisältö on <code>[3, 7, 4]</code>:
       <p>
 
-        <code>
-          <pre>
-            var lista = [3];
-            lista.push(7); // Listan sisältö on nyt [3, 7]
-            lista.push(4); // Listan sisältö on nyt [3, 7, 4]
-          </pre>
-        </code>
+        <pre><code class="javascript">var lista = [3];
+lista.push(7); // Listan sisältö on nyt [3, 7]
+lista.push(4); // Listan sisältö on nyt [3, 7, 4]</code></pre>
 
         <p>
           Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan loppuun alkiota niin, että listan sisällöksi tulee 4, 5, 6.
@@ -183,13 +168,9 @@ exercise_page: true
           Nyt pystymme luomaan listoja ja lisäämään niiden loppuun alkiota. Valitettavasti kuitenkin tämä ei aina riitä. Tietyissä tilanteissa voitaisiin haluta lisätä alkioita listan alkuun. Javascriptissä on onneksi ratkaisu tähän ongelmaan. Koodi <code>lista.unshift(lisättävä_alkio)</code> tomii samalla tavalla kuin <code>lista.push</code>, mutta se lisää alkiota listan alkuun eikä loppuun. Alla oleva koodi luo listan, jonka sisältö on [9, 5, 1].
         </p>
 
-        <code>
-          <pre>
-            var lista = [1];
-            lista.unshift(5); // Listan sisältö on nyt [5, 1]
-            lista.unshift(9); // Listan sisältö on nyt [9, 5, 1]
-          </pre>
-        </code>
+        <pre><code class="javascript">var lista = [1];
+lista.unshift(5); // Listan sisältö on nyt [5, 1]
+lista.unshift(9); // Listan sisältö on nyt [9, 5, 1]</code></pre>
 
         <p>
           Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan alkuun alkiota niin, että listan sisällöksi tulee 2, 3, 4.
@@ -217,25 +198,17 @@ exercise_page: true
         <p>
           Funktio määritellään kirjoittamalla <code>function funktionNimi() { koodi }</code>. Esimerkiksi voitaisiin määritellä funktio, joka tulostaa tervehdyksen.
         </p>
-          <code>
-            <pre>
-              function tervehdi() {
-                console.log("Terve!");
-              }
-            </pre>
-          </code>
+          <pre><code class="javascript">function tervehdi() {
+  console.log("Terve!");
+}</code></pre>
 
 
         <p>
           Kun haluamme suorittaa aikaisemmin määritellyn funktion, joudumme kutsumaan sitä. Kutsuminen onnistuu koodilla: <code>kutsutavanFunktionNimi();</code>. Esimerkiksi yllä olevaa tervehdys-funktiota kutsuttaisiin kirjoittamalla <code>tervehdi();</code>. Funktion kutsuminen suorittaa sen sisällä määritellyn koodin. Esimerkiksi alla oleva koodi tulostaisi kahdesti "Terve!".
         </p>
 
-        <code>
-          <pre>
-            tervehdi(); // Tulostaa "Terve!"
-            tervehdi(); // Tulostaa "Terve!"
-          </pre>
-        </code>
+        <pre><code class="javascript">tervehdi(); // Tulostaa "Terve!"
+tervehdi(); // Tulostaa "Terve!"</code></pre>
 
         <p>
           Tehtävä: Alla on määritelty funktio. Kutsu sitä.
@@ -249,16 +222,12 @@ exercise_page: true
           Usein halutaan, että ohjelman sisäinen tila vaikuttaa ohjelman suoritukseen. Voitaisiin esimerkiksi haluta, että ohjelma tulostaa erilaisen tulosteen riippuen jonkin muuttujan arvosta. Esimerkiksi alla oleva ohjelma tulostaa eri tekstin riippuen muuttujan ika arvosta.
         </p>
 
-        <code>
-          <pre>
-            var ika = 14;
-            if (ika < 18) {                         // Jos ikä on alle 18, suoritetaan aaltosulkeiden sisällä eli if-lohkossa oleva koodi
-              console.log("Olet alaikäinen!");
-            } else {                                // Muuten suoritetaan else-lohkossa oleva koodi
-              console.log("Olet täysi-ikäinen!");
-            }
-          </pre>
-        </code>
+        <pre><code class="javascript">var ika = 14;
+if (ika < 18) { // Jos ikä on alle 18, suoritetaan aaltosulkeiden sisällä eli if-lohkossa oleva koodi
+  console.log("Olet alaikäinen!");
+} else { // Muuten suoritetaan else-lohkossa oleva koodi
+  console.log("Olet täysi-ikäinen!");
+}</code></pre>
 
         <p>
           Koodin ehdollinen suoritus onnistuu <code>if</code>-avainsanan avulla. If-ehtolauseen rakenne on <code> if ( ehto ) { koodi, joka suoritetaan ehdon ollessa tosi }</code>. Eli if-avainsanan jälkeen laitetaan jonkin ehto, jonka totuutta tarkastellaan ja sen jälkeen kirjoitetaan aaltosulkuihin koodi, joka tulee suorittaa ehdon ollesssa tosi. If-ehtolauseen jälkeen voi halutessaan kirjoittaa perään else-lohkon kuten yllä olevassa esimerkissä. Else-lohko suoritetaan siinä tapauksessa, että ehto ei ole tosi.
@@ -297,33 +266,25 @@ exercise_page: true
           </div>
         </div>
 
-        Seuraavassa koodinpätkässä ehto on totta, joten vain if-lohkon sisällä oleva koodi suoritetaan:
+        <p>Seuraavassa koodinpätkässä ehto on totta, joten vain if-lohkon sisällä oleva koodi suoritetaan:</p>
 
-        <code>
-          <pre>
-            var luku = 8;
-            var toinenLuku = 7;
-            if (luku >= toinenLuku) {
-              // If-lohko                   // Tämä suoritetaan
-            } else {
-              // Else-lohko                 // Tätä ei suoriteta
-            }
-          </pre>
-        </code>
+        <pre><code class="javascript">var luku = 8;
+var toinenLuku = 7;
+if (luku >= toinenLuku) {
+  // If-lohko, joka suoritetaan
+} else {
+  // Else-lohko, jota ei suoriteta
+}</code></pre>
 
-        Seuraavassa koodinpätkässä ehto on epätosi ja vain else:n sisällä oleva koodi suoritetaan;
+        <p>Seuraavassa koodinpätkässä ehto on epätosi ja vain else:n sisällä oleva koodi suoritetaan:</p>
 
-        <code>
-          <pre>
-            var luku = 6;
-            var toinenLuku = 7;
-            if (luku >= toinenLuku) {
-              // If-lohko                    // Tätä ei suoriteta
-            } else {
-              // Else-lohko                  // Tämä suoritetaan
-            }
-          </pre>
-        </code>
+        <pre><code class="javascript">var luku = 6;
+var toinenLuku = 7;
+if (luku >= toinenLuku) {
+  // If-lohko, jota ei suoriteta
+} else {
+  // Else-lohko, joka suoritetaan
+}</code></pre>
 
         <p>Tehtävä: Muuta muuttujan a arvoa niin, että tehtävässä oleva ehto on totta. Tulostuksen pitäisi siis olla "Totta".</p>
 

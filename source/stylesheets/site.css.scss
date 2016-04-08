@@ -68,11 +68,21 @@ code {
 }
 
 pre {
+  code {
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+pre {
   font-family: monospace;
-  background-color: white !important;
+  background-color: white;
 }
 
 .multiple-columns {
+  @extend .narrow;
   display: flex;
   justify-content: space-around;
 
@@ -85,4 +95,13 @@ pre {
   border: 1px solid;
   padding: 5px;
   border-radius: 10px;
+}
+
+.narrow {
+  max-width: 1000px;
+  margin: auto;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  @extend .narrow;
 }
