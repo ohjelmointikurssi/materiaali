@@ -10,7 +10,7 @@ exercise_page: true
   <h1>Tehtäväsarja 1</h1>
 
   <p>
-    Tervetuloa ohjelmoimaan! Käymme aluksi läpi ohjelmoinnin alkeita, jotka johdattavat sinut pelin tekemiseen. Opettelemme <i>Javascript</i>-ohjelmointikieltä -- se on ohjelmointikieli, joka on tarkoitettu selaimessa ajattavien ohjelmien tekemiseen. Koska useat pienet pelit nykyään ajetaan selaimessa, Javascript sopii erinomaisesti tälle kurssille.
+    Tervetuloa ohjelmoimaan! Käymme aluksi läpi ohjelmoinnin alkeita, jotka johdattavat sinut pelin tekemiseen. Opettelemme <i>Javascript</i>-ohjelmointikieltä -- se on kieli, joka on tarkoitettu selaimessa ajettavien ohjelmien tekemiseen.
   </p>
 
   <div class="chapter">
@@ -30,22 +30,23 @@ exercise_page: true
   <div class="chapter">
     <h2>Muuttujat</h2>
     <p>
-      Usein haluamme käyttää tietoa useammassa paikassa. Jotta tämä olisi mahdollista haluamme jonkin tavan säilöä tietoa, jotta siihen pääsee myöhemmin käsiksi. Ohjelmoinnissa voimme ottaa tietoa talteen <i>muuttujiin</i>. Muuttujat toimivat samaan tapaan kuin matematiikassa. Matematiikassa voisi olla esimerkiksi yhtälöt <code>x = 3</code> ja <code>y = x+2</code>, joissa <code>x</code> ja <code>y</code> olisivat muuttujia. Tällöin tietäisimme, että <code>y = 3+2 = 5</code>. Jos taas vaihdettaisiin, että <code>x = 5</code>, tietäisimme että <code>y = 7</code>.
+      Usein haluamme käyttää tietoa useammassa paikassa. Jotta tämä olisi mahdollista haluamme jonkin tavan säilöä tietoa, jotta siihen pääsee myöhemmin käsiksi. Ohjelmoinnissa voimme ottaa tietoa talteen <i>muuttujiin</i>. Muuttujat toimivat samaan tapaan kuin matematiikassa. Matematiikassa voisi olla esimerkiksi yhtälöt <code>x = 3</code> ja <code>y = x + 2</code>, joissa <code>x</code> ja <code>y</code> olisivat muuttujia. Tällöin tietäisimme, että <code>y = 3 + 2 = 5</code>. Jos taas vaihdettaisiin, että <code>x = 5</code>, tietäisimme että <code>y = 7</code>.
     </p>
 
     <p>
-      Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa palkkeja tippuu alaspäin ja pelaajan on tarkoitus napata niitä liikkumalla nuolinäppäimillä. Kokeile peliä painamalla run-painiketta.
+      Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa pelaajan on tarkoitus kerätä alaspäin tippuvia palkkeja. Liikkuminen tapahtuu nuolinäppäimillä. Kokeile peliä painamalla run-painiketta.
     </p>
 
+    <div class="code-area" data-type='tmc-exercise' data-id='2287'></div>
+    
     <p>
-      Peli on tällä hetkellä hankalahko, koska palkit tippuvat nopeasti ja pallo liikkuu hitaasti. Yritetään tehdä pelistä hieman helpompi.
+      Kuten huomasit, peli on tällä hetkellä hankalahko, koska palkit tippuvat nopeasti ja pallo liikkuu hitaasti. Yritetään tehdä pelistä hieman helpompi.
     </p>
 
     <p>
       Kuten ehkä jo huomasit, peli koostuu useammasta tiedostosta. Tiedostoa voi vaihtaa painamalla tiedoston nimeä. Mene tiedostoon update.js. Kokeile, mitä käy jos vaihdat riveillä 2 ja 3 olevia numeroita 250 ja 500 joiksikin muiksi numeroiksi ja muutoksen jälkeen painat run-painiketta. Helpottuuko peli, jos vaihdat numeroiden arvot päittäin?
     </p>
 
-    <div class="code-area" data-type='tmc-exercise' data-id='2287'></div>
     <p>
       Toisin kuin matematiikassa, ohjelmoinnissa muuttujan arvo voi olla myös jotain muuta kuin lukuja, esimerkiksi merkkijonoja (englanniksi string). Merkkijonot ovat mitä tahansa kirjaimista tai merkeistä koostuvia lauseita tai sanoja. Ohjelmoinnissa muuttujien käyttö on hyödyllistä muun muassa siksi, ettei samaa lukuarvoa tarvitse toistaa ohjelmakoodissa aina kun sitä tarvitaan.
     </p>
@@ -77,9 +78,11 @@ exercise_page: true
     <div class="code-area" data-type='tmc-exercise' data-id='2289'></div>
 
     <h4>Muuttujat pelissä</h4>
+    
     <p>
       Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne. Katso tarvittaessa apua ensimmäisestä tehtävästä tai editorin alla olevista vihjeistä.
     </p>
+    
     <h4>Odotettu vastaus</h4>
     <p>
       Peli toimii samalla tavalla kuin ensimmäisessä tehtävässä.
@@ -93,6 +96,7 @@ exercise_page: true
     </p>
 
     <h3>Muuttujien operaatiot</h3>
+    
     <p>
       Muuttujilla voidaan tehdä <i>operaatioita</i>. Operaatiot ovat erilaisia toimintoja. Numeroilla ne mahdollistavat esimerkiksi muuttujien yhteenlaskun, vähennyslaskun, kertolaskun ja jakolaskun. Lukujen laskutoimitukset toimivat täysin samalla tavalla kuin matematiikassa. Esimerkiksi:
     </p>
