@@ -50,22 +50,21 @@ exercise_page: true
 
     <h3>Piirtäminen ohjelmallisesti</h3>
     <p>
-      Tehtävä. Kokeile antaa ohjelmalle komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code> ja piirrä niiden avulla kuvioita piirtoalustalle.
-    </p>
-    <p>
-      Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
+      <strong>Tehtävä</strong>: Kokeile antaa ohjelmalle komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code> ja piirrä niiden avulla kuvioita piirtoalustalle. Voit kirjoittaa komennot funktion <code>lueKomennot()</code> sisälle.
     </p>
 
+    <div data-type='tmc-exercise' data-id='2804'></div>
+
     <h3>Neliön piirtäminen</h3>
-    <p>
-      Tehtävä. Piirrä esimerkkiä vastaava kuva edellisen tehtävän komennoilla.
-    </p>
-    <p>
-      Todo: Kuva neliöstä.
-    </p>
-    <p>
-      Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
-    </p>
+    <div class="multiple-columns">
+      <%= image_tag './images/nelio.png' %>
+      <p>
+        <strong>Tehtävä</strong>: Piirrä kuvassa olevaa esimerkkiä vastaava kuvio käyttämällä edellisen tehtävän komentoja.
+      </p>
+    </div>
+
+
+    <div data-type='tmc-exercise' data-id='2805'></div>
 
     <h3>Portaiden piirtäminen</h3>
     <p>
@@ -112,60 +111,60 @@ exercise_page: true
 
     <p>
       <pre><code class="javascript">oikealle();
-alas();
-oikealle();
-alas();
-oikealle();
-alas();
-oikealle();
-alas();
-oikealle();
-alas();</code></pre>
-    </p>
+        alas();
+        oikealle();
+        alas();
+        oikealle();
+        alas();
+        oikealle();
+        alas();
+        oikealle();
+        alas();</code></pre>
+      </p>
 
-    <p>
-      Koodissa on siis 2 riviä jokasita porrasta kohti. Jos portaikossa olisi 100 porrasta, koodin pituus olisi jo 200 riviä! Ohjelmoinnissa on kuitenkin keinoja välttää toistuvaa koodia. Opetellaan seuraavaksi toistolause, jota kutsutaan while-silmukaksi.
-    </p>
+      <p>
+        Koodissa on siis 2 riviä jokasita porrasta kohti. Jos portaikossa olisi 100 porrasta, koodin pituus olisi jo 200 riviä! Ohjelmoinnissa on kuitenkin keinoja välttää toistuvaa koodia. Opetellaan seuraavaksi toistolause, jota kutsutaan while-silmukaksi.
+      </p>
 
-    <h3>While-silmukka</h3>
-    <p>
-      While-silmukka hiukan samalla tavalla kuin ensimmäisessä tehtäväsarjassa harjoitellut ehtolauseet. While-silmukka määritellään kirjoittamalla <code>while(ehto) { // suoritettava koodi niin kauan, kun ehto on voimassa }</code>Myös while-loopissa pitää olla ehto. Alla on esimerkki while-silmukasta:
-    </p>
-    <p>
-      <pre><code class="javascript">while(true) {
-  console.log("Tervehdys!");
-}</code></pre>
-    </p>
+      <h3>While-silmukka</h3>
+      <p>
+        While-silmukka hiukan samalla tavalla kuin ensimmäisessä tehtäväsarjassa harjoitellut ehtolauseet. While-silmukka määritellään kirjoittamalla <code>while(ehto) { // suoritettava koodi niin kauan, kun ehto on voimassa }</code>Myös while-loopissa pitää olla ehto. Alla on esimerkki while-silmukasta:
+      </p>
+      <p>
+        <pre><code class="javascript">while(true) {
+          console.log("Tervehdys!");
+        }</code></pre>
+      </p>
 
-    <p>
-      Yllä oleva koodi tulostaisi loputtomasti lausetta "Tervehdys!". Loputtomuus johtuu siitä, että ehto <code>true</code> on aina voimassa. Selaimessa ikuinen silmukka ei toimi, vaan jäädyttää välilehden. Voit testata tätä tulevissa tehtävissä, jos uskallat. Ongelman voi korjata sulkemalla välilehden ja avaamalla materiaalin uudessa välilehdessä.
-    </p>
+      <p>
+        Yllä oleva koodi tulostaisi loputtomasti lausetta "Tervehdys!". Loputtomuus johtuu siitä, että ehto <code>true</code> on aina voimassa. Selaimessa ikuinen silmukka ei toimi, vaan jäädyttää välilehden. Voit testata tätä tulevissa tehtävissä, jos uskallat. Ongelman voi korjata sulkemalla välilehden ja avaamalla materiaalin uudessa välilehdessä.
+      </p>
 
-    <h3>Indeksi-muuttuja</h3>
-    <p>
-      Jotta while-silmukan suoritus loppuisi joskus, käytetään usein ns. indeksi-muuttujaa. Tämän muuttujan tarkoituksena on tallentaa nykyisen kierroksen numero ja lopettaa while-silmukan suoritus, kun kierrosluku on tarpeeksi suuri. Indeksi-muuttujan arvoa pitää muistaa kasvattaa aina while-silmukan lopuksi, jotta sen arvo kasvaa. Alla esimerkki indeksi-muuttujan käytöstä while-silmukan kanssa:
-    </p>
-    <p>
-      <pre><code class="javascript">var indeksi = 1;
-while(indeksi <= 50) {
-  console.log("Tervehdys!");
-  indeksi = indeksi + 1;
-}</code></pre>
-    </p>
-    <p>
-      Yllä oleva koodi tulostaisi lauseen "Tervehdys!" 50 kertaa.
-    </p>
+      <h3>Indeksi-muuttuja</h3>
+      <p>
+        Jotta while-silmukan suoritus loppuisi joskus, käytetään usein ns. indeksi-muuttujaa. Tämän muuttujan tarkoituksena on tallentaa nykyisen kierroksen numero ja lopettaa while-silmukan suoritus, kun kierrosluku on tarpeeksi suuri. Indeksi-muuttujan arvoa pitää muistaa kasvattaa aina while-silmukan lopuksi, jotta sen arvo kasvaa. Alla esimerkki indeksi-muuttujan käytöstä while-silmukan kanssa:
+      </p>
+      <p>
+        <pre><code class="javascript">var indeksi = 1;
+          while(indeksi <= 50) {
+            console.log("Tervehdys!");
+            indeksi = indeksi + 1;
+          }</code></pre>
+        </p>
+        <p>
+          Yllä oleva koodi tulostaisi lauseen "Tervehdys!" 50 kertaa.
+        </p>
 
-    <h3>Pitkät portaat</h3>
-    <p>
-      Tehtävä. Piirrä esimerkkiä vastaava kuva käyttäen while-silmukkaa ja tuttuja komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code>. Portaita on yhteensä 50 kappaletta.
-    </p>
-    <p>
-      Todo: Kuva pitkistä portaista.
-    </p>
-    <p>
-      Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
-    </p>
-  </div>
+        <h3>Pitkät portaat</h3>
+        <p>
+          Tehtävä. Piirrä esimerkkiä vastaava kuva käyttäen while-silmukkaa ja tuttuja komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code>. Portaita on yhteensä 50 kappaletta.
+        </p>
+        <p>
+          Todo: Kuva pitkistä portaista.
+        </p>
+        <p>
+          Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
+        </p>
+      </div>
 
-</div>
+    </div>
