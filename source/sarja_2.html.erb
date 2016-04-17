@@ -138,12 +138,33 @@ alas();</code></pre>
     </p>
 
     <p>
-      Yllä oleva koodi tulostaisi loputtomasti lausetta "Tervehdys!". Loputtomuus johtuu siitä, että ehto <code>true</code> on aina voimassa.
+      Yllä oleva koodi tulostaisi loputtomasti lausetta "Tervehdys!". Loputtomuus johtuu siitä, että ehto <code>true</code> on aina voimassa. Selaimessa ikuinen silmukka ei toimi, vaan jäädyttää välilehden. Voit testata tätä tulevissa tehtävissä, jos uskallat. Ongelman voi korjata sulkemalla välilehden ja avaamalla materiaalin uudessa välilehdessä.
     </p>
 
-    <h3>Indeksointi</h3>
+    <h3>Indeksi-muuttuja</h3>
     <p>
-      blabla
+      Jotta while-silmukan suoritus loppuisi joskus, käytetään usein ns. indeksi-muuttujaa. Tämän muuttujan tarkoituksena on tallentaa nykyisen kierroksen numero ja lopettaa while-silmukan suoritus, kun kierrosluku on tarpeeksi suuri. Indeksi-muuttujan arvoa pitää muistaa kasvattaa aina while-silmukan lopuksi, jotta sen arvo kasvaa. Alla esimerkki indeksi-muuttujan käytöstä while-silmukan kanssa:
+    </p>
+    <p>
+      <pre><code class="javascript">var indeksi = 1;
+while(indeksi <= 50) {
+  console.log("Tervehdys!");
+  indeksi = indeksi + 1;
+}</code></pre>
+    </p>
+    <p>
+      Yllä oleva koodi tulostaisi lauseen "Tervehdys!" 50 kertaa.
+    </p>
+
+    <h3>Pitkät portaat</h3>
+    <p>
+      Tehtävä. Piirrä esimerkkiä vastaava kuva käyttäen while-silmukkaa ja tuttuja komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code>. Portaita on yhteensä 50 kappaletta.
+    </p>
+    <p>
+      Todo: Kuva pitkistä portaista.
+    </p>
+    <p>
+      Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
     </p>
   </div>
 
