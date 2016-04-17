@@ -112,7 +112,10 @@ alas();</code></pre>
 
       <h3>While-silmukka</h3>
       <p>
-        While-silmukka hiukan samalla tavalla kuin ensimmäisessä tehtäväsarjassa harjoitellut ehtolauseet. While-silmukka määritellään kirjoittamalla <code>while(ehto) { // suoritettava koodi niin kauan, kun ehto on voimassa }</code>Myös while-loopissa pitää olla ehto. Alla on esimerkki while-silmukasta:
+        While-silmukka toimii hiukan samalla tavalla kuin ensimmäisessä tehtäväsarjassa harjoitellut ehtolauseet. While-silmukka määritellään kirjoittamalla <code>while(ehto) { // suoritettava koodi niin kauan, kun ehto on voimassa }</code> Kuten if-lauseessa, myös while-loopissa pitää aina olla ehto. Ehto tarkistetaan jokaisen koodin suorituksen jälkeen.
+      </p>
+      <p>
+        Alla on esimerkki while-silmukasta:
       </p>
       <p>
         <pre><code class="javascript">while(true) {
@@ -126,13 +129,16 @@ alas();</code></pre>
 
       <h3>Indeksi-muuttuja</h3>
       <p>
-        Jotta while-silmukan suoritus loppuisi joskus, käytetään usein ns. indeksi-muuttujaa. Tämän muuttujan tarkoituksena on tallentaa nykyisen kierroksen numero ja lopettaa while-silmukan suoritus, kun kierrosluku on tarpeeksi suuri. Indeksi-muuttujan arvoa pitää muistaa kasvattaa aina while-silmukan lopuksi, jotta sen arvo kasvaa. Alla esimerkki indeksi-muuttujan käytöstä while-silmukan kanssa:
+        Jotta while-silmukan suoritus loppuisi joskus, käytetään usein ns. indeksi-muuttujaa. Tämän muuttujan tarkoituksena on tallentaa nykyisen kierroksen numero ja lopettaa while-silmukan suoritus, kun kierrosluku on tarpeeksi suuri. Indeksi-muuttujan arvoa pitää muistaa kasvattaa aina while-silmukan sisällä, jotta sen arvo kasvaa. While-silmukan loppuun voidaan lisätä if-lause, jossa tarkistetaan, pitääkö silmukan suoritus lopettaa. Silmukan suorituksen voi lopettaa <code>break</code> -komennolla. Alla esimerkki indeksi-muuttujan käytöstä while-silmukan kanssa:
       </p>
       <p>
         <pre><code class="javascript">var indeksi = 1;
-while(indeksi <= 50) {
-  console.log("Tervehdys!");
-  indeksi = indeksi + 1;
+while(true) {
+  console.log("Tervehdys!");  // Tulostetaan tervehdys
+  indeksi = indeksi + 1;      // Lisätään indeksin arvoa
+  if (indeksi > 50) {         // Tarkistetaan, pitäisikö silmukan suoritus lopetetaan
+    break;                    // Lopetetaan silmukan suoritus, jos indeksi oli tarpeeksi suuri
+  }
 }</code></pre>
         </p>
         <p>
@@ -141,7 +147,7 @@ while(indeksi <= 50) {
 
         <h3>Pitkät portaat</h3>
         <p>
-          Tehtävä. Piirrä esimerkkiä vastaava kuva käyttäen while-silmukkaa ja tuttuja komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code>. Portaita on yhteensä 50 kappaletta.
+          <strong>Tehtävä</strong>: Piirrä esimerkkiä vastaava kuva käyttäen while-silmukkaa ja tuttuja komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code>. Portaita on yhteensä 50 kappaletta.
         </p>
         <p>
           Todo: Kuva pitkistä portaista.
@@ -149,6 +155,38 @@ while(indeksi <= 50) {
         <p>
           Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
         </p>
+
+        <h3>Listat ja indeksi</h3>
+        <p>
+          Indeksin käyttö on myös hyödyllistä listojen kanssa, koska sillä voi viitata tiettyyn objektiin listassa. Listassa voidaan ajatella olevan numerointi, joka alkaa nollasta. Tämän ansiosta listan ensimmäistä alkiota voi käyttää kirjoittamalla <code>lista[0]</code>. Listan toista alkiota voi vastaavasti käyttää kirjoittamalla <code>lista[1]</code> ja niin edelleen.
+        </p>
+
+        <p>
+          Alla esimerkki koodista, joka tulostaa yksitellen kaikki listan alkiot:
+        </p>
+        <p>
+        <pre><code class="javascript">var lista = [1, 3, 3, 7];
+var indeksi = 0;
+while(true) {
+  console.log(lista[indeksi]);        // Tulostetaan listan alkio indeksin kohdalta
+  indeksi = indeksi + 1;              // Kasvatetaan indeksiä
+  if (indeksi >= lista.length) {      // Tarkistetaan, pitääkö silmukan suoritus lopettaa.
+    break;                            // Lopetetaan silmukan suoritus, jos indeksi oli tarpeeksi suuri
+  }
+}</code></pre>
+        </p>
+        <p>
+          Huomioi yllä olevassa koodissa, että indeksin arvon tarkistuksessa on yhtäsuuruus mukana. Tämä johtuu siitä, että indeksointi alkaa nollasta - jos listan koko on 4, lista[4] viittaisi listan viidenteen alkioon, jota ei ole olemassa.
+        </p>
+
+        <h3>Listan alkioiden summan laskeminen</h3>
+        <p>
+          <strong>Tehtävä</strong>: Laske listan alkioiden summa käyttämällä while-silmukkaa. Tuloksen pitäisi olla 1337.
+        </p>
+        <p>
+          Henrik todo: Lisää tähän tehtävä, jossa valmiina lista lukuja joiden summa on 1337 ja summa-muuttuja arvolla 0. Opiskelijat voi ite lisätä while loopin ja listan arvojen summaan lisäyksen. While loopin jälkee valmiina summa-muuttujan tulostus.
+        </p>
+
       </div>
 
     </div>
