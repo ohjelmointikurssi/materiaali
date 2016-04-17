@@ -12,7 +12,13 @@ exercise_page: true
   <h2>Koordinaatisto</h2>
   <div class="chapter">
     <p>
-      Oletetaan, että jokainen mahdollinen piste piirtoalustalla voidaan kuvata koordinaatteina. Tämä koordinaatisto ei kuitenkaan ole tavanomainen koordinaatisto, sillä akselit eivät alakkaan vasemmasta alakulmasta, vaan vasemmasta yläkulmasta! Y-akseli kulkee vasemmasta yläkulmasta kohti vasenta alakulmaa ja x-akseli kulkee vasemmasta yläkulmasta kohti oikeaa yläkulmaa. Vasemman yläkulman koordinaatit olisivat siis (0, 0) ja oikean alakulman koordinatit olisivat (800, 600).
+      Ohjelmoinnissa voidaan joutua piirtämään kuvioita näytölle. Kuvioiden piirto hoituu usein käyttämällä matematiikasta tuttua koordinaatistoa.
+    </p>
+    <p>
+      Henrik todo: Kuva koordinaatistosta
+    </p>
+    <p>
+      Ohjelmoinnissa koordinaatisto eroaa matematiikasta jonkin verran. Ensinnäkin, yleensä ei käytetä negatiivisia arvoja, vaan x:n ja y:n mahdolliset arvot alkavat numerosta 0. Mutta tärkeämpi ero on, että ohjelmoinnissa origo on vasemmassa yläkulmassa eli x- ja y-akseleiden nollakohta sijaitsee vasemmassa yläkulmassa eikä vasemmassa alakulmassa. Y-akseli kulkee vasemmasta yläkulmasta kohti vasenta alakulmaa ja x-akseli kulkee vasemmasta yläkulmasta kohti oikeaa yläkulmaa. Jos piirtoalustan koko on 800x600, vasemman yläkulman koordinaatit olisivat siis (0, 0) ja oikean alakulman koordinatit olisivat (800, 600).
     </p>
   </div>
 
@@ -22,24 +28,117 @@ exercise_page: true
     <h3>Piirtäminen näppäimistöllä</h3>
 
     <p>
-      Kokeile piirtää tässä tehtävässä jotakin luovaa painamalla nuolinäppäimiä.
+      Tällä viikolla tehtävät keskittyvät piirtämiseen. Harjoitellaan aluksi piirtämistä nuolinäppäinten avulla.
     </p>
 
+    <h3>Nuolinäppäimillä piirto</h3>
+    <p>
+      Tehtävä. Kokeile piirtää tässä tehtävässä jotakin nuolinäppäimillä
+    </p>
     <div data-type='tmc-exercise' data-id='2803'></div>
   </div>
 
   <h2>Liikkuminen</h2>
   <div class="chapter">
     <p>
-      blabla
-      näppäimiston sijaan ylös, alas, jne komentoja
+      Edellisessä tehtävässä käyttäjä joutuu itse kertomaan ohjelmalle, mihin ohjelman pitää piirtää seuraavaksi. Eräs ohjelmoinnin perusideoista on automatisoida asioiden tekemistä. Tietokoneelle halutaan antaa komentoja ilman, että ihmisen pitää erikseen kertoa jokainen komento.
     </p>
+
+    <p>
+      Katsomalla edellisen tehtävän koodia tiedostossa <code>update.js</code> huomataan, että nuolinäppäinten painaminen kutsui ohjelmassa valmiiksi määriteltyä funktiota <code>liiku</code>. Seuraavassa tehtävässä päästään antamaan komentoja nuolinäppäinten sijaan ohjelmallisesti eli kutsumalla funktioita.
+    </p>
+
+    <h3>Piirtäminen ohjelmallisesti</h3>
+    <p>
+      Tehtävä. Kokeile antaa ohjelmalle komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code> ja piirrä niiden avulla kuvioita piirtoalustalle.
+    </p>
+    <p>
+      Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
+    </p>
+
+    <h3>Neliön piirtäminen</h3>
+    <p>
+      Tehtävä. Piirrä esimerkkiä vastaava kuva edellisen tehtävän komennoilla.
+    </p>
+    <p>
+      Todo: Kuva neliöstä.
+    </p>
+    <p>
+      Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
+    </p>
+
+    <h3>Portaiden piirtäminen</h3>
+    <p>
+      Tehtävä. Piirrä esimerkkiä vastaava kuva edellisen tehtävän komennoilla.
+    </p>
+    <p>
+      Todo: Kuva portaista.
+    </p>
+    <p>
+      Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
+    </p>
+
+    <h3>Ruudukon piirtäminen</h3>
+    <p>
+      Tehtävä. Piirrä esimerkkiä vastaava kuva edellisen tehtävän komennoilla.
+    </p>
+    <p>
+      Todo: Kuva neliöstä.
+    </p>
+    <p>
+      Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
+    </p>
+
+    <h3>Muurin piirtäminen</h3>
+    <p>
+      Tehtävä. Piirrä esimerkkiä vastaava kuva edellisen tehtävän komennoilla.
+    </p>
+    <p>
+      Todo: Kuva muurista.
+    </p>
+    <p>
+      Henrik todo: Lisää tähän tehtävä, jossa lukittuna muu alue kuin se, johon voi laittaa noita ylos, alas, oikealle, vasemmalle kutsuja.
+    </p>
+
   </div>
+
+
 
   <h2>Toistolauseet</h2>
   <div class="chapter">
     <p>
-      blabla
+      Monessa edellisistä piirtotehtävistä tuli väistämättä paljon toistuvaa koodia. Esimerkiksi portaikon piirtämisessä koodi näytti luultavasti suunnilleen tältä:
+    </p>
+
+    <p>
+      <pre><code class="javascript">oikealle();
+alas();
+oikealle();
+alas();
+oikealle();
+alas();
+oikealle();
+alas();
+oikealle();
+alas();</code></pre>
+    </p>
+
+    <p>
+      Koodissa on siis 2 riviä jokasita porrasta kohti. Jos portaikossa olisi 100 porrasta, koodin pituus olisi jo 200 riviä! Ohjelmoinnissa on kuitenkin keinoja välttää toistuvaa koodia. Opetellaan seuraavaksi toistolause, jota kutsutaan while-silmukaksi.
+    </p>
+
+    <h3>While-silmukka</h3>
+    <p>
+      While-silmukka hiukan samalla tavalla kuin ensimmäisessä tehtäväsarjassa harjoitellut ehtolauseet. While-silmukka määritellään kirjoittamalla <code>while(ehto) { // suoritettava koodi niin kauan, kun ehto on voimassa }</code>Myös while-loopissa pitää olla ehto. Alla on esimerkki while-silmukasta:
+    </p>
+    <p>
+      <pre><code class="javascript">while(true) {
+  console.log("Tervehdys!");
+}</code></pre>
+    </p>
+
+    <p>
+      Yllä oleva koodi tulostaisi loputtomasti lausetta "Tervehdys!". Loputtomuus johtuu siitä, että ehto <code>true</code> on aina voimassa.
     </p>
 
     <h3>Indeksointi</h3>
