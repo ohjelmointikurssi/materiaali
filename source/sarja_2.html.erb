@@ -118,7 +118,7 @@ oikealle();</code></pre>
       </p>
 
       <p>
-        Koodissa on siis 2 riviä jokaista porrasta kohti. Jos portaikossa olisi 100 porrasta, koodin pituus olisi jo 200 riviä! Ohjelmoinnissa on kuitenkin keinoja välttää toistuvaa koodia. Opetellaan seuraavaksi toistolause, jota kutsutaan while-silmukaksi.
+        Koodissa on siis 4 riviä jokaista porrasta kohti. Jos portaikossa olisi 100 porrasta, koodin pituus olisi jo 400 riviä! Ohjelmoinnissa on kuitenkin keinoja välttää toistuvaa koodia. Opetellaan seuraavaksi toistolause, jota kutsutaan while-silmukaksi.
       </p>
 
       <h3>While-silmukka</h3>
@@ -135,7 +135,7 @@ oikealle();</code></pre>
       </p>
 
       <p>
-        Yllä oleva koodi tulostaisi loputtomasti lausetta "Tervehdys!". Loputtomuus johtuu siitä, että ehto <code>true</code> on aina voimassa. Selaimessa ikuinen silmukka ei toimi, vaan jäädyttää välilehden. Voit testata tätä tulevissa tehtävissä, jos uskallat. Ongelman voi korjata sulkemalla välilehden ja avaamalla materiaalin uudessa välilehdessä.
+        Yllä oleva koodi tulostaisi loputtomasti lausetta "Tervehdys!". Loputtomuus johtuu siitä, että ehto <code>true</code> on aina voimassa. Selaimessa ikuinen silmukka ei toimi, vaan jäädyttää välilehden. Voit testata tätä tulevissa tehtävissä, jos uskallat. Ongelman voi korjata sulkemalla välilehden ja avaamalla materiaalin uudessa välilehdessä. Huom! Menetät tehdyn työn, jos joudut sulkemaan välilehden.
       </p>
 
       <h3>Indeksi-muuttuja</h3>
@@ -167,6 +167,9 @@ while(true) {
         <div data-type='tmc-exercise' data-id='2808'></div>
 
         <h3>Listat ja indeksi</h3>
+        <p>
+          Tehtäväsarjassa 1 tutustuttiin listoihin, niiden luontiin, niiden loppuun tai alkuun lisäämiseen ja lopusta tai alusta poistamiseen.
+        </p>
 
         <p>
           Indeksin käyttö on myös hyödyllistä listojen kanssa, koska sillä voi viitata tiettyyn objektiin listassa. Listassa voidaan ajatella olevan numerointi, joka alkaa nollasta. Tämän ansiosta listan ensimmäistä alkiota voi käyttää kirjoittamalla <code>lista[0]</code>. Listan toista alkiota voi vastaavasti käyttää kirjoittamalla <code>lista[1]</code> ja niin edelleen.
@@ -190,11 +193,25 @@ while(true) {
           Huomioi yllä olevassa koodissa, että indeksin arvon tarkistuksessa on yhtäsuuruus mukana. Tämä johtuu siitä, että indeksointi alkaa nollasta - jos listan koko on 4, lista[4] viittaisi listan viidenteen alkioon, jota ei ole olemassa.
         </p>
 
+        <h3>Listan alkioiden lukumäärän laskeminen</h3>
+        <p>
+          <strong>Tehtävä</strong>: Laske listan alkioiden lukumäärä käyttämällä while-silmukkaa ja valmista lukumaara-muuttujaa. Tuloksen pitäisi olla 74.
+        </p>
+
+        <div data-type='tmc-exercise' data-id='2811'></div>
+
         <h3>Listan alkioiden summan laskeminen</h3>
         <p>
-          <strong>Tehtävä</strong>: Laske listan alkioiden summa käyttämällä while-silmukkaa. Tuloksen pitäisi olla 1337.
+          <strong>Tehtävä</strong>: Laske listan alkioiden summa käyttämällä while-silmukkaa ja valmista summa-muuttujaa. Tuloksen pitäisi olla 1337.
         </p>
 
         <div data-type='tmc-exercise' data-id='2809'></div>
+
+        <h3>Listan alkioiden keskiarvon laskeminen</h3>
+        <p>
+          <strong>Tehtävä</strong>: Laske listan alkioiden keskiarvo. Keskiarvon laskemisessa on hyötyä edellisistä kahdesta tehtävistä. Keskiarvon kaava on <code>(Alkioiden summa) / (Alkioiden lukumäärä)</code>. Osaatko tehdä tehtävän käyttämällä vain yhtä while-silmukkaa? Tuloksen pitäisi olla noin 18.
+        </p>
+
+        <div data-type='tmc-exercise' data-id='2810'></div>
 
     </div>
