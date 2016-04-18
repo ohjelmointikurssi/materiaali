@@ -11,15 +11,20 @@ exercise_page: true
 
   <h2>Koordinaatisto</h2>
   <div class="chapter">
-    <p>
-      Ohjelmoinnissa voidaan joutua piirtämään kuvioita näytölle. Kuvioiden piirto hoituu usein käyttämällä matematiikasta tuttua koordinaatistoa.
-    </p>
-    <p>
-      Henrik todo: Kuva koordinaatistosta
-    </p>
-    <p>
-      Ohjelmoinnissa koordinaatisto eroaa matematiikasta jonkin verran. Ensinnäkin, yleensä ei käytetä negatiivisia arvoja, vaan x:n ja y:n mahdolliset arvot alkavat numerosta 0. Mutta tärkeämpi ero on, että ohjelmoinnissa origo on vasemmassa yläkulmassa eli x- ja y-akseleiden nollakohta sijaitsee vasemmassa yläkulmassa eikä vasemmassa alakulmassa. Y-akseli kulkee vasemmasta yläkulmasta kohti vasenta alakulmaa ja x-akseli kulkee vasemmasta yläkulmasta kohti oikeaa yläkulmaa. Jos piirtoalustan koko on 800x600, vasemman yläkulman koordinaatit olisivat siis (0, 0) ja oikean alakulman koordinatit olisivat (800, 600).
-    </p>
+
+    <div class="multiple-columns">
+      <div>
+        <p>
+          Ohjelmoinnissa voidaan joutua piirtämään kuvioita näytölle. Kuvioiden piirto hoituu usein käyttämällä matematiikasta tuttua koordinaatistoa.
+        </p>
+        <p>
+          Ohjelmoinnissa koordinaatisto eroaa matematiikasta jonkin verran. Ensinnäkin, yleensä ei käytetä negatiivisia arvoja, vaan x:n ja y:n mahdolliset arvot alkavat numerosta 0. Mutta tärkeämpi ero on, että ohjelmoinnissa origo on vasemmassa yläkulmassa eli x- ja y-akseleiden nollakohta sijaitsee vasemmassa yläkulmassa eikä vasemmassa alakulmassa. Y-akseli kulkee vasemmasta yläkulmasta kohti vasenta alakulmaa ja x-akseli kulkee vasemmasta yläkulmasta kohti oikeaa yläkulmaa. Jos piirtoalustan koko on 800x600, vasemman yläkulman koordinaatit olisivat siis (0, 0) ja oikean alakulman koordinatit olisivat (800, 600).
+        </p>
+      </div>
+      <%= image_tag './images/koordinaatisto.png', class: 'coordinates' %>
+    </div>
+
+
   </div>
 
   <h2>Piirtäminen</h2>
