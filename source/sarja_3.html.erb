@@ -13,25 +13,38 @@ exercise_page: true
     <h2>Alkuaskelia</h2>
 
     <p>
-        Lähdetään työstämään viime viikon piirtohjelmaa. Yritetään saada siitä aikaiseksi matopeli. Aletaan ratkoa ongelmaa pienissä helpoissa osissa.
+      Viime viikolla piirsimme neliönmuotoisista paloista erilaisia kuviota. Pelkästään paikallaanolevien kuvioden piirtely on valitettavasti hieman tylsää. Tämän kurssinhan pitäisi olla peliohjelmointikurssi eikä piirtokurssi. Olisiko mahdollista saada edellisen viikon kuviosta aikaiseksi peli?
+    </p>
+
+    <p>
+      Neliöistä piirretyistä viivoista tulee auttamatta mieleen matopeli. Jos loisimme madon viime viikon viivojen tapaan, laittaisimme sen olemaan tietyn pituinen ja lisäisimme omenan, meillä melkein olisi jo pieni peli valmiina. Kuullostaa paremmalta! Lähdetään liikkeelle!
     </p>
 
     <h3>Madon luonti</h3>
 
     <p>
-        Alla on tehtävä, johon pudotetaan yksi madon osa. Pelin alussa mato kasvaa kunnes siitä tulee koko:n pituinen. Mato alkaa kasvamaan suunta-muuttujan mukaiseen suuntaan.
+      Tässä matopelissä uuden madon luonti on yksinkertaista. Se onnistuu asettamalla yksi madon palanen pelialueelle. Sen jälkeen mato alkaa itsestään kasvamaan, kunnes se saavuttaa oikean pituudensa. Madon pituus on tallennettu <code>koko</code>-muuttujaan.
+    </p>
+
+    <p>
+      Alla olevassa tehtäväpohjassa asetetaan yksi palanen pelialueelle. Mato alkaa kasvamaan suunta-muuttujan mukaiseen suuntaan kunnes siitä on tullut koko:n kokoinen.
+    </p>
+
+    <p>
+      Kuten viime viikon piirtotehtävissä, koordinaatisto alkaa pelialueen vasemmasta yläkulmasta. Pelialueella x-koordinaatti voi saada arvoja välillä <code>0..39</code> ja y-koordinaatti voi saada arvoja välillä <code>0..29</code>. Jos esimerkiksi haluaisit lisätä madon osan pelialueen vasempaan yläkulmaan, se onnistuisi komennolla: <code>luoMadonOsa(0, 0)</code>. Madon osan piirtäminen pelialueen oikeaan alakulmaan onnistuu komennolle <code>luoMadonOsa(39, 29)</code>.
     </p>
     <p>
-        Kuten viime viikon piirtotehtävissä, koordinaatisto alkaa pelialueen vasemmasta yläkulmasta. Pelialueella x-koordinaatti voi saada arvoja välillä <code>0..39</code> ja y-koordinaatti voi saada arvoja välillä <code>0..29</code>. Jos esimerkiksi haluaisit lisätä madon osan pelialueen vasempaan yläkulmaan, se onnistuisi komennolla: <code>luoMadonOsa(0, 0)</code>. Madon osan piirtäminen pelialueen oikeaan alakulmaan onnistuu komennolle <code>luoMadonOsa(39, 29)</code>.
+      <strong>Tehtävä:</strong> Mato lähtee liikkelle vähäsen hassusta paikasta. Saatko madon lähtemään liikkumaan pelialueen keskeltä. Lisäksi keksitkö miten mato alkaa liikkumaan oikealle pelin alussa?
     </p>
-    <p>
-        <strong>Tehtävä:</strong> Mato lähtee liikkelle vähäsen hassusta paikasta. Saatko madon lähtemään liikkumaan pelialueen keskeltä. Lisäksi keksitkö miten mato alkaa liikkumaan oikealle pelin alussa?
+
+    <p class="hint">
+      <strong>Vihje</strong>: sallitut suunnat ovat: 'oikealle', 'vasemmalle', 'ylös' ja 'alas'.
     </p>
 
     <div data-type='tmc-exercise' data-id='2796'></div>
 
     <p>
-        Alla olevassa tehtäväpohjassa on pieni ongelma käyettävyyden kannalta. Pystytkö löytämään sen? Kun olet löytänyt ongelman, kokeile muuttaa <code>this.game.time.slowMotion</code>:in arvoa. Saatko pelistä toimivan?
+      Alla olevassa tehtäväpohjassa on pieni ongelma käyettävyyden kannalta. Pystytkö löytämään sen? Kun olet löytänyt ongelman, kokeile muuttaa <code>this.game.time.slowMotion</code>:in arvoa. Saatko pelistä toimivan?
     </p>
 
     <div data-type='tmc-exercise' data-id='2797'></div>
@@ -39,11 +52,15 @@ exercise_page: true
   <div class="chapter">
     <h2>Liikkuminen</h2>
     <p>
-        Toteutetaan seuraavaksi madon liikkumisen. Haluamme saada madon muuttamaan suuntaansa, kun pelaaja painaa nuolinäppäintä. Emme kuitenkaan halua mahdollistaa madolle mahdottomia käännöksiä, esim. jos mato on menossa oikealle, emme voi lähteä menemään vasemmalle.
+      Toteutetaan seuraavaksi madon liikkumisen. Haluamme saada madon muuttamaan suuntaansa, kun pelaaja painaa nuolinäppäintä. Emme kuitenkaan halua mahdollistaa madolle mahdottomia käännöksiä, esim. jos mato on menossa oikealle, emme voi lähteä menemään vasemmalle.
     </p>
 
     <p>
-        Olemme toteuttaneet suunnan muutoksen metodiin lueSuunta. Alla olevassa tehtävässä voit muuttaa kyseisen metodin sisältöä. Osa suunnanmuutoksista on jo totutettu valmiiksi. Toteuta loput muutokset.
+      Olemme toteuttaneet suunnan muutoksen metodiin lueSuunta. Alla olevassa tehtävässä voit muuttaa kyseisen metodin sisältöä. Osa suunnanmuutoksista on jo totutettu valmiiksi. Toteuta loput muutokset.
+    </p>
+
+    <p class="hint">
+      <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>liikkuminen.js</code>. Muuta muuttujien <code>x</code> ja <code>y</code> arvoa samaan tapaan kuin tehtäväpohjassa olevissa esimerkeissä.
     </p>
 
     <div data-type='tmc-exercise' data-id='2798'></div>
@@ -54,7 +71,7 @@ exercise_page: true
     <h3>Omenan syönti</h3>
 
     <p>
-        Haluasimme tunnistaa, kun mato saa syötyä omenan. Olemme luoneet <code>törmäykset</code>-tiedostoon metodin <code>törmääOmenaan</code>, joka kertoo onko mato törmännyt omenaan. Jos mato on törmännyt omenaan, pelistä poistetaan nykyinen omena, pelin pisteitä kasvatetaan ja luodaan uusi omena.
+      Haluasimme tunnistaa, kun mato saa syötyä omenan. Olemme luoneet <code>törmäykset</code>-tiedostoon metodin <code>törmääOmenaan</code>, joka kertoo onko mato törmännyt omenaan. Jos mato on törmännyt omenaan, pelistä poistetaan nykyinen omena, pelin pisteitä kasvatetaan ja luodaan uusi omena.
     </p>
 
     <p>
@@ -66,24 +83,28 @@ exercise_page: true
       Mato on syönyt omenan, kun madon pään ja omenan sekä x että y-koordinaatit ovat samoja.
     </p>
 
+    <p class="hint">
+      <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Kirjoita muuttujiin <code>xKoordinaatitOvatSamat</code> ja <code>yKoordinaatitOvatSamat</code> tarkistukset ovatko muuttujien <code>madonPää</code> ja <code>omena</code> x- ja y-koordinaatit samat. Muista, että yhtäsuuruden tarkistus onnistuu <code>==</code>-operaatiolla. Koordinaattehin pääsee käsiksi kirjoittamalla <code>muuttuja.x</code> tai <code>muuttuja.y</code>.
+    </p>
+
     <div data-type='tmc-exercise' data-id='2799'></div>
 
     <h3>Seinään törmääminen</h3>
 
     <p>
-        Pelimme toimiin nyt hyvin, mutta haluamme sen myös loppuvan joskus. Toteutetaan seuraavaksi toiminnallisuus, jossa peli loppuu madon törmättyä seinään.
+      Pelimme toimiin nyt hyvin, mutta haluamme sen myös loppuvan joskus. Toteutetaan seuraavaksi toiminnallisuus, jossa peli loppuu madon törmättyä seinään.
     </p>
 
     <p>
-        Tunnistaaksemme seinään törmäyksen meidän täytyy joka kierroksella tarkistaa, onko törmäys tapahtunut. Tarkastus on yksinkertaista tehdä tarkastamalla yrittääkö madon pää mennä pelialueen ulkopuolelle.
+      Tunnistaaksemme seinään törmäyksen meidän täytyy joka kierroksella tarkistaa, onko törmäys tapahtunut. Tarkastus on yksinkertaista tehdä tarkastamalla yrittääkö madon pää mennä pelialueen ulkopuolelle.
     </p>
 
     <p>
-        Törmäykset-tiedostossa olemme toteuttaneet metodin seiniintörmäysen varaalle. Metodi toimii eräänlaisena kysymyksenä: "Onko mato törmäännyt seinään". Jos törmäys on tapahtunut, metodi sanoo joo eli "<code>return true;</code>". Jos törmäystä ei ole tapahtunut, metodi sanoo että ei ole tapahtunut eli: "<code>return false;</code>". Eli käytännössä metodissa olevan if-ehdon toteutuessa todetaan törmäyksen tapahtuneen.
+      Törmäykset-tiedostossa olemme toteuttaneet metodin seiniintörmäysen varaalle. Metodi toimii eräänlaisena kysymyksenä: "Onko mato törmäännyt seinään". Jos törmäys on tapahtunut, metodi sanoo joo eli "<code>return true;</code>". Jos törmäystä ei ole tapahtunut, metodi sanoo että ei ole tapahtunut eli: "<code>return false;</code>". Eli käytännössä metodissa olevan if-ehdon toteutuessa todetaan törmäyksen tapahtuneen.
     </p>
 
     <p>
-        Olemme ottaneet madon pään talteen muuttujaaan <code>madonPää</code>. Saat madon pään nykyisen x-koordinaatin komennolla: <code>madonPää.x</code> ja y-koordinaatin komennolla <code>madonPää.y</code>.
+      Olemme ottaneet madon pään talteen muuttujaaan <code>madonPää</code>. Saat madon pään nykyisen x-koordinaatin komennolla: <code>madonPää.x</code> ja y-koordinaatin komennolla <code>madonPää.y</code>.
     </p>
 
     <p>
@@ -99,7 +120,11 @@ exercise_page: true
     </p>
 
     <p>
-      <strong>Tehtävä:</strong> alla olevassa tehtävä pohjassa on runko seinään törmäksen tunnistamiseksi. Täydennä loput rajojen yli menemiset koodiin. Metodissa oleva ehtolause tarkistaa onko mikään ehtomuuttujista totta, ja kertoo mahdollisesta törmäyksestä sen mukaisesti.
+      <strong>Tehtävä:</strong> alla olevassa tehtäväpohjassa on runko seinään törmäksen tunnistamiseksi. Täydennä loput rajojen yli menemiset koodiin. Metodissa oleva ehtolause tarkistaa onko mikään ehtomuuttujista totta, ja kertoo mahdollisesta törmäyksestä sen mukaisesti.
+    </p>
+
+    <p class="hint">
+      <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Täydennä muuttujat <code>mennytAlhaaltayli</code> ja <code>mennytYlhäältäYli</code> toimimaan samalla tavalla kuin muuttujat <code>mennytYlhäältäYli</code> ja <code>mennytYlhäältäYli</code>.
     </p>
 
     <div data-type='tmc-exercise' data-id='2800'></div>
@@ -111,36 +136,39 @@ exercise_page: true
     </p>
 
     <p>
-      Toistolauseet pelastavat meidät hankalasta tilanteesta. Saamme kaikki muut madon osat taulukkoon paitsi pään koodilla: <code>var madonOsat = mato.slice(1)</code>. Voimme tehdä tarkistuksen jokaisessa taulukossa olevalla madon osalla <code>forEach</code>-toistorakenteella.
+      Toistolauseet pelastavat meidät hankalasta tilanteesta. Voimme tehdä tarkistuksen jokaisessa taulukossa olevalla madon osalla viime viikolta tutulla <code>while</code>-toistorakenteella. Tässä vaiheessa aloitamme poikkeuksellisesti indeksoinnin ykkösestä, ohittaen madon pään.
     </p>
 
-    <p>
-      <code>
-        <pre>
-          var madonOsat = mato.slice(1);
-          madonOsat.forEach(function(osa) {
-            // Jokainen madon osa käsitellään kerran täällä yksi kerrallaan.
-          });
-        </pre>
-      </code>
-    </p>
+    <pre><code class="javascript">var indeksi = 1;
+  while(true) {
+    var nykyinenMadonOsa = mato[indeksi];
+    // Täällä voimme tehdä tarkistuksia madon osille käyttämällä nykyinenMadonOsa-muuttujaa
+    indeksi = indeksi + 1;
+    if (indeksi >= lista.length) {
+      break;
+    }
+  }</code></pre>
 
-    <p>
-      Koodi käy jokaisen madon osan peräkkäin läpi toistorakenteen sisällä. Tämä on siis ihanteellinen paikka tarkistaa onko madon pää törmännyt johonkin madon osaan. Pääsemme madon osiin toistolauseessa käsiksi <code>osa</code>-muuttujan kautta käsiksi.
-    </p>
+      <p>
+        Koodi käy jokaisen madon osan peräkkäin läpi toistorakenteen sisällä. Tämä on siis ihanteellinen paikka tarkistaa onko madon pää törmännyt johonkin madon osaan. Pääsemme madon osiin toistolauseessa käsiksi <code>osa</code>-muuttujan kautta käsiksi.
+      </p>
 
-    <p>
-      <strong>Tehtävä:</strong> toteuta metodiiin <code>onTörmännytItseensä</code> tarkistus, onko mato törmännyt itseensä.
-    </p>
+      <p>
+        <strong>Tehtävä:</strong> toteuta metodiiin <code>onTörmännytItseensä</code> tarkistus, onko mato törmännyt itseensä.
+      </p>
 
-    <div data-type='tmc-exercise' data-id='2801'></div>
+      <p class="hint">
+        <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Laita muuttujiin xKoordinaatitOvatSamat ja yKoordinaatitOvatSamat tarkistus, onko madonPää:n ja nykyinenMadonOsa:n x- ja y-koordinaatit samat.
+      </p>
+
+      <div data-type='tmc-exercise' data-id='2801'></div>
+    </div>
+    <div class="chapter">
+      <h2>Valmista!</h2>
+      <p>Tässä vaiheessa saamme lopun pelistä helposti tehtyä tehtyä. Tämän todistaminen on jätetty harjoitukseksi lukijalle.</p>
+
+      <div data-type='tmc-exercise' data-id='2714'></div>
+
+      <p>Olemme saaneet matopelin valmiiksi. Hienoa työtä!</p>
+    </div>
   </div>
-  <div class="chapter">
-    <h2>Valmista!</h2>
-    <p>Tässä vaiheessa saamme lopun pelistä helposti tehtyä tehtyä. Tämän todistaminen on jätetty harjoitukseksi lukijalle.</p>
-
-    <div data-type='tmc-exercise' data-id='2714'></div>
-
-    <p>Olemme saaneet matopelin valmiiksi. Hienoa työtä!</p>
-  </div>
-</div>

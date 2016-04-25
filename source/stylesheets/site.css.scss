@@ -103,6 +103,14 @@ p, h1, h2, h3, h4, h5, h6 {
   @extend .narrow;
 }
 
+p.hint {
+  background-color: #D9EDF7;
+  color: #1d70b0;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0.5px solid #BCE8F1;
+}
+
 img.coordinates {
   width: 250px;
   height: 250px;
