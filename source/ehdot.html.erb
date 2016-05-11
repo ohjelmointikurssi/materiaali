@@ -1,0 +1,82 @@
+---
+title: Ehdot
+exercise_page: true
+---
+<h1>Ehdot</h1>
+
+<div class="chapter">
+  <h2>Ehtolauseet: if, else</h2>
+
+  <p>
+    Usein halutaan, että ohjelman sisäinen tila vaikuttaa ohjelman suoritukseen. Voitaisiin esimerkiksi haluta, että ohjelma tulostaa erilaisen tulosteen riippuen jonkin muuttujan arvosta. Esimerkiksi alla oleva ohjelma tulostaa eri tekstin riippuen muuttujan ika arvosta.
+  </p>
+
+  <pre><code class="javascript">var ika = 14;
+if (ika < 18) { // Jos ikä on alle 18, suoritetaan aaltosulkeiden sisällä eli if-lohkossa oleva koodi
+  console.log("Olet alaikäinen!");
+} else { // Muuten suoritetaan else-lohkossa oleva koodi
+  console.log("Olet täysi-ikäinen!");
+}</code></pre>
+
+  <p>
+    Koodin ehdollinen suoritus onnistuu <code>if</code>-avainsanan avulla. If-ehtolauseen rakenne on <code> if ( ehto ) { koodi, joka suoritetaan ehdon ollessa tosi }</code>. Eli if-avainsanan jälkeen laitetaan jonkin ehto, jonka totuutta tarkastellaan ja sen jälkeen kirjoitetaan aaltosulkuihin koodi, joka tulee suorittaa ehdon ollesssa tosi. If-ehtolauseen jälkeen voi halutessaan kirjoittaa perään else-lohkon kuten yllä olevassa esimerkissä. Else-lohko suoritetaan siinä tapauksessa, että ehto ei ole tosi.
+  </p>
+
+  <h3>Ehdot</h3>
+
+  <p>
+    Jotta voimme käyttää edellä esiteltyjä ehtolauseita, meidän täytyy osata kirjoittaa joitain ehtoja niille. Eräs yksinkertainen ehto on yhtäsuuruden vertailu. Se onnistuu merkinnällä <code>==</code>. Ehtolauseen <code>if (muuttuja == toinenMuuttuja ) { koodi }</code> koodi suoritetaan, jos <code>muuttuja</code> ja <code>toinenMuuttuja</code> sisältävät saman arvon.
+  </p>
+
+  <p>
+    Luvuilla voimme yhtäsuuruuden lisäksi tarkastella niiden suuruuksia. Voimme esimerkiksi tarkistaa, onko luku pienempi tai suurempi kuin toinen luku. Suuruuden vertailu onnisttuu operaattoreilla <code><</code>, <code>></code>, <code><=</code> ja <code>>=</code>. Operaattorit <code><</code> ja <code>></code> eivät ota yhtäsuuruutta huomioon kun taas operaattorit <code><=</code> ja <code>>=</code> ottavat.
+  </p>
+
+  <h3>Esimerkkejä ehdoista</h3>
+  <div class="multiple-columns">
+    <div>
+      Seuraavat ehdot ovat totta:
+      <ul>
+        <li>2 < 1</li>
+        <li>2 <= 2</li>
+        <li>7 > 5</li>
+        <li>7 >= 5</li>
+      </ul>
+    </div>
+
+    <div>
+      Seuraavat ehdot eivät ole totta:
+      <ul>
+        <li>3 < 2</li>
+        <li>3 <= 2</li>
+        <li>1 > 2</li>
+        <li>1 >= 2</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Seuraavassa koodinpätkässä ehto on totta, joten vain if-lohkon sisällä oleva koodi suoritetaan:</p>
+
+  <pre><code class="javascript">var luku = 8;
+var toinenLuku = 7;
+if (luku >= toinenLuku) {
+  // If-lohko, joka suoritetaan
+} else {
+  // Else-lohko, jota ei suoriteta
+}</code></pre>
+
+  <p>Seuraavassa koodinpätkässä ehto on epätosi ja vain else:n sisällä oleva koodi suoritetaan:</p>
+
+  <pre><code class="javascript">var luku = 6;
+var toinenLuku = 7;
+if (luku >= toinenLuku) {
+  // If-lohko, jota ei suoriteta
+} else {
+  // Else-lohko, joka suoritetaan
+}</code></pre>
+
+  <p>Tehtävä: Muuta muuttujan a arvoa niin, että tehtävässä oleva ehto on totta. Tulostuksen pitäisi siis olla "Totta".</p>
+
+  <div data-type='tmc-exercise' data-id='2791'></div>
+</div>
+</div>

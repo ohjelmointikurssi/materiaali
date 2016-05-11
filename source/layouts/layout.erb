@@ -18,11 +18,18 @@
   <body class="<%= page_classes %>">
     <nav>
       <%= nav_link_to 'Etusivu', 'index.html' %>
-      <%= nav_link_to 'Sarja 1', 'sarja_1.html' %>
-      <%= nav_link_to 'Sarja 2', 'sarja_2.html' %>
-      <%= nav_link_to 'Sarja 3', 'sarja_3.html' %>
+      <%= nav_link_to 'Muuttujat', 'muuttujat.html' %>
+      <%= nav_link_to 'Listat', 'listat.html' %>
+      <%= nav_link_to 'Funktiot', 'funktiot.html' %>
+      <%= nav_link_to 'Ehdot', 'ehdot.html' %>
+      <%= nav_link_to 'Piirtäminen', 'piirtaminen.html' %>
+      <%= nav_link_to 'Toisto', 'toisto.html' %>
+      <%= nav_link_to 'Matopeli', 'matopeli.html' %>
     </nav>
-    <%= yield %>
+    <div id='container'>
+      <a href="#" class='tmc-exercise-logout' title='Logout'>Logout</a>
+      <%= yield %>
+    </div>
 
     <footer>
       Tämän sisällön ovat tehneet mahdolliseksi <a href="https://www.cs.helsinki.fi/">Helsingin yliopiston Tietojenkäsittelytieteen laitos</a>, <a href="http://100-vuotissaatio.teknologiateollisuus.fi/">Teknologiateollisuuden satavuotissäätiö</a> ja <a href="https://www.cs.helsinki.fi/en/rage/">Agile Education Research-tutkimusryhmä RAGE</a>.

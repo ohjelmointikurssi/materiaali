@@ -1,0 +1,114 @@
+---
+title: Muuttjat ja tulostaminen
+exercise_page: true
+---
+
+<h1>Muuttujat ja tulostaminen</h1>
+
+<div class="chapter">
+  <h2>Tulostaminen</h2>
+
+  <p>
+    Eräs tärkeimmistä ohjelmoinnin perustaidoista on oppia tulostamaan tekstiä näytölle. Javascriptissä tulostus onnistuu komennolla <code>console.log("Tulostettava asia");</code>.
+    Lainausmerkit tulostettavan lauseen ympärillä tarkoittavat, että tulostettava asia on tekstiä.
+  </p>
+
+  <p>
+    Harjoitellaan tulostamista. Alla on tyhjä ohjelman runko. Ohjelmassa oleva rivi <code>// Kirjoita ohjelmasi tähän alle</code> on kommenttirivi, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Lisää kommenttirivin alle komento, joka tulostaa nimesi ja suorita ohjelma. Ohjelman tulostus voi olla vaikka: <code>Essi Esimerkki</code>.
+  </p>
+
+  <div data-type='tmc-exercise' data-id='2779'></div>
+</div>
+<div class="chapter">
+  <h2>Muuttujat</h2>
+  <p>
+    Usein haluamme käyttää tietoa useammassa paikassa. Jotta tämä olisi mahdollista haluamme jonkin tavan säilöä tietoa, jotta siihen pääsee myöhemmin käsiksi. Ohjelmoinnissa voimme ottaa tietoa talteen <i>muuttujiin</i>. Muuttujat toimivat samaan tapaan kuin matematiikassa. Matematiikassa voisi olla esimerkiksi yhtälöt <code>x = 3</code> ja <code>y = x + 2</code>, joissa <code>x</code> ja <code>y</code> olisivat muuttujia. Tällöin tietäisimme, että <code>y = 3 + 2 = 5</code>. Jos taas vaihdettaisiin, että <code>x = 5</code>, tietäisimme että <code>y = 7</code>.
+  </p>
+
+  <p>
+    Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa pelaajan on tarkoitus kerätä alaspäin tippuvia rubiineja. Liikkuminen tapahtuu nuolinäppäimillä. Kokeile peliä painamalla <code>Käynnistä</code>-painiketta.
+  </p>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='2287'></div>
+
+  <p>
+    Kuten huomasit, peli on tällä hetkellä hankalahko, koska rubiinit tippuvat nopeasti ja pallo liikkuu hitaasti. Yritetään tehdä pelistä hieman helpompi.
+  </p>
+
+  <p>
+    Kuten ehkä jo huomasit, peli koostuu useammasta tiedostosta. Tiedostoa voi vaihtaa painamalla tiedoston nimeä. Mene tiedostoon update.js. Kokeile, mitä käy jos vaihdat riveillä 2 ja 3 olevia numeroita 250 ja 500 joiksikin muiksi numeroiksi ja muutoksen jälkeen painat run-painiketta. Helpottuuko peli, jos vaihdat numeroiden arvot päittäin?
+  </p>
+
+  <p>
+    Toisin kuin matematiikassa, ohjelmoinnissa muuttujan arvo voi olla myös jotain muuta kuin lukuja, esimerkiksi merkkijonoja (englanniksi string). Merkkijonot ovat mitä tahansa kirjaimista tai merkeistä koostuvia lauseita tai sanoja. Ohjelmoinnissa muuttujien käyttö on hyödyllistä muun muassa siksi, ettei samaa lukuarvoa tarvitse toistaa ohjelmakoodissa aina kun sitä tarvitaan.
+  </p>
+
+  <p>
+    Ohjelmoinnissa muuttujat pitää luoda eli <i>alustaa</i> (englanniksi initialize) ennen kuin niitä voi käyttää. JavaScriptissä muuttujat alustetaan kirjoittamalla <code>var muuttujanNimi = muuttujanArvo;</code>. Aluksi määritellään, että nyt luodaan uusi muuttuja kirjoittamalla sana 'var' (tulee sanasta variable). Seuraavaksi määritellään muuttujalle nimi. Muuttujan nimessä ei saa olla välilyöntejä, minkä takia muuttujat yleensä nimetään ns. camelCasella. CamelCasessa lauseen ensimmäinen kirjain kirjoitetaan pienellä, minkä jälkeen jokaisen muun sanan ensimmäinen kirjain kirjoitetaan isolla kirjaimella ja muut pienellä. Esimerkiksi lause "ohjelmointi on kivaa" kirjoitettaisiin camelCasessa "ohjelmointiOnKivaa". Yhtäsuuruus-merkillä annetaan muuttujalle arvo, ja itse arvo kirjoitetaan yhtäsuuruus-merkin oikealle puolelle. Jokainen JavaScript-koodirivi pitää vielä lopettaa puolipisteellä. Merkkijonon sisältävän muuttujan voi alustaa kirjoittamalla <code>var merkkijono = "Terve, mitä kuuluu?";</code>. Huomaa, että merkkijono-tyylisiä muuttujia alustaessa pitää käyttää lainausmerkkejä muuttujan arvon ympärillä.
+  </p>
+
+  <h4>Muuttujien harjoittelua</h4>
+  <p>
+    Harjoitellaan seuraavaksi hiukan muuttujien käyttöä. Tässä tehtävässä luodaan aluksi muuttuja <i>etunimi</i>, johon talletetaan merkkijono. Sen jälkeen tulostetaan etunimi näytölle. Tehtäväpohjassa on valmiiksi kirjoitettu muuttujan <i>etunimi</i> tulostus: <code>console.log(etunimi);</code>. Tehtävänäsi on lisätä tiedoston ensimmäiselle riville muuttujan alustus eli luonti. Tässä ja useissa myöhemmissä tehtävistä osa koodista on lukittu ja voit editoida vain vapaita alueita. Lukitun alueen tunnistaa harmaasta taustaväristä, kun taas lukitsemattoman alueen taustaväri on valkoinen.
+  </p>
+  <h4>Odotettu vastaus</h4>
+  <p>
+    Näytölle pitäisi ilmestyä muutujalle annettu arvo, esim. oma etunimesi.
+  </p>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='2288'></div>
+
+  <h4>Laskuri</h4>
+  <p>
+    Tehdään seuraavaksi yksinkertainen laskuri. Tässä tehtävässä luodaan aluksi kaksi muuttujaa <i>a</i> ja <i>b</i>, joihin talletetaan lukuja. Sen jälkeen tulostetaan lukujen summa näytölle. Tehtäväpohjassa on tällä kertaa vain kommentit, jotka kertovat mitä jokaisella rivillä pitäisi tehdä. Kirjoita rivit käyttäen hyödyksi yhteenlasku-esimerkkiä ja edellisen tehtävän muuttujan tulostusta.
+  </p>
+  <h4>Odotettu vastaus</h4>
+  <p>
+    Jos annat luvuille esim. arvot 5 ja 2, pitäisi näytölle tulostua luku 7.
+  </p>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='2289'></div>
+
+  <h4>Muuttujat pelissä</h4>
+
+  <p>
+    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne. Katso tarvittaessa apua ensimmäisestä tehtävästä tai editorin alla olevista vihjeistä.
+  </p>
+
+  <h4>Odotettu vastaus</h4>
+  <p>
+    Peli toimii samalla tavalla kuin ensimmäisessä tehtävässä.
+  </p>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='2290'></div>
+
+  <h4>Virheet</h4>
+  <p>
+    Kumpikin virhe löytyy tiedostosta update.js. Ensimmäinen virhe on, että palkkien tippumisnopeus on väärä. Toinen virhe on, että pallo liikkuu väärään suuntaan nuolinäppäimistä.
+  </p>
+
+  <h3>Muuttujien operaatiot</h3>
+
+  <p>
+    Muuttujilla voidaan tehdä <i>operaatioita</i>. Operaatiot ovat erilaisia toimintoja. Numeroilla ne mahdollistavat esimerkiksi muuttujien yhteenlaskun, vähennyslaskun, kertolaskun ja jakolaskun. Lukujen laskutoimitukset toimivat täysin samalla tavalla kuin matematiikassa. Esimerkiksi:
+  </p>
+  <p>
+    <pre><code class="javascript">console.log(5 + 2); // tulostaa luvun 7
+console.log(5 - 7); // tulostaa luvun -2
+console.log(2 * 6); // tulostaa luvun 12
+console.log(8 / 4); // tulostaa luvun 2</code></pre>
+  </p>
+  <p>
+    Operaattoreilla voidaan myös yhdistää merkkijonoja. Se onnistuu ketjuttamalla halutut merkkijonot <code>+</code>-operattorilla, kuten yhteenlaskussa. Esimerkki:
+  </p>
+  <p>
+    <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?"); // tulostaa "Hei, mitä kuuluu?"</code></pre>
+  </p>
+  <h4>Operaatioden harjoittelua</h4>
+
+  <p>
+    Alla olevassa tehtäväpohjassa on alustettu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tässä tehtävässä tehdään näillä muuttujilla laskutoimituksia. Tee joku laskutoimitus, jonka tulos on <code>30</code>.
+  </p>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='2780'></div>
+</div>
