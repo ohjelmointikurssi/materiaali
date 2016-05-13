@@ -33,19 +33,16 @@ exercise_page: true
     <p>
       Kuten viime viikon piirtotehtävissä, koordinaatisto alkaa pelialueen vasemmasta yläkulmasta. Pelialueella x-koordinaatti voi saada arvoja välillä <code>0..39</code> ja y-koordinaatti voi saada arvoja välillä <code>0..29</code>. Jos esimerkiksi haluaisit lisätä madon osan pelialueen vasempaan yläkulmaan, se onnistuisi komennolla: <code>luoMadonOsa(0, 0)</code>. Madon osan piirtäminen pelialueen oikeaan alakulmaan onnistuu komennolle <code>luoMadonOsa(39, 29)</code>.
     </p>
-    <p>
-      <strong>Tehtävä:</strong> Mato lähtee liikkelle vähäsen hassusta paikasta. Saatko madon lähtemään liikkumaan pelialueen keskeltä. Lisäksi keksitkö miten mato alkaa liikkumaan oikealle pelin alussa?
-    </p>
 
-    <p class="hint">
-      <strong>Vihje</strong>: sallitut suunnat ovat: 'oikealle', 'vasemmalle', 'ylös' ja 'alas'.
-    </p>
+    <% partial 'partials/exercise', locals: { name: 'Madon luonti', additional_content: '<strong>Vihje</strong>: sallitut suunnat ovat: "oikealle", "vasemmalle", "ylös" ja "alas".' } do %>
+      Mato lähtee liikkelle vähäsen hassusta paikasta. Saatko madon lähtemään liikkumaan pelialueen keskeltä. Lisäksi keksitkö miten mato alkaa liikkumaan oikealle pelin alussa?
+    <% end %>
 
     <div data-type='tmc-exercise' data-id='2796'></div>
 
-    <p>
-      Alla olevassa tehtäväpohjassa on pieni ongelma käyettävyyden kannalta. Pystytkö löytämään sen? Kun olet löytänyt ongelman, kokeile muuttaa <code>this.game.time.slowMotion</code>:in arvoa. Saatko pelistä toimivan?
-    </p>
+    <% partial 'partials/exercise', locals: { name: 'Ongelma' } do %>
+      Alla olevassa tehtäväpohjassa on pieni ongelma kätettävyyden kannalta. Pystytkö löytämään sen? Kun olet löytänyt ongelman, kokeile muuttaa <code>this.game.time.slowMotion</code>:in arvoa. Saatko pelistä toimivan?
+    <% end %>
 
     <div data-type='tmc-exercise' data-id='2797'></div>
 
@@ -55,15 +52,15 @@ exercise_page: true
       Jos haluamme matopelin on olevan jotekin järkevä, haluamme rajoittaa sen kokoa. Tehtäviemme mato kasvaa kunnes se on saavuttanut pituuden, joka löytyy muuttujasta: <code>koko</code>. Funktiossa <code>create</code> asetetaan <code>koko</code>-muuttujaan madon alkukoko. Madon alkukoko määrää miten isoksi mato alussa kasvaa.
     </p>
 
-    <p>
-      <strong>Tehtävä</strong>: muuta madon toimintaa niin, että se ei kasva loputtoman pitkäksi alussa. Hyvä aloituskoko on pienenmpi kuin viisi.
-    </p>
+    <% partial 'partials/exercise', locals: { name: 'Madon koko' } do %>
+      Muuta madon toimintaa niin, että se ei kasva loputtoman pitkäksi alussa. Hyvä aloituskoko on pienenmpi kuin viisi.
+    <% end %>
 
     <div data-type='tmc-exercise' data-id='2814'></div>
 
-    <p>
-      <strong>Tehtävä</strong>: Alla olevassa tehtävässä luodaan yhden pituinen mato. Kokeile miltä peli toimii. Haluamme saada madosta isomman. Mato kasvaa itsestään, kun <code>koko</code>-muuttujan arvo kasvaa. Tiedoston <code>create.js</code>:n lopussa on funktio <code>kerranSekunnissa</code>, jonka koodi ajetaan aina kerran sekunnissa. Nosta siellä muuttujan <code>koko</code> arvoa ja katso, mitä tapahtuu.
-    </p>
+    <% partial 'partials/exercise', locals: { name: 'Madon kasvattaminen' } do %>
+      Alla olevassa tehtävässä luodaan yhden pituinen mato. Kokeile miltä peli toimii. Haluamme saada madosta isomman. Mato kasvaa itsestään, kun <code>koko</code>-muuttujan arvo kasvaa. Tiedoston <code>create.js</code>:n lopussa on funktio <code>kerranSekunnissa</code>, jonka koodi ajetaan aina kerran sekunnissa. Nosta siellä muuttujan <code>koko</code> arvoa ja katso, mitä tapahtuu.
+    <% end %>
 
     <div data-type='tmc-exercise' data-id='2815'></div>
   </div>
@@ -73,13 +70,9 @@ exercise_page: true
       Toteutetaan seuraavaksi madon liikkumisen. Haluamme saada madon muuttamaan suuntaansa, kun pelaaja painaa nuolinäppäintä. Emme kuitenkaan halua mahdollistaa madolle mahdottomia käännöksiä, esim. jos mato on menossa oikealle, emme voi lähteä menemään vasemmalle.
     </p>
 
-    <p>
+    <% partial 'partials/exercise', locals: { name: 'Suunnan lukeminen', additional_content: '<strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>liikkuminen.js</code>. Muuta muuttujien <code>x</code> ja <code>y</code> arvoa samaan tapaan kuin tehtäväpohjassa olevissa esimerkeissä.' } do %>
       Olemme toteuttaneet suunnan muutoksen metodiin lueSuunta. Alla olevassa tehtävässä voit muuttaa kyseisen metodin sisältöä. Osa suunnanmuutoksista on jo totutettu valmiiksi. Toteuta loput muutokset.
-    </p>
-
-    <p class="hint">
-      <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>liikkuminen.js</code>. Muuta muuttujien <code>x</code> ja <code>y</code> arvoa samaan tapaan kuin tehtäväpohjassa olevissa esimerkeissä.
-    </p>
+    <% end %>
 
     <div data-type='tmc-exercise' data-id='2798'></div>
   </div>
@@ -101,19 +94,15 @@ exercise_page: true
       Mato on syönyt omenan, kun madon pään ja omenan sekä x että y-koordinaatit ovat samoja.
     </p>
 
-    <p class="hint">
-      <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Kirjoita muuttujiin <code>xKoordinaatitOvatSamat</code> ja <code>yKoordinaatitOvatSamat</code> tarkistukset ovatko muuttujien <code>madonPää</code> ja <code>omena</code> x- ja y-koordinaatit samat. Muista, että yhtäsuuruden tarkistus onnistuu <code>==</code>-operaatiolla. Koordinaattehin pääsee käsiksi kirjoittamalla <code>muuttuja.x</code> tai <code>muuttuja.y</code>.
-    </p>
+    <% partial 'partials/exercise', locals: { name: 'Omenan syöminen', additional_content: '<strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Kirjoita muuttujiin <code>xKoordinaatitOvatSamat</code> ja <code>yKoordinaatitOvatSamat</code> tarkistukset ovatko muuttujien <code>madonPää</code> ja <code>omena</code> x- ja y-koordinaatit samat. Muista, että yhtäsuuruden tarkistus onnistuu <code>==</code>-operaatiolla. Koordinaattehin pääsee käsiksi kirjoittamalla <code>muuttuja.x</code> tai <code>muuttuja.y</code>.' } do %>
+      Toteuta omenan syöminen.
+    <% end %>
 
     <div data-type='tmc-exercise' data-id='2799'></div>
 
-    <p>
-      <strong>Tehtävä</strong>: Funktio <code>uusiOmena()</code> luo uuden omenan ja asettaa sen muuttujaan <code>omena</code>. Alla olevassa tehtäväpohjassa luodaan pelin alussa yksi uusi omena. Kokeile lisätä useita uusia omenoita. Mikä ei toimi? Miksi näin käy? Millä tämän voisi korjata? (Ei tarvitse tehdä.)
-    </p>
-
-    <p class="hint">
-      <strong>Vihje</strong>: Miten teit omenan syönnin tarkistuksen edellisessä tehtävässä?
-    </p>
+    <% partial 'partials/exercise', locals: { name: 'Paljon omenoita', additional_content: '<strong>Vihje</strong>: Miten teit omenan syönnin tarkistuksen edellisessä tehtävässä?' } do %>
+      Funktio <code>uusiOmena()</code> luo uuden omenan ja asettaa sen muuttujaan <code>omena</code>. Alla olevassa tehtäväpohjassa luodaan pelin alussa yksi uusi omena. Kokeile lisätä useita uusia omenoita. Mikä ei toimi? Miksi näin käy? Millä tämän voisi korjata? (Ei tarvitse tehdä.)
+    <% end %>
 
     <div data-type='tmc-exercise' data-id='2816'></div>
 
@@ -147,13 +136,9 @@ exercise_page: true
       Vastaavasti jos haluamme tarkistaa onko mato mennyt vasemmasta reunasta yli, huomaamme että haluamme tässäkin tarkastella x-akselin arvoa. Koska pelin vasen reuna alkaa nollasta ja vasemmalle mentäessä x-koordinaatin arvot pienenevät, haluamme tarkastella onko x-akselin arvo päässyt pienemmäksi kuin 0. Koodina tämä onnistuisi lausekkeella: <code>var onMennytVasemmaltaYli = madonPää.x < 0;</code>
     </p>
 
-    <p>
-      <strong>Tehtävä:</strong> alla olevassa tehtäväpohjassa on runko seinään törmäksen tunnistamiseksi. Täydennä loput rajojen yli menemiset koodiin. Metodissa oleva ehtolause tarkistaa onko mikään ehtomuuttujista totta, ja kertoo mahdollisesta törmäyksestä sen mukaisesti.
-    </p>
-
-    <p class="hint">
-      <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Täydennä muuttujat <code>mennytAlhaaltayli</code> ja <code>mennytYlhäältäYli</code> toimimaan samalla tavalla kuin muuttujat <code>mennytYlhäältäYli</code> ja <code>mennytYlhäältäYli</code>.
-    </p>
+    <% partial 'partials/exercise', locals: { name: 'Seinään törmääminen', additional_content: '<strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Täydennä muuttujat <code>mennytAlhaaltayli</code> ja <code>mennytYlhäältäYli</code> toimimaan samalla tavalla kuin muuttujat <code>mennytYlhäältäYli</code> ja <code>mennytYlhäältäYli</code>.' } do %>
+      Alla olevassa tehtäväpohjassa on runko seinään törmäksen tunnistamiseksi. Täydennä loput rajojen yli menemiset koodiin. Metodissa oleva ehtolause tarkistaa onko mikään ehtomuuttujista totta, ja kertoo mahdollisesta törmäyksestä sen mukaisesti.
+    <% end %>
 
     <div data-type='tmc-exercise' data-id='2800'></div>
 
@@ -181,13 +166,9 @@ exercise_page: true
         Koodi käy jokaisen madon osan peräkkäin läpi toistorakenteen sisällä. Tämä on siis ihanteellinen paikka tarkistaa onko madon pää törmännyt johonkin madon osaan. Pääsemme madon osiin toistolauseessa käsiksi <code>osa</code>-muuttujan kautta käsiksi.
       </p>
 
-      <p>
-        <strong>Tehtävä:</strong> toteuta metodiiin <code>onTörmännytItseensä</code> tarkistus, onko mato törmännyt itseensä.
-      </p>
-
-      <p class="hint">
-        <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Laita muuttujiin xKoordinaatitOvatSamat ja yKoordinaatitOvatSamat tarkistus, onko madonPää:n ja nykyinenMadonOsa:n x- ja y-koordinaatit samat.
-      </p>
+      <% partial 'partials/exercise', locals: { name: 'Itseensä törmääminen', additional_content: '<strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Laita muuttujiin xKoordinaatitOvatSamat ja yKoordinaatitOvatSamat tarkistus, onko madonPää:n ja nykyinenMadonOsa:n x- ja y-koordinaatit samat.' } do %>
+        Toteuta metodiiin <code>onTörmännytItseensä</code> tarkistus, onko mato törmännyt itseensä.
+      <% end %>
 
       <div data-type='tmc-exercise' data-id='2801'></div>
     </div>

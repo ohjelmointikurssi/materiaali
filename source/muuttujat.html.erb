@@ -1,5 +1,5 @@
 ---
-title: Muuttjat ja tulostaminen
+title: Muuttujat ja tulostaminen
 exercise_page: true
 ---
 
@@ -13,9 +13,9 @@ exercise_page: true
     Lainausmerkit tulostettavan lauseen ympärillä tarkoittavat, että tulostettava asia on tekstiä.
   </p>
 
-  <p>
+  <% partial 'partials/exercise', locals: { name: 'Nimen tulostaminen' } do %>
     Harjoitellaan tulostamista. Alla on tyhjä ohjelman runko. Ohjelmassa oleva rivi <code>// Kirjoita ohjelmasi tähän alle</code> on kommenttirivi, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Lisää kommenttirivin alle komento, joka tulostaa nimesi ja suorita ohjelma. Ohjelman tulostus voi olla vaikka: <code>Essi Esimerkki</code>.
-  </p>
+  <% end %>
 
   <div data-type='tmc-exercise' data-id='2779'></div>
 </div>
@@ -47,38 +47,21 @@ exercise_page: true
     Ohjelmoinnissa muuttujat pitää luoda eli <i>alustaa</i> (englanniksi initialize) ennen kuin niitä voi käyttää. JavaScriptissä muuttujat alustetaan kirjoittamalla <code>var muuttujanNimi = muuttujanArvo;</code>. Aluksi määritellään, että nyt luodaan uusi muuttuja kirjoittamalla sana 'var' (tulee sanasta variable). Seuraavaksi määritellään muuttujalle nimi. Muuttujan nimessä ei saa olla välilyöntejä, minkä takia muuttujat yleensä nimetään ns. camelCasella. CamelCasessa lauseen ensimmäinen kirjain kirjoitetaan pienellä, minkä jälkeen jokaisen muun sanan ensimmäinen kirjain kirjoitetaan isolla kirjaimella ja muut pienellä. Esimerkiksi lause "ohjelmointi on kivaa" kirjoitettaisiin camelCasessa "ohjelmointiOnKivaa". Yhtäsuuruus-merkillä annetaan muuttujalle arvo, ja itse arvo kirjoitetaan yhtäsuuruus-merkin oikealle puolelle. Jokainen JavaScript-koodirivi pitää vielä lopettaa puolipisteellä. Merkkijonon sisältävän muuttujan voi alustaa kirjoittamalla <code>var merkkijono = "Terve, mitä kuuluu?";</code>. Huomaa, että merkkijono-tyylisiä muuttujia alustaessa pitää käyttää lainausmerkkejä muuttujan arvon ympärillä.
   </p>
 
-  <h4>Muuttujien harjoittelua</h4>
-  <p>
+  <% partial 'partials/exercise', locals: { name: 'Muuttujien harjoittelua', additional_content: '<strong>Odotettu vastaus:</strong> Näytölle pitäisi ilmestyä muutujalle annettu arvo, esim. oma etunimesi.' } do %>
     Harjoitellaan seuraavaksi hiukan muuttujien käyttöä. Tässä tehtävässä luodaan aluksi muuttuja <i>etunimi</i>, johon talletetaan merkkijono. Sen jälkeen tulostetaan etunimi näytölle. Tehtäväpohjassa on valmiiksi kirjoitettu muuttujan <i>etunimi</i> tulostus: <code>console.log(etunimi);</code>. Tehtävänäsi on lisätä tiedoston ensimmäiselle riville muuttujan alustus eli luonti. Tässä ja useissa myöhemmissä tehtävistä osa koodista on lukittu ja voit editoida vain vapaita alueita. Lukitun alueen tunnistaa harmaasta taustaväristä, kun taas lukitsemattoman alueen taustaväri on valkoinen.
-  </p>
-  <h4>Odotettu vastaus</h4>
-  <p>
-    Näytölle pitäisi ilmestyä muutujalle annettu arvo, esim. oma etunimesi.
-  </p>
+  <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2288'></div>
 
-  <h4>Laskuri</h4>
-  <p>
+  <% partial 'partials/exercise', locals: { name: 'Laskuri', additional_content: '<strong>Odotettu vastaus: </strong> Jos annat luvuille esim. arvot 5 ja 2, pitäisi näytölle tulostua luku 7.' } do %>
     Tehdään seuraavaksi yksinkertainen laskuri. Tässä tehtävässä luodaan aluksi kaksi muuttujaa <i>a</i> ja <i>b</i>, joihin talletetaan lukuja. Sen jälkeen tulostetaan lukujen summa näytölle. Tehtäväpohjassa on tällä kertaa vain kommentit, jotka kertovat mitä jokaisella rivillä pitäisi tehdä. Kirjoita rivit käyttäen hyödyksi yhteenlasku-esimerkkiä ja edellisen tehtävän muuttujan tulostusta.
-  </p>
-  <h4>Odotettu vastaus</h4>
-  <p>
-    Jos annat luvuille esim. arvot 5 ja 2, pitäisi näytölle tulostua luku 7.
-  </p>
+  <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2289'></div>
 
-  <h4>Muuttujat pelissä</h4>
-
-  <p>
+  <% partial 'partials/exercise', locals: { name: 'Muuttujat pelissä', additional_content: '<strong>Odotettu vastaus: </strong> Peli toimii samalla tavalla kuin ensimmäisessä tehtävässä.' } do %>
     Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne. Katso tarvittaessa apua ensimmäisestä tehtävästä tai editorin alla olevista vihjeistä.
-  </p>
-
-  <h4>Odotettu vastaus</h4>
-  <p>
-    Peli toimii samalla tavalla kuin ensimmäisessä tehtävässä.
-  </p>
+  <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2290'></div>
 
@@ -104,11 +87,10 @@ console.log(8 / 4); // tulostaa luvun 2</code></pre>
   <p>
     <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?"); // tulostaa "Hei, mitä kuuluu?"</code></pre>
   </p>
-  <h4>Operaatioden harjoittelua</h4>
 
-  <p>
+  <% partial 'partials/exercise', locals: { name: 'Operaatioden harjoittelua' } do %>
     Alla olevassa tehtäväpohjassa on alustettu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tässä tehtävässä tehdään näillä muuttujilla laskutoimituksia. Tee joku laskutoimitus, jonka tulos on <code>30</code>.
-  </p>
+  <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2780'></div>
 </div>

@@ -30,14 +30,15 @@ exercise_page: true
     Funktiolla voi näppärästi vähentää ylimääräistä kirjoittamista. Jokaista määritettyä funktiota voidaan kutsua niin monta kertaa kuin haluamme. Jos esimerkikis kutsimme <code>tervehdi</code>-funktiota kaksi kertaa, tulostuu "Terve!" myös kahdesti.
   </p>
 
-  <p>
+  <% partial 'partials/exercise', locals: { name: 'Kutsutaan monesti' } do %>
     Tehtävä: Kokeillaan kutsua funktiota monta kertaa. Alla olevassa tehtävässä on määritetty ja kutsuttu funktiota <i>kerran</i>. Muuta ohjelmaa siten, että funktiota kutsutaan <i>viisi</i> kertaa.
-  </p>
+  <% end %>
 
   <div data-type='tmc-exercise' data-id='2826'></div>
 
-  <p>
+  <% partial 'partials/exercise', locals: { name: 'Funktion kutsuminen' } do %>
     Tehtävä: Alla on määritelty funktio. Kutsu sitä.
-  </p>
+  <% end %>
+
   <div data-type='tmc-exercise' data-id='2792'></div>
 </div>

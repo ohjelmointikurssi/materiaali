@@ -1,0 +1,16 @@
+<div class="exercise-description">
+  <div class="exercise-description-header">
+    Tehtävä:<div><strong><%= name %></strong></div>
+  </div>
+  <div class="exercise-description-content <% if defined? image %>multiple-columns<% end %>">
+      <% if defined? image %>
+        <%= image_tag image %>
+      <% end %>
+      <div><%= yield %></div>
+  </div>
+  <% if defined? additional_content %>
+    <div class="exercise-description-additional-information">
+      <%= additional_content %>
+    </div>
+  <% end %>
+</div>

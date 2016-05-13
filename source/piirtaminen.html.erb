@@ -7,7 +7,7 @@ exercise_page: true
 <h2>Koordinaatisto</h2>
 <div class="chapter">
 
-  <div class="multiple-columns">
+  <div class="multiple-columns narrow">
     <div>
       <p>
         Ohjelmoinnissa voidaan joutua piirtämään kuvioita näytölle. Kuvioiden piirto hoituu usein käyttämällä matematiikasta tuttua koordinaatistoa.
@@ -20,158 +20,43 @@ exercise_page: true
   </div>
 
   <h3>Pisteiden asettelu koordinaatistoon</h3>
-  <div class="multiple-columns">
-    <%= image_tag './images/naama.png' %>
-    <p>
-      <strong>Tehtävä</strong>: Tehtäväpohjassa on olemassa funktio <code>luoPala(x, y)</code>, joka sijoittaa palan pelialueelle annettuihin koordinaatteihin. Esimerkiksi kutsu <code>luoPala(5, 2)</code> luo uuden palan koordinaatteihin <code>(5, 2)</code>. Kutsu funktiota <code>luoPala()</code> monta kertaa niin, että pelialueelle piirtyy vierellä oleva kuvio.
-    </p>
-  </div>
+
+  <% partial 'partials/exercise', locals: { name: 'Pisteiden asettelu koordinaatistoon', image: './images/naama.png' } do %>
+    Tehtäväpohjassa on olemassa funktio <code>luoPala(x, y)</code>, joka sijoittaa palan pelialueelle annettuihin koordinaatteihin. Esimerkiksi kutsu <code>luoPala(5, 2)</code> luo uuden palan koordinaatteihin <code>(5, 2)</code>. Kutsu funktiota <code>luoPala()</code> monta kertaa niin, että pelialueelle piirtyy vierellä oleva kuvio.
+  <% end %>
 
 <div data-type='tmc-exercise' data-id='2813'></div>
 
 </div>
 
-<h2>Piirtäminen</h2>
-<div class="chapter">
-
-  <h3>Piirtäminen näppäimistöllä</h3>
-
-  <p>
-    Tällä viikolla tehtävät keskittyvät piirtämiseen. Harjoitellaan aluksi piirtämistä nuolinäppäinten avulla.
-  </p>
-
-  <h3>Nuolinäppäimillä piirto</h3>
-  <p>
-    <strong>Tehtävä</strong>: Kokeile piirtää tässä tehtävässä jotakin nuolinäppäimillä
-  </p>
-  <div data-type='tmc-exercise' data-id='2803'></div>
-</div>
-
 <h2>Liikkuminen</h2>
 <div class="chapter">
   <p>
-    Edellisessä tehtävässä käyttäjä joutuu itse kertomaan ohjelmalle, mihin ohjelman pitää piirtää seuraavaksi. Eräs ohjelmoinnin perusideoista on automatisoida asioiden tekemistä. Tietokoneelle halutaan antaa komentoja ilman, että ihmisen pitää erikseen kertoa jokainen komento.
+    Olisi kiva, jos voisimme piirtää asiota.
   </p>
 
-  <p>
-    Katsomalla edellisen tehtävän koodia tiedostossa <code>update.js</code> huomataan, että nuolinäppäinten painaminen kutsui ohjelmassa valmiiksi määriteltyä funktiota <code>liiku</code>. Seuraavissa tehtävissä päästään antamaan komentoja nuolinäppäinten sijaan ohjelmallisesti eli kutsumalla funktioita.
-  </p>
-
-  <h3>Piirtäminen ohjelmallisesti</h3>
-  <p>
-    <strong>Tehtävä</strong>: Kokeile antaa ohjelmalle komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code> ja piirrä niiden avulla kuvioita piirtoalustalle. Voit kirjoittaa komennot funktion <code>lueKomennot()</code> sisälle.
-  </p>
+  <% partial 'partials/exercise', locals: { name: 'Piirtäminen ohjelmallisesti'} do %>
+    Kokeile antaa ohjelmalle komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code> ja piirrä niiden avulla kuvioita piirtoalustalle. Voit kirjoittaa komennot funktion <code>lueKomennot()</code> sisälle.
+  <% end %>
 
   <div data-type='tmc-exercise' data-id='2804'></div>
 
-  <h3>Neliön piirtäminen</h3>
-  <div class="multiple-columns">
-    <%= image_tag './images/nelio.png' %>
-    <p>
-      <strong>Tehtävä</strong>: Piirrä kuvassa olevaa esimerkkiä vastaava kuvio käyttämällä edellisen tehtävän komentoja.
-    </p>
-  </div>
+  <% partial 'partials/exercise', locals: { name: 'Neliön piirtäminen', image: './images/nelio.png'} do %>
+    <strong>Tehtävä</strong>: Piirrä kuvassa olevaa esimerkkiä vastaava kuvio käyttämällä edellisen tehtävän komentoja.
+  <% end %>
 
   <div data-type='tmc-exercise' data-id='2805'></div>
 
-  <h3>Portaiden piirtäminen</h3>
-  <div class="multiple-columns">
-    <%= image_tag './images/portaat.png' %>
-    <p>
-      <strong>Tehtävä</strong>: Piirrä esimerkkiä vastaava kuva edellisen tehtävän komennoilla.
-    </p>
-  </div>
+  <% partial 'partials/exercise', locals: { name: 'Portaiden piirtäminen', image: './images/portaat.png'} do %>
+    Piirrä esimerkkiä vastaava kuva edellisen tehtävän komennoilla.
+  <% end %>
 
   <div data-type='tmc-exercise' data-id='2806'></div>
 
-  <h3>Muurin piirtäminen</h3>
-  <div class="multiple-columns">
-    <%= image_tag './images/muuri.png' %>
-    <p>
-      <strong>Tehtävä</strong>: Piirrä esimerkkiä vastaava kuva edellisen tehtävän komennoilla.
-    </p>
-  </div>
+  <% partial 'partials/exercise', locals: { name: 'Muurin piirtäminen', image: './images/muuri.png'} do %>
+    Piirrä esimerkkiä vastaava kuva edellisen tehtävän komennoilla.
+  <% end %>
 
   <div data-type='tmc-exercise' data-id='2807'></div>
 
 </div>
-
-<h2>Toistolauseet</h2>
-<div class="chapter">
-  <p>
-    Monessa edellisistä piirtotehtävistä tuli väistämättä paljon toistuvaa koodia. Esimerkiksi portaikon piirtämisessä koodi näytti luultavasti suunnilleen tältä:
-  </p>
-
-  <p>
-    <pre><code class="javascript">ylos();
-ylos();
-oikealle();
-oikealle();
-ylos();
-ylos();
-oikealle();
-oikealle();
-ylos();
-ylos();
-oikealle();
-oikealle();
-ylos();
-ylos();
-oikealle();
-oikealle();</code></pre>
-    </p>
-
-    <p>
-      Koodissa on siis 4 riviä jokaista porrasta kohti. Jos portaikossa olisi 100 porrasta, koodin pituus olisi jo 400 riviä! Ohjelmoinnissa on kuitenkin keinoja välttää toistuvaa koodia. Opetellaan seuraavaksi toistolause, jota kutsutaan while-silmukaksi.
-    </p>
-
-    <h3>While-silmukka</h3>
-    <p>
-      While-silmukka toimii hiukan samalla tavalla kuin ensimmäisessä tehtäväsarjassa harjoitellut ehtolauseet. While-silmukka määritellään kirjoittamalla <code>while(ehto) { // suoritettava koodi niin kauan, kun ehto on voimassa }</code> Kuten if-lauseessa, myös while-loopissa pitää aina olla ehto. Ehto tarkistetaan jokaisen koodin suorituksen jälkeen.
-    </p>
-    <p>
-      Alla on esimerkki while-silmukasta:
-    </p>
-    <p>
-      <pre><code class="javascript">while(true) {
-console.log("Tervehdys!");
-}</code></pre>
-    </p>
-
-    <p>
-      Yllä oleva koodi tulostaisi loputtomasti lausetta "Tervehdys!". Loputtomuus johtuu siitä, että ehto <code>true</code> on aina voimassa. Selaimessa ikuinen silmukka ei toimi, vaan jäädyttää välilehden. Voit testata tätä tulevissa tehtävissä, jos uskallat. Ongelman voi korjata sulkemalla välilehden ja avaamalla materiaalin uudessa välilehdessä. Huom! Menetät tehdyn työn, jos joudut sulkemaan välilehden.
-    </p>
-
-    <h3>Indeksi-muuttuja</h3>
-    <p>
-      Jotta while-silmukan suoritus loppuisi joskus, käytetään usein ns. indeksi-muuttujaa. Tämän muuttujan tarkoituksena on tallentaa nykyisen kierroksen numero ja lopettaa while-silmukan suoritus, kun kierrosluku on tarpeeksi suuri. Indeksi-muuttujan arvoa pitää muistaa kasvattaa aina while-silmukan sisällä, jotta sen arvo kasvaa. While-silmukan loppuun voidaan lisätä if-lause, jossa tarkistetaan, pitääkö silmukan suoritus lopettaa. Silmukan suorituksen voi lopettaa <code>break</code> -komennolla. Alla esimerkki indeksi-muuttujan käytöstä while-silmukan kanssa:
-    </p>
-    <p>
-      <pre><code class="javascript">var indeksi = 1;
-while(true) {
-console.log("Tervehdys!");  // Tulostetaan tervehdys
-indeksi = indeksi + 1;      // Lisätään indeksin arvoa
-if (indeksi > 50) {         // Tarkistetaan, pitäisikö silmukan suoritus lopetetaan
-  break;                    // Lopetetaan silmukan suoritus, jos indeksi oli tarpeeksi suuri
-}
-}</code></pre>
-      </p>
-      <p>
-        Yllä oleva koodi tulostaisi lauseen "Tervehdys!" 50 kertaa.
-      </p>
-
-      <h3>Pitkät portaat</h3>
-
-      <div class="multiple-columns">
-        <%= image_tag './images/pitkat_portaat.png' %>
-        <p>
-          <strong>Tehtävä</strong>: Piirrä esimerkkiä vastaava kuva käyttäen <code>while</code>-silmukkaa ja tuttuja komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code> niin, että portaita tulee yhteensä <code>50</code> kappaletta. Muista käyttää <code>break</code>-komentoa lopettamaan silmukan suoritus.
-        </p>
-      </div>
-      <div data-type='tmc-exercise' data-id='2808'></div>
-
-      <h3>Vapaa piirtäminen silmukassa</h3>
-      <p>
-        <strong>Tehtävä</strong>: Voit tässä tehtävässä vapaasti testata, mitä tapahtuu, jos laitat komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code> silmukan sisään eri määriä ja eri järjestyksessä.
-      </p>
-      <div data-type='tmc-exercise' data-id='2812'></div>

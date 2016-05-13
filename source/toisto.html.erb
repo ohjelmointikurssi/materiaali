@@ -4,6 +4,78 @@ exercise_page: true
 ---
 <h1>Toisto</h1>
 
+<h2>Toistolauseet</h2>
+<div class="chapter">
+  <p>
+    Monessa edellisistä piirtotehtävistä tuli väistämättä paljon toistuvaa koodia. Esimerkiksi portaikon piirtämisessä koodi näytti luultavasti suunnilleen tältä:
+  </p>
+
+  <p>
+    <pre><code class="javascript">ylos();
+ylos();
+oikealle();
+oikealle();
+ylos();
+ylos();
+oikealle();
+oikealle();
+ylos();
+ylos();
+oikealle();
+oikealle();
+ylos();
+ylos();
+oikealle();
+oikealle();</code></pre>
+    </p>
+
+    <p>
+      Koodissa on siis 4 riviä jokaista porrasta kohti. Jos portaikossa olisi 100 porrasta, koodin pituus olisi jo 400 riviä! Ohjelmoinnissa on kuitenkin keinoja välttää toistuvaa koodia. Opetellaan seuraavaksi toistolause, jota kutsutaan while-silmukaksi.
+    </p>
+
+    <h3>While-silmukka</h3>
+    <p>
+      While-silmukka toimii hiukan samalla tavalla kuin ensimmäisessä tehtäväsarjassa harjoitellut ehtolauseet. While-silmukka määritellään kirjoittamalla <code>while(ehto) { // suoritettava koodi niin kauan, kun ehto on voimassa }</code> Kuten if-lauseessa, myös while-loopissa pitää aina olla ehto. Ehto tarkistetaan jokaisen koodin suorituksen jälkeen.
+    </p>
+    <p>
+      Alla on esimerkki while-silmukasta:
+    </p>
+    <p>
+      <pre><code class="javascript">while(true) {
+  console.log("Tervehdys!");
+}</code></pre>
+    </p>
+
+    <p>
+      Yllä oleva koodi tulostaisi loputtomasti lausetta "Tervehdys!". Loputtomuus johtuu siitä, että ehto <code>true</code> on aina voimassa. Selaimessa ikuinen silmukka ei toimi, vaan jäädyttää välilehden. Voit testata tätä tulevissa tehtävissä, jos uskallat. Ongelman voi korjata sulkemalla välilehden ja avaamalla materiaalin uudessa välilehdessä. Huom! Menetät tehdyn työn, jos joudut sulkemaan välilehden.
+    </p>
+
+    <h3>Indeksi-muuttuja</h3>
+    <p>
+      Jotta while-silmukan suoritus loppuisi joskus, käytetään usein ns. indeksi-muuttujaa. Tämän muuttujan tarkoituksena on tallentaa nykyisen kierroksen numero ja lopettaa while-silmukan suoritus, kun kierrosluku on tarpeeksi suuri. Indeksi-muuttujan arvoa pitää muistaa kasvattaa aina while-silmukan sisällä, jotta sen arvo kasvaa. While-silmukan loppuun voidaan lisätä if-lause, jossa tarkistetaan, pitääkö silmukan suoritus lopettaa. Silmukan suorituksen voi lopettaa <code>break</code> -komennolla. Alla esimerkki indeksi-muuttujan käytöstä while-silmukan kanssa:
+    </p>
+    <p>
+      <pre><code class="javascript">var indeksi = 1;
+while(true) {
+console.log("Tervehdys!");  // Tulostetaan tervehdys
+  indeksi = indeksi + 1;      // Lisätään indeksin arvoa
+  if (indeksi > 50) {         // Tarkistetaan, pitäisikö silmukan suoritus lopetetaan
+    break;                    // Lopetetaan silmukan suoritus, jos indeksi oli tarpeeksi suuri
+  }
+}</code></pre>
+      </p>
+      <p>
+        Yllä oleva koodi tulostaisi lauseen "Tervehdys!" 50 kertaa.
+      </p>
+
+
+      <% partial 'partials/exercise', locals: { name: 'Pitkät portaat', image: './images/pitkat_portaat.png'} do %>
+        Piirrä esimerkkiä vastaava kuva käyttäen <code>while</code>-silmukkaa ja tuttuja komentoja <code>ylos()</code>, <code>alas()</code>, <code>oikealle()</code> ja <code>vasemmalle()</code> niin, että portaita tulee yhteensä <code>50</code> kappaletta. Muista käyttää <code>break</code>-komentoa lopettamaan silmukan suoritus.
+      <% end %>
+
+      <div data-type='tmc-exercise' data-id='2808'></div>
+
+
 <h2>Listat ja indeksi</h3>
 <p>
   Tehtäväsarjassa 1 tutustuttiin listoihin, niiden luontiin, niiden loppuun tai alkuun lisäämiseen ja lopusta tai alusta poistamiseen.
@@ -31,23 +103,14 @@ while(true) {
   Huomioi yllä olevassa koodissa, että indeksin arvon tarkistuksessa on yhtäsuuruus mukana. Tämä johtuu siitä, että indeksointi alkaa nollasta - jos listan koko on 4, lista[4] viittaisi listan viidenteen alkioon, jota ei ole olemassa.
 </p>
 
-<h3>Listan alkioiden lukumäärän laskeminen</h3>
-<p>
-  <strong>Tehtävä</strong>: Laske listan alkioiden lukumäärä käyttämällä while-silmukkaa ja valmista lukumaara-muuttujaa. Tuloksen pitäisi olla 74.
-</p>
-
-<div data-type='tmc-exercise' data-id='2811'></div>
-
-<h3>Listan alkioiden summan laskeminen</h3>
-<p>
-  <strong>Tehtävä</strong>: Laske listan alkioiden summa käyttämällä while-silmukkaa ja valmista summa-muuttujaa. Tuloksen pitäisi olla 1337.
-</p>
+<% partial 'partials/exercise', locals: { name: 'Listan summa' } do %>
+  Laske listan alkioiden summa käyttämällä while-silmukkaa ja valmista summa-muuttujaa. Tuloksen pitäisi olla 1337.
+<% end %>
 
 <div data-type='tmc-exercise' data-id='2809'></div>
 
-<h3>Listan alkioiden keskiarvon laskeminen</h3>
-<p>
-  <strong>Tehtävä</strong>: Laske listan alkioiden keskiarvo. Keskiarvon laskemisessa on hyötyä edellisistä kahdesta tehtävistä. Keskiarvon kaava on <code>(Alkioiden summa) / (Alkioiden lukumäärä)</code>. Osaatko tehdä tehtävän käyttämällä vain yhtä while-silmukkaa? Tuloksen pitäisi olla noin 18.
-</p>
+<% partial 'partials/exercise', locals: { name: 'Listan keskiarvo' } do %>
+  Laske listan alkioiden keskiarvo. Keskiarvon laskemisessa on hyötyä edellisistä kahdesta tehtävistä. Keskiarvon kaava on <code>(Alkioiden summa) / (Alkioiden lukumäärä)</code>. Osaatko tehdä tehtävän käyttämällä vain yhtä while-silmukkaa? Tuloksen pitäisi olla noin 18.
+<% end %>
 
 <div data-type='tmc-exercise' data-id='2810'></div>

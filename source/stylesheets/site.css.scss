@@ -79,7 +79,6 @@ pre {
 }
 
 .multiple-columns {
-  @extend .narrow;
   display: flex;
   justify-content: space-around;
 
@@ -119,4 +118,34 @@ img.coordinates {
 
 img {
   margin-right: 20px;
+}
+
+$exercise-color: #2980b9;
+$exercise-border-radius: 2px;
+
+.exercise-description {
+  @extend .narrow;
+  background: #fff;
+  border-radius: $exercise-border-radius;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  .exercise-description-content {
+    padding: 10px;
+  }
+
+  .exercise-description-additional-information {
+    padding: 10px;
+    border-top: 1px solid #E0E0E0;
+  }
+
+  .exercise-description-header {
+    border-top-left-radius: $exercise-border-radius;
+    border-top-right-radius: $exercise-border-radius;
+    padding: 10px;
+    background-color: $exercise-color;
+    color: white;
+    strong {
+      font-size: 20px;
+    }
+  }
 }

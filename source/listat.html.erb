@@ -23,10 +23,9 @@ var lista = [a, b, c];</code></pre>
       luo uuden taulukon, jonka sisältö on 1, 3 ja kissa. Voimme merkitä tälläistä listaa merkinnällä <code>[1, 3, "kissa"]</code>.
     </p>
 
-    <h4>Listojen harjoittelua</h4>
-    <p>
+    <% partial 'partials/exercise', locals: { name: 'Listojen harjoittelua' } do %>
       Muuta alla olevaa tehtäväpohjaa siten, että muuttujan <code>lista</code> sisältö on <code>[1, 2, "listat", "ovat", "hauskoja!"]</code>;
-    </p>
+    <% end %>
 
     <div class="code-area" data-type='tmc-exercise' data-id='2781'></div>
 
@@ -44,9 +43,9 @@ var lista = [a, b, c];</code></pre>
 lista.push(7); // Listan sisältö on nyt [3, 7]
 lista.push(4); // Listan sisältö on nyt [3, 7, 4]</code></pre>
 
-      <p>
-        Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan loppuun alkiota niin, että listan sisällöksi tulee 4, 5, 6.
-      </p>
+  <% partial 'partials/exercise', locals: { name: 'Listan loppuun lisääminen' } do %>
+    Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan loppuun alkiota niin, että listan sisällöksi tulee 4, 5, 6.
+  <% end %>
 
       <div data-type='tmc-exercise' data-id='2794'></div>
 
@@ -60,9 +59,10 @@ lista.push(4); // Listan sisältö on nyt [3, 7, 4]</code></pre>
 lista.unshift(5); // Listan sisältö on nyt [5, 1]
 lista.unshift(9); // Listan sisältö on nyt [9, 5, 1]</code></pre>
 
-      <p>
-        Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan alkuun alkiota niin, että listan sisällöksi tulee 2, 3, 4.
-      </p>
+<% partial 'partials/exercise', locals: { name: 'Listan alkuun lisääminen' } do %>
+  Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan alkuun alkiota niin, että listan sisällöksi tulee 2, 3, 4.
+<% end %>
+
 
       <div data-type='tmc-exercise' data-id='2793'></div>
 
@@ -72,7 +72,9 @@ lista.unshift(9); // Listan sisältö on nyt [9, 5, 1]</code></pre>
         Voimme myös haluta poistaa listasta alkiota. Kuten varmaan jo edellisistä tehtävistä arvasitkin, voimme poistaa alkiota joko listan alusta tai listan lopusta. Koodi <code>lista.pop()</code> poistaa elementin listan lopusta ja koodi <code>lista.shift()</code> poistaa listan ensimmäisen alkion.
       </p>
 
-      <p>Tehtävä: Poista listan alusta kaksi elementtiä ja lopusta yksi elementti. Mikä tulee tulokseksi?</p>
+      <% partial 'partials/exercise', locals: { name: 'Listasta poistaminen' } do %>
+        Tehtävä: Poista listan alusta kaksi elementtiä ja lopusta yksi elementti. Mikä tulee tulokseksi?
+      <% end %>
 
       <div data-type='tmc-exercise' data-id='2795'></div>
     </div>
