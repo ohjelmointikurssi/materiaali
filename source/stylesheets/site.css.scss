@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+#container {
+  flex: 1;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 nav {
   height: 50px;
   background-color: #2980b9;
