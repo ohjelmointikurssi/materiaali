@@ -4,27 +4,40 @@ exercise_page: true
 ---
 <h1>Funktiot</h1>
 <div class="chapter">
-  <h2>Funktiot</h2>
+  <h2>Miksi käyttää funktioita?</h2>
 
   <p>
     Yllä olevassa materiaalissa kaikki koodi suoritettiin heti, kun suoritus osuu koodin kohdalle. Haluamme kuitenkin usein siirtää koodin suoritusta tulevaisuuteen johonkin tiettyyn tapahtumaan. Tätä varten on olemassa funktiot. Funktioilla määritellään ohjelmakoodia, joka suoritetaan myöhemmin.
   </p>
 
   <p>
-    Funktio määritellään kirjoittamalla <code>function funktionNimi() { koodi }</code>. Esimerkiksi voitaisiin määritellä funktio, joka tulostaa tervehdyksen.
+    Funktio määritellään kirjoittamalla <code>function funktionNimi() { koodi }</code>. Funktion määritellyssä aaltosulkujen välissä on koodi, joka tallennetaan odottamaan funktion kutsumista.  Voimme esimerkiksi määritellä funktion, joka tulostaa tervehdyksen.
   </p>
     <pre><code class="javascript">function tervehdi() {
   console.log("Terve!");
 }</code></pre>
+</div>
 
-  <h3>Funktion kutsuminen</h3>
-
+<h2>Funktion kutsuminen</h2>
+<div class="chapter">
 
   <p>
-    Kun haluamme suorittaa aikaisemmin määritellyn funktion, joudumme kutsumaan sitä. Kutsuminen onnistuu koodilla: <code>kutsutavanFunktionNimi();</code>. Esimerkiksi yllä olevaa tervehdys-funktiota kutsuttaisiin kirjoittamalla <code>tervehdi();</code>. Funktion kutsuminen suorittaa sen sisällä määritellyn koodin. Esimerkiksi alla oleva koodi tulostaisi "Terve!".
+    Kun haluamme suorittaa jonkin funktion sisällä määriteltyä koodia, joudumme kutsumaan funktiota. Meidän onneksemme funktiot vastaavat omaan nimeensä, jos käytämme tiettyä kutsutapaa. Funktion kutsu onnistuu kirjoittamalla kutsuttavan funktion nimi, jonka perään laitetaan sulut <code>()</code>. Funktion kutsu onnistuu siis tyyliin: <code>kutsuttavanFunktionNimi();</code> Tässä on funktion kutsun perässä vielä puolipiste, koska kutsun jälkeen loppuu rivi.
+  </p>
+  <p>
+    Funktion nimi katsomalla funktion määritelmää. Nimi on <code>function</code>-sanan jälkeinen sana. Esimerkiksi voimme kutsua tervehdys-funktiota kirjoittamalla <code>tervehdi();</code>, koska saimme funktion nimen selville funktion määritelmästä: <code>function <span class="highlight-background">tervehdi</span>()</code>. Funktion kutsuminen suorittaa sen sisällä määritellyn koodin. Esimerkiksi alla oleva koodi tulostaisi "Terve!".
   </p>
 
   <pre><code class="javascript">tervehdi();</code></pre>
+
+
+  <% partial 'partials/exercise', locals: { name: 'Funktion kutsuminen' } do %>
+    Tehtävä: Alla on määritelty funktio. Kutsu sitä.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='2792'></div>
+
+  <h3>Funktion kutsuminen monesti</h3>
 
   <p>
     Funktiolla voi näppärästi vähentää ylimääräistä kirjoittamista. Jokaista määritettyä funktiota voidaan kutsua niin monta kertaa kuin haluamme. Jos esimerkikis kutsimme <code>tervehdi</code>-funktiota kaksi kertaa, tulostuu "Terve!" myös kahdesti.
@@ -35,10 +48,4 @@ exercise_page: true
   <% end %>
 
   <div data-type='tmc-exercise' data-id='2826'></div>
-
-  <% partial 'partials/exercise', locals: { name: 'Funktion kutsuminen' } do %>
-    Tehtävä: Alla on määritelty funktio. Kutsu sitä.
-  <% end %>
-
-  <div data-type='tmc-exercise' data-id='2792'></div>
 </div>

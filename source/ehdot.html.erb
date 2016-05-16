@@ -5,17 +5,15 @@ exercise_page: true
 <h1>Ehdot</h1>
 
 <div class="chapter">
-  <h2>Ehtolauseet: if, else</h2>
+  <h2>If-ehtolause</h2>
 
   <p>
-    Usein halutaan, että ohjelman sisäinen tila vaikuttaa ohjelman suoritukseen. Voitaisiin esimerkiksi haluta, että ohjelma tulostaa erilaisen tulosteen riippuen jonkin muuttujan arvosta. Esimerkiksi alla oleva ohjelma tulostaa eri tekstin riippuen muuttujan ika arvosta.
+    Usein halutaan, että ohjelman sisäinen tila vaikuttaa ohjelman suoritukseen. Voitaisiin esimerkiksi haluta, että ohjelma tulostaa erilaisen tulosteen riippuen jonkin muuttujan arvosta. Esimerkiksi alla oleva ohjelma tulostaa eri tekstin riippuen muuttujan ika arvosta. Jos ikä on alle 18, suoritetaan aaltosulkeiden sisällä eli if-lohkossa oleva koodi.
   </p>
 
   <pre><code class="javascript">var ika = 14;
-if (ika < 18) { // Jos ikä on alle 18, suoritetaan aaltosulkeiden sisällä eli if-lohkossa oleva koodi
+if (ika < 18) {
   console.log("Olet alaikäinen!");
-} else { // Muuten suoritetaan else-lohkossa oleva koodi
-  console.log("Olet täysi-ikäinen!");
 }</code></pre>
 
   <p>
@@ -61,8 +59,6 @@ if (ika < 18) { // Jos ikä on alle 18, suoritetaan aaltosulkeiden sisällä eli
 var toinenLuku = 7;
 if (luku >= toinenLuku) {
   // If-lohko, joka suoritetaan
-} else {
-  // Else-lohko, jota ei suoriteta
 }</code></pre>
 
   <p>Seuraavassa koodinpätkässä ehto on epätosi ja vain else:n sisällä oleva koodi suoritetaan:</p>
@@ -71,14 +67,56 @@ if (luku >= toinenLuku) {
 var toinenLuku = 7;
 if (luku >= toinenLuku) {
   // If-lohko, jota ei suoriteta
-} else {
-  // Else-lohko, joka suoritetaan
 }</code></pre>
 
-<% partial 'partials/exercise', locals: { name: 'Funktion kutsuminen', additional_content: '<strong>Odotettu vastaus</strong>: Ohjelma tulostaa "Totta".' } do %>
+<% partial 'partials/exercise', locals: { name: 'Ehtojen harjoittelua', additional_content: '<strong>Odotettu vastaus</strong>: Ohjelma tulostaa "Totta".' } do %>
   Muuta muuttujan <code>a</code> arvoa niin, että tehtävässä oleva ehto on totta.
 <% end %>
 
   <div data-type='tmc-exercise' data-id='2791'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Oma ehto', additional_content: '<strong>Odotettu vastaus</strong>: Ohjelma tulostaa "Totta".' } do %>
+    Käytä kahta lukua ja tee totta oleva ehto. Kirjoita ehtosi sanan <code>false</code> tilalle.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='2828'></div>
+</div>
+<div class="chapter">
+  <h2>Kun ehto ei ole totta</h2>
+
+  <h3>Vastakkainen ehto</h3>
+
+  <p>
+    Ehtolauseet ovat hyödyllisiä, mutta useita ohjelmia yksinkertaistaisi jos voisimme suorittaa koodia tapauksessa, jossa ehto ei ollut tosi. Yksi tapa tehdä tämä on tehdä päinvastainen ehto ensimmäisen ehdon jälkeen. Esimerkiksi jos ensimmäinen ehto olisi <code>if ( x > 3)</code> ehto <code>if ( x <= 3)</code> suoritetaan aina, kun ensimmäinen ei ole totta.
+  </p>
+
+  <% partial 'partials/exercise', locals: { name: 'Vastakkainen ehto' } do %>
+    Alla olevassa tehtävässä on ehto. Kirjoita toinen ehto sanan <code>false</code> tilalle, joka on totta aina kun ensimmäinen ehto ei ole totta.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='2829'></div>
+
+  <h3>Else</h3>
+
+  <p>
+    Vastakkaisen ehdon kirjoittaminen toimii, mutta niiden kirjoittaminen on työlästä. Helpompaa olisi, jos meillä olisi tapa ilmaista että haluamme suorittaa tiettyä koodia, kun ehto ei ole totta.
+  </p>
+
+  <p>
+    Tälläisiä tilanteita varten on olemassa <code>else</code>-lohko. Se liitetään if-lohkon perään ja suoritetaan kun if-lauseen ehto ei ole totta. Alla oleva esimerkissä suortitettaisiin vain alempi <code>else</code>-lohko ja ohjelma tulostaisi "Olet täysi-ikäinen!".
+  </p>
+
+  <pre><code class="javascript">var ika = 18;
+if (ika < 18) {
+  console.log("Olet alaikäinen!");
+} else {
+  console.log("Olet täysi-ikäinen!");
+}</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: 'Else' } do %>
+    Alla olevassa tehtävässä on ehto. Lisää siihen else-haara ja tulosta siellä jotakin.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='2827'></div>
 </div>
 </div>
