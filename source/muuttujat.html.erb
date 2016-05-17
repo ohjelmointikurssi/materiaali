@@ -29,15 +29,13 @@ exercise_page: true
     Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa pelaajan on tarkoitus kerätä alaspäin tippuvia rubiineja. Liikkuminen tapahtuu nuolinäppäimillä. Kokeile peliä painamalla <code>Käynnistä</code>-painiketta.
   </p>
 
+  <% partial 'partials/exercise', locals: { name: 'Muutujien kokeilemista' } do %>
+    <p>Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa pelaajan on tarkoitus kerätä alaspäin tippuvia rubiineja. Liikkuminen tapahtuu nuolinäppäimillä. Kokeile peliä painamalla Käynnistä-painiketta.</p>
+
+    <p>Kuten huomasit, peli on tällä hetkellä hankalahko, koska rubiinit tippuvat nopeasti ja pallo liikkuu hitaasti. Yritetään tehdä pelistä hieman helpompi. Kokeile, mitä käy jos vaihdat riveillä 1 ja 2 olevia numeroita 250 ja 500 joiksikin muiksi numeroiksi ja muutoksen jälkeen painat run-painiketta. Helpottuuko peli, jos vaihdat numeroiden arvot päittäin?</p>
+  <% end %>
+
   <div class="code-area" data-type='tmc-exercise' data-id='2287'></div>
-
-  <p>
-    Kuten huomasit, peli on tällä hetkellä hankalahko, koska rubiinit tippuvat nopeasti ja pallo liikkuu hitaasti. Yritetään tehdä pelistä hieman helpompi.
-  </p>
-
-  <p>
-    Kuten ehkä jo huomasit, peli koostuu useammasta tiedostosta. Tiedostoa voi vaihtaa painamalla tiedoston nimeä. Mene tiedostoon update.js. Kokeile, mitä käy jos vaihdat riveillä 2 ja 3 olevia numeroita 250 ja 500 joiksikin muiksi numeroiksi ja muutoksen jälkeen painat run-painiketta. Helpottuuko peli, jos vaihdat numeroiden arvot päittäin?
-  </p>
 
   <p>
     Toisin kuin matematiikassa, ohjelmoinnissa muuttujan arvo voi olla myös jotain muuta kuin lukuja, esimerkiksi merkkijonoja (englanniksi string). Merkkijonot ovat mitä tahansa kirjaimista tai merkeistä koostuvia lauseita tai sanoja. Ohjelmoinnissa muuttujien käyttö on hyödyllistä muun muassa siksi, ettei samaa lukuarvoa tarvitse toistaa ohjelmakoodissa aina kun sitä tarvitaan.

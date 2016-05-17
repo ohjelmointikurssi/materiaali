@@ -59,7 +59,7 @@ exercise_page: true
     <div data-type='tmc-exercise' data-id='2814'></div>
 
     <% partial 'partials/exercise', locals: { name: 'Madon kasvattaminen' } do %>
-      Alla olevassa tehtävässä luodaan yhden pituinen mato. Kokeile miltä peli toimii. Haluamme saada madosta isomman. Mato kasvaa itsestään, kun <code>koko</code>-muuttujan arvo kasvaa. Tiedoston <code>create.js</code>:n lopussa on funktio <code>kerranSekunnissa</code>, jonka koodi ajetaan aina kerran sekunnissa. Nosta siellä muuttujan <code>koko</code> arvoa ja katso, mitä tapahtuu.
+      Alla olevassa tehtävässä luodaan yhden pituinen mato. Kokeile miltä peli toimii. Haluamme saada madosta isomman. Mato kasvaa itsestään, kun <code>koko</code>-muuttujan arvo kasvaa. Tehtävässä on funktio <code>kerranSekunnissa</code>, jonka koodi ajetaan aina kerran sekunnissa. Nosta siellä muuttujan <code>koko</code> arvoa ja katso, mitä tapahtuu.
     <% end %>
 
     <div data-type='tmc-exercise' data-id='2815'></div>
@@ -70,7 +70,7 @@ exercise_page: true
       Toteutetaan seuraavaksi madon liikkumisen. Haluamme saada madon muuttamaan suuntaansa, kun pelaaja painaa nuolinäppäintä. Emme kuitenkaan halua mahdollistaa madolle mahdottomia käännöksiä, esim. jos mato on menossa oikealle, emme voi lähteä menemään vasemmalle.
     </p>
 
-    <% partial 'partials/exercise', locals: { name: 'Suunnan lukeminen', additional_content: '<strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>liikkuminen.js</code>. Muuta muuttujien <code>x</code> ja <code>y</code> arvoa samaan tapaan kuin tehtäväpohjassa olevissa esimerkeissä.' } do %>
+    <% partial 'partials/exercise', locals: { name: 'Suunnan lukeminen', additional_content: '<strong>Vihje</strong>: Muuta muuttujien <code>x</code> ja <code>y</code> arvoa samaan tapaan kuin tehtäväpohjassa olevissa esimerkeissä.' } do %>
       Olemme toteuttaneet suunnan muutoksen metodiin lueSuunta. Alla olevassa tehtävässä voit muuttaa kyseisen metodin sisältöä. Osa suunnanmuutoksista on jo totutettu valmiiksi. Toteuta loput muutokset.
     <% end %>
 
@@ -94,7 +94,7 @@ exercise_page: true
       Mato on syönyt omenan, kun madon pään ja omenan sekä x että y-koordinaatit ovat samoja.
     </p>
 
-    <% partial 'partials/exercise', locals: { name: 'Omenan syöminen', additional_content: '<strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Kirjoita muuttujiin <code>xKoordinaatitOvatSamat</code> ja <code>yKoordinaatitOvatSamat</code> tarkistukset ovatko muuttujien <code>madonPää</code> ja <code>omena</code> x- ja y-koordinaatit samat. Muista, että yhtäsuuruden tarkistus onnistuu <code>==</code>-operaatiolla. Koordinaattehin pääsee käsiksi kirjoittamalla <code>muuttuja.x</code> tai <code>muuttuja.y</code>.' } do %>
+    <% partial 'partials/exercise', locals: { name: 'Omenan syöminen', additional_content: '<strong>Vihje</strong>: Kirjoita muuttujiin <code>xKoordinaatitOvatSamat</code> ja <code>yKoordinaatitOvatSamat</code> tarkistukset ovatko muuttujien <code>madonPää</code> ja <code>omena</code> x- ja y-koordinaatit samat. Muista, että yhtäsuuruden tarkistus onnistuu <code>==</code>-operaatiolla. Koordinaattehin pääsee käsiksi kirjoittamalla <code>muuttuja.x</code> tai <code>muuttuja.y</code>.' } do %>
       Toteuta omenan syöminen.
     <% end %>
 
@@ -136,7 +136,7 @@ exercise_page: true
       Vastaavasti jos haluamme tarkistaa onko mato mennyt vasemmasta reunasta yli, huomaamme että haluamme tässäkin tarkastella x-akselin arvoa. Koska pelin vasen reuna alkaa nollasta ja vasemmalle mentäessä x-koordinaatin arvot pienenevät, haluamme tarkastella onko x-akselin arvo päässyt pienemmäksi kuin 0. Koodina tämä onnistuisi lausekkeella: <code>var onMennytVasemmaltaYli = madonPää.x < 0;</code>
     </p>
 
-    <% partial 'partials/exercise', locals: { name: 'Seinään törmääminen', additional_content: '<strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Täydennä muuttujat <code>mennytAlhaaltayli</code> ja <code>mennytYlhäältäYli</code> toimimaan samalla tavalla kuin muuttujat <code>mennytYlhäältäYli</code> ja <code>mennytYlhäältäYli</code>.' } do %>
+    <% partial 'partials/exercise', locals: { name: 'Seinään törmääminen', additional_content: '<strong>Vihje</strong>: Täydennä muuttujat <code>mennytAlhaaltayli</code> ja <code>mennytYlhäältäYli</code> toimimaan samalla tavalla kuin muuttujat <code>mennytYlhäältäYli</code> ja <code>mennytYlhäältäYli</code>.' } do %>
       Alla olevassa tehtäväpohjassa on runko seinään törmäksen tunnistamiseksi. Täydennä loput rajojen yli menemiset koodiin. Metodissa oleva ehtolause tarkistaa onko mikään ehtomuuttujista totta, ja kertoo mahdollisesta törmäyksestä sen mukaisesti.
     <% end %>
 
@@ -166,7 +166,7 @@ exercise_page: true
         Koodi käy jokaisen madon osan peräkkäin läpi toistorakenteen sisällä. Tämä on siis ihanteellinen paikka tarkistaa onko madon pää törmännyt johonkin madon osaan. Pääsemme madon osiin toistolauseessa käsiksi <code>osa</code>-muuttujan kautta käsiksi.
       </p>
 
-      <% partial 'partials/exercise', locals: { name: 'Itseensä törmääminen', additional_content: '<strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Laita muuttujiin xKoordinaatitOvatSamat ja yKoordinaatitOvatSamat tarkistus, onko madonPää:n ja nykyinenMadonOsa:n x- ja y-koordinaatit samat.' } do %>
+      <% partial 'partials/exercise', locals: { name: 'Itseensä törmääminen', additional_content: '<strong>Vihje</strong>: Laita muuttujiin xKoordinaatitOvatSamat ja yKoordinaatitOvatSamat tarkistus, onko madonPää:n ja nykyinenMadonOsa:n x- ja y-koordinaatit samat.' } do %>
         Toteuta metodiiin <code>onTörmännytItseensä</code> tarkistus, onko mato törmännyt itseensä.
       <% end %>
 

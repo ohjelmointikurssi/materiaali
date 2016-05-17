@@ -151,6 +151,14 @@ $exercise-border-radius: 2px;
 
   .exercise-description-content {
     padding: 10px;
+
+    & > div > p:first-of-type {
+      margin-top: 0;
+    }
+
+    & > div > p:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .exercise-description-additional-information {
