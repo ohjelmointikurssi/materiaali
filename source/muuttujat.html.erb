@@ -18,6 +18,34 @@ exercise_page: true
   <% end %>
 
   <div data-type='tmc-exercise' data-id='2779'></div>
+
+  <h3>Useasti tulostaminen</h3>
+
+  <p>
+    Tulostaminen voidaan tehdä niin monta kertaa kuin halutaan. Yksi tulostuskomento tulostaa aina yhden rivin tekstiä. Jos kirjoitamme tulostuskomennon useammin, tulostuu useampia rivejä. Tulostettavat rivit tulostuvat komentojen järjestyksessä ylhäältä alaspäin.
+  </p>
+
+  <p>Esimerkki:</p>
+
+  <pre><code class="javascript">console.log("Ensimmäinen rivi.");
+console.log("Toinen rivi.");
+console.log("Kolmas rivi.");</code></pre>
+
+  <p>Yllä oleva koodi tulostaa:</p>
+
+  <pre><code>Ensimmäinen rivi.
+Toinen rivi.
+Kolmas rivi.</code></pre>
+
+<% partial 'partials/exercise', locals: { name: 'Usean rivin tulostaminen' } do %>
+  Kirjoita ohjelma, jonka tulostus on seuraavanlainen:
+  <pre><code class="javascript">Hei maailma!
+(Ja kaikki sen ihmiset)
+</code></pre>
+<% end %>
+
+  <div data-type='tmc-exercise' data-id='2830'></div>
+
 </div>
 <div class="chapter">
   <h2>Muuttujat</h2>
@@ -29,7 +57,7 @@ exercise_page: true
     Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa pelaajan on tarkoitus kerätä alaspäin tippuvia rubiineja. Liikkuminen tapahtuu nuolinäppäimillä. Kokeile peliä painamalla <code>Käynnistä</code>-painiketta.
   </p>
 
-  <% partial 'partials/exercise', locals: { name: 'Muutujien kokeilemista' } do %>
+  <% partial 'partials/exercise', locals: { name: 'Muuttujien kokeilemista' } do %>
     <p>Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa pelaajan on tarkoitus kerätä alaspäin tippuvia rubiineja. Liikkuminen tapahtuu nuolinäppäimillä. Kokeile peliä painamalla Käynnistä-painiketta.</p>
 
     <p>Kuten huomasit, peli on tällä hetkellä hankalahko, koska rubiinit tippuvat nopeasti ja pallo liikkuu hitaasti. Yritetään tehdä pelistä hieman helpompi. Kokeile, mitä käy jos vaihdat riveillä 1 ja 2 olevia numeroita 250 ja 500 joiksikin muiksi numeroiksi ja muutoksen jälkeen painat run-painiketta. Helpottuuko peli, jos vaihdat numeroiden arvot päittäin?</p>
@@ -63,7 +91,7 @@ exercise_page: true
 
   <div class="code-area" data-type='tmc-exercise' data-id='2290'></div>
 
-  <h3>Muuttujien operaatiot</h3>
+  <h3>Muuttujilla laskeminen</h3>
 
   <p>
     Muuttujilla voidaan tehdä <i>operaatioita</i>. Operaatiot ovat erilaisia toimintoja. Numeroilla ne mahdollistavat esimerkiksi muuttujien yhteenlaskun, vähennyslaskun, kertolaskun ja jakolaskun. Lukujen laskutoimitukset toimivat täysin samalla tavalla kuin matematiikassa. Esimerkiksi:
@@ -74,16 +102,49 @@ console.log(5 - 7); // tulostaa luvun -2
 console.log(2 * 6); // tulostaa luvun 12
 console.log(8 / 4); // tulostaa luvun 2</code></pre>
   </p>
-  <p>
-    Operaattoreilla voidaan myös yhdistää merkkijonoja. Se onnistuu ketjuttamalla halutut merkkijonot <code>+</code>-operattorilla, kuten yhteenlaskussa. Esimerkki:
-  </p>
-  <p>
-    <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?"); // tulostaa "Hei, mitä kuuluu?"</code></pre>
-  </p>
 
   <% partial 'partials/exercise', locals: { name: 'Operaatioden harjoittelua' } do %>
     Alla olevassa tehtäväpohjassa on alustettu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tässä tehtävässä tehdään näillä muuttujilla laskutoimituksia. Tee joku laskutoimitus, jonka tulos on <code>30</code>.
   <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2780'></div>
+
+  <h3>Tekstin yhdistäminen</h3>
+
+  <p>
+    Operaattoreilla voidaan myös yhdistää merkkijonoja. Se onnistuu ketjuttamalla halutut merkkijonot <code>+</code>-operattorilla, kuten yhteenlaskussa. Esimerkiksi kaikki alla olevat koodinpätkät tulostavat: "Hei, mitä kuuluu?".
+  </p>
+
+  <pre><code class="javascript">var hei = "Hei";
+var kuuluu = ", mitä kuuluu";
+var mitaKuuluu = hei + kuuluu;
+console.log(mitaKuuluu);</code></pre>
+
+  <pre><code class="javascript">var hei = "Hei";
+var kuuluu = ", mitä kuuluu";
+console.log(hei + kuuluu);</code></pre>
+
+  <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?");</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: 'Lauseen muodostaminen' } do %>
+    Tehtäväpohjassa on laitettu muuttujiin <code>a</code> ja <code>b</code>. Yhdistele muuttujia <code>+</code>-operaattorilla muuttujaan <code>yhdistetty</code> siten, että tehtävässä tulostuu järkevä lause. Sinun on siis pakko käyttää muuttujia <code>a</code> ja <code>b</code>.
+  <% end %>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='2831'></div>
+
+  <p>
+    Voimme yhdistellä niin monta asiaa kun haluamme yhdellä rivillä. Voimme esimerkiksi yhidistellä 3, 4 tai viisi eri merkkijonoa toisiinsa ketjuttamalla ne peräkkäin. Esimerkiksi:
+  </p>
+
+  <pre><code class="javascript">var paivan = "Tämän päivän ";
+var saa = "sää on ";
+var poutainen = " poutainen "
+var yhdistetty = paivan + saa + "ehkä" + poutainen;
+console.log(yhdistetty);</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: 'Pitkän lauseen muodostaminen' } do %>
+    Tehtäväpohjassa on laitettu muuttujiin sanoja. Yhdistele muuttujia muuttujaan <code>yhdistetty</code> siten, että tehtävässä tulostuu järkevä lause.
+  <% end %>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='2832'></div>
 </div>
