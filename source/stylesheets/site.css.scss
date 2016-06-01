@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+$narrow-width: 1000px;
+
 #container {
   flex: 1;
 }
@@ -44,7 +46,6 @@ nav {
 
 footer {
   width: 100%;
-  margin-top: 50px;
   padding: 20px 0;
   color: #fff;
   background-color: #282626;
@@ -114,7 +115,7 @@ pre {
 }
 
 .narrow {
-  max-width: 1000px;
+  max-width: $narrow-width;
   margin: 20px auto;
 }
 
@@ -123,11 +124,25 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 p.hint {
-  background-color: #D9EDF7;
-  color: #1d70b0;
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  $hint-padding: 20px 10px;
+  padding: $hint-padding;
+  max-width: $narrow-width - 10px * 2;
+  background-color: #7c3ed5;
+  font-size: 17px;
+  color: white;
   border-radius: 10px;
-  border: 0.5px solid #BCE8F1;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-weight: bold;
+
+  i.fa {
+    font-size: 50px;
+    display: block;
+    float: left;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
 }
 
 img.coordinates {

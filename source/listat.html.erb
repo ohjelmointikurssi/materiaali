@@ -8,24 +8,24 @@ exercise_page: true
   <h2>Listat</h2>
 
   <p>
-    Lista on objekti, joka voi sisältää useita useita eri objekteja. Tyhjä lista luodaan merkinnällä <code>var lista = [];</code>. Listan sisällä voi olla muita objekteja. Merkintä <code>var lista = [1, 2, 3, 4];</code> luo uuden listan, jonka sisällä on numerot 1, 2, 3 ja 4. Listoihin voi laittaan kaikentyyppisiä objekteja, kuten vaikka sanoja. Koodi <code>var lista = ["JavaScript", "Ohjelmointi"];</code> luo listan, jonka sisällä on merkkjonot <code>"JavaScript"</code> ja <code>"Ohjelmointi"</code>.
+    Lista on objekti, joka voi sisältää useita useita eri objekteja. Tyhjä lista luodaan merkinnällä <code>var lista = []</code>. Listan sisällä voi olla muita objekteja. Merkintä <code>var lista = [1, 2, 3, 4]</code> luo uuden listan, jonka sisällä on numerot 1, 2, 3 ja 4. Listoihin voi laittaan kaikentyyppisiä objekteja, kuten vaikka sanoja. Koodi <code>var lista = ["JavaScript", "Ohjelmointi"]</code> luo listan, jonka sisällä on merkkjonot <code>"JavaScript"</code> ja <code>"Ohjelmointi"</code>.
   </p>
 
   <p>
     Listaan voi myös laittaa muiden objektien arvoja. Koodi:
   </p>
 
-  <pre><code class="javascript">var a = 1;
-var b = 3;
-var c = "kissa";
-var lista = [a, b, c];</code></pre>
+  <pre><code class="javascript">var a = 1
+var b = 3
+var c = "kissa"
+var lista = [a, b, c]</code></pre>
 
   <p>
     luo uuden taulukon, jonka sisältö on 1, 3 ja kissa. Voimme merkitä tälläistä listaa merkinnällä <code>[1, 3, "kissa"]</code>.
   </p>
 
   <% partial 'partials/exercise', locals: { name: 'Listojen harjoittelua' } do %>
-    Muuta alla olevaa tehtäväpohjaa siten, että muuttujan <code>lista</code> sisältö on <code>[1, 2, "listat", "ovat", "hauskoja!"]</code>;
+    Muuta alla olevaa tehtäväpohjaa siten, että muuttujan <code>lista</code> sisältö on <code>[1, 2, "listat", "ovat", "hauskoja!"]</code>
   <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2781'></div>
@@ -37,12 +37,12 @@ var lista = [a, b, c];</code></pre>
   <h3>Listan loppuun lisääminen</h3>
 
   <p>
-    Olemassa olevan listan loppuun voidaan lisätä uusi alkio komennolla <code>lista.push(lisättävä_alkio);</code>. Jos haluamme vaikka lisätä listaan numeron 3, se onnistuu koodilla: <code>lista.push(3);</code>. Alla olevan koodin suorituksen jälkeen listan sisältö on <code>[3, 7, 4]</code>:
+    Olemassa olevan listan loppuun voidaan lisätä uusi alkio komennolla <code>lista.push(lisättävä_alkio)</code>. Jos haluamme vaikka lisätä listaan numeron 3, se onnistuu koodilla: <code>lista.push(3)</code>. Alla olevan koodin suorituksen jälkeen listan sisältö on <code>[3, 7, 4]</code>:
   </p>
 
-      <pre><code class="javascript">var lista = [3];
-lista.push(7);
-lista.push(4);</code></pre>
+      <pre><code class="javascript">var lista = [3]
+lista.push(7)
+lista.push(4)</code></pre>
 
   <% partial 'partials/exercise', locals: { name: 'Listan loppuun lisääminen' } do %>
     Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan loppuun alkiota niin, että listan sisällöksi tulee 4, 5, 6.
@@ -56,9 +56,9 @@ lista.push(4);</code></pre>
     Nyt pystymme luomaan listoja ja lisäämään niiden loppuun alkiota. Valitettavasti kuitenkin tämä ei aina riitä. Tietyissä tilanteissa voitaisiin haluta lisätä alkioita listan alkuun. Javascriptissä on onneksi ratkaisu tähän ongelmaan. Koodi <code>lista.unshift(lisättävä_alkio)</code> tomii samalla tavalla kuin <code>lista.push</code>, mutta se lisää alkiota listan alkuun eikä loppuun. Alla oleva koodi luo listan, jonka sisältö on [9, 5, 1].
   </p>
 
-    <pre><code class="javascript">var lista = [1];
-lista.unshift(5);
-lista.unshift(9);</code></pre>
+    <pre><code class="javascript">var lista = [1]
+lista.unshift(5)
+lista.unshift(9)</code></pre>
 
   <% partial 'partials/exercise', locals: { name: 'Listan alkuun lisääminen' } do %>
     Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan alkuun alkiota niin, että listan sisällöksi tulee 2, 3, 4.
@@ -89,19 +89,21 @@ lista.unshift(9);</code></pre>
     Ohjelmassa listan pituuden saa kirjoittamalla <code>lista.length</code>, missä lista on haluamamme lista. Tämän arvon voi esimerkiksi tulostaa, käytää laskutoimituksissa ja niin edelleen. Alla olevassa esimerkissä tulostetaan listan pituus joka on 4.
   </p>
 
-  <pre><code class="javascript">var eeppinenLista = [1, 3, 4, 5];
-console.log(eeppinenLista.length);
+  <pre><code class="javascript">var eeppinenLista = [1, 3, 4, 5]
+console.log(eeppinenLista.length)
 </code></pre>
 
-  <% partial 'partials/exercise', locals: { name: 'Listan pituus' } do %>
+  <% partial 'partials/exercise', locals: { name: 'Listan pituus', additional_content: '<strong>Odotettu vastaus</strong>: Ohjelma tulostaa listan pituuden, mikä on <i>yksi</i> numero. Esimerkiksi koko listan tulostaminen ei kelpaa.' } do %>
     Tehtäväpohjassa on valmiina lista. Tulosta sen pituus materiaalissa opetetulla tavalla.
   <% end %>
 
   <div data-type='tmc-exercise' data-id='2843'></div>
 
-  <% partial 'partials/exercise', locals: { name: 'Jalokivikokoelma' } do %>
+  <% partial 'partials/exercise', locals: { name: 'Jalokivikokoelma', additional_content: '<strong>Odotettu vastaus</strong>: Ohjelma tulostaa ostettettavien jalokivien määrän, mikä on <i>yksi</i> numero.'  } do %>
     Joukko kavereita haluaa ostaa jalokivikokoelman. Kaikkien kavereiden nimet ovat talletettu listaan <code>nimet</code>. Jokaiselle listassa olevalle kaverille ostetaan kaikki listassa <code>jalokivet</code> olevat jalokivet. Tulosta kuinka paljon jalokiviä ostetaan yhteensä.
   <% end %>
 
   <div data-type='tmc-exercise' data-id='2842'></div>
 </div>
+
+<p>Valmista? Jatka seuraavaksi <%= link_to 'funktioihin', 'funktiot.html' %>.</p>

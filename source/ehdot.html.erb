@@ -11,9 +11,9 @@ exercise_page: true
     Usein halutaan, että ohjelman sisäinen tila vaikuttaa ohjelman suoritukseen. Voitaisiin esimerkiksi haluta, että ohjelma tulostaa erilaisen tulosteen riippuen jonkin muuttujan arvosta. Esimerkiksi alla oleva ohjelma tulostaa eri tekstin riippuen muuttujan ika arvosta. Jos ikä on alle 18, suoritetaan aaltosulkeiden sisällä eli if-lohkossa oleva koodi.
   </p>
 
-  <pre><code class="javascript">var ika = 14;
+  <pre><code class="javascript">var ika = 14
 if (ika < 18) {
-  console.log("Olet alaikäinen!");
+  console.log("Olet alaikäinen!")
 }</code></pre>
 
   <p>
@@ -55,16 +55,16 @@ if (ika < 18) {
 
   <p>Seuraavassa koodinpätkässä ehto on totta, joten vain if-lohkon sisällä oleva koodi suoritetaan:</p>
 
-  <pre><code class="javascript">var luku = 8;
-var toinenLuku = 7;
+  <pre><code class="javascript">var luku = 8
+var toinenLuku = 7
 if (luku >= toinenLuku) {
   // If-lohko, joka suoritetaan
 }</code></pre>
 
   <p>Seuraavassa koodinpätkässä ehto on epätosi ja vain else:n sisällä oleva koodi suoritetaan:</p>
 
-  <pre><code class="javascript">var luku = 6;
-var toinenLuku = 7;
+  <pre><code class="javascript">var luku = 6
+var toinenLuku = 7
 if (luku >= toinenLuku) {
   // If-lohko, jota ei suoriteta
 }</code></pre>
@@ -106,11 +106,11 @@ if (luku >= toinenLuku) {
     Tälläisiä tilanteita varten on olemassa <code>else</code>-lohko. Se liitetään if-lohkon perään ja suoritetaan kun if-lauseen ehto ei ole totta. Alla oleva esimerkissä suortitettaisiin vain alempi <code>else</code>-lohko ja ohjelma tulostaisi "Olet täysi-ikäinen!".
   </p>
 
-  <pre><code class="javascript">var ika = 18;
+  <pre><code class="javascript">var ika = 18
 if (ika < 18) {
-  console.log("Olet alaikäinen!");
+  console.log("Olet alaikäinen!")
 } else {
-  console.log("Olet täysi-ikäinen!");
+  console.log("Olet täysi-ikäinen!")
 }</code></pre>
 
   <% partial 'partials/exercise', locals: { name: 'Else' } do %>
@@ -119,4 +119,5 @@ if (ika < 18) {
 
   <div data-type='tmc-exercise' data-id='2827'></div>
 </div>
-</div>
+
+<p>Valmista? Jatka seuraavaksi <%= link_to 'piirtämiseen', 'piirtaminen.html' %>.</p>

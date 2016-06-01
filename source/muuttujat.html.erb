@@ -9,12 +9,19 @@ exercise_page: true
   <h2>Tulostaminen</h2>
 
   <p>
-    Eräs tärkeimmistä ohjelmoinnin perustaidoista on oppia tulostamaan tekstiä näytölle. Javascriptissä tulostus onnistuu komennolla <code>console.log("Tulostettava asia");</code>.
-    Lainausmerkit tulostettavan lauseen ympärillä tarkoittavat, että tulostettava asia on tekstiä.
+    Eräs tärkeimmistä ohjelmoinnin perustaidoista on oppia tulostamaan tekstiä näytölle. Javascriptissä tulostus onnistuu komennolla <code>console.log("Tulostettava asia")</code>.
+    Lainausmerkit tulostettavan lauseen ympärillä tarkoittavat, että tulostettava asia on tekstiä joka tulostetana sellaisenaan eikä ole esimerkiksi komento.
   </p>
 
-  <% partial 'partials/exercise', locals: { name: 'Nimen tulostaminen' } do %>
-    Harjoitellaan tulostamista. Alla on tyhjä ohjelman runko. Ohjelmassa oleva rivi <code>// Kirjoita ohjelmasi tähän alle</code> on kommenttirivi, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Lisää kommenttirivin alle komento, joka tulostaa nimesi ja suorita ohjelma. Ohjelman tulostus voi olla vaikka: <code>Essi Esimerkki</code>.
+  <p>
+    Ohjelmassa oleva rivi <code>// Kirjoita ohjelmasi tähän alle</code> on kommenttirivi, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Alla olevassa esimerkissä on kommenttirivi ja tulostus. Esimerkki tulostaa: <code>Kanit on söpöjä</code>.
+  </p>
+
+  <pre><code class="javascript">// Tämä on kommentti ja alla on tulostuskomento
+console.log("Kanit on söpöjä.")</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: 'Nimen tulostaminen', additional_content: '<strong>Vihje</strong>: Kun kirjoitat tulostuskomennon ja käynnistät ohjelman, alle pitäisi ilmestyä valkoinen laatikko, johon on tulostunut nimesi.' } do %>
+    Lisää kommenttirivin alle komento, joka tulostaa nimesi ja suorita ohjelma. Ohjelman tulostus voi olla vaikka: <code>Essi Esimerkki</code>.
   <% end %>
 
   <div data-type='tmc-exercise' data-id='2779'></div>
@@ -27,9 +34,9 @@ exercise_page: true
 
   <p>Esimerkki:</p>
 
-  <pre><code class="javascript">console.log("Ensimmäinen rivi.");
-console.log("Toinen rivi.");
-console.log("Kolmas rivi.");</code></pre>
+  <pre><code class="javascript">console.log("Ensimmäinen rivi.")
+console.log("Toinen rivi.")
+console.log("Kolmas rivi.")</code></pre>
 
   <p>Yllä oleva koodi tulostaa:</p>
 
@@ -53,9 +60,9 @@ Kolmas rivi.</code></pre>
     Usein haluamme käyttää tietoa useammassa paikassa. Jotta tämä olisi mahdollista haluamme jonkin tavan säilöä tietoa, jotta siihen pääsee myöhemmin käsiksi. Ohjelmoinnissa voimme ottaa tietoa talteen <i>muuttujiin</i>. Muuttujat toimivat samaan tapaan kuin matematiikassa. Matematiikassa voisi olla esimerkiksi yhtälöt <code>x = 3</code> ja <code>y = x + 2</code>, joissa <code>x</code> ja <code>y</code> olisivat muuttujia. Tällöin tietäisimme, että <code>y = 3 + 2 = 5</code>. Jos taas vaihdettaisiin, että <code>x = 5</code>, tietäisimme että <code>y = 7</code>.
   </p>
 
-  <p>
-    Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa pelaajan on tarkoitus kerätä alaspäin tippuvia rubiineja. Liikkuminen tapahtuu nuolinäppäimillä. Kokeile peliä painamalla <code>Käynnistä</code>-painiketta.
-  </p>
+  <% partial 'partials/hint' do %>
+    Tehtäviä kannattaa kokeilla useasti painamalla Käynnistä-painiketta.
+  <% end %>
 
   <% partial 'partials/exercise', locals: { name: 'Muuttujien kokeilemista' } do %>
     <p>Ennen kuin syvennytään tarkemmin muuttujiin kokeillaan mitä niillä voi tehdä. Alla on yksinkertainen peli, jossa pelaajan on tarkoitus kerätä alaspäin tippuvia rubiineja. Liikkuminen tapahtuu nuolinäppäimillä. Kokeile peliä painamalla Käynnistä-painiketta.</p>
@@ -70,17 +77,21 @@ Kolmas rivi.</code></pre>
   </p>
 
   <p>
-    Ohjelmoinnissa muuttujat pitää luoda eli <i>alustaa</i> (englanniksi initialize) ennen kuin niitä voi käyttää. JavaScriptissä muuttujat alustetaan kirjoittamalla <code>var muuttujanNimi = muuttujanArvo;</code>. Aluksi määritellään, että nyt luodaan uusi muuttuja kirjoittamalla sana 'var' (tulee sanasta variable). Seuraavaksi määritellään muuttujalle nimi. Muuttujan nimessä ei saa olla välilyöntejä, minkä takia muuttujat yleensä nimetään ns. camelCasella. CamelCasessa lauseen ensimmäinen kirjain kirjoitetaan pienellä, minkä jälkeen jokaisen muun sanan ensimmäinen kirjain kirjoitetaan isolla kirjaimella ja muut pienellä. Esimerkiksi lause "ohjelmointi on kivaa" kirjoitettaisiin camelCasessa "ohjelmointiOnKivaa". Yhtäsuuruus-merkillä annetaan muuttujalle arvo, ja itse arvo kirjoitetaan yhtäsuuruus-merkin oikealle puolelle. Jokainen JavaScript-koodirivi pitää vielä lopettaa puolipisteellä. Merkkijonon sisältävän muuttujan voi alustaa kirjoittamalla <code>var merkkijono = "Terve, mitä kuuluu?";</code>. Huomaa, että merkkijono-tyylisiä muuttujia alustaessa pitää käyttää lainausmerkkejä muuttujan arvon ympärillä.
+    Ohjelmoinnissa muuttujat pitää luoda eli <i>alustaa</i> (englanniksi initialize) ennen kuin niitä voi käyttää. JavaScriptissä muuttujat alustetaan kirjoittamalla <code>var muuttujanNimi = muuttujanArvo</code>. Aluksi määritellään, että nyt luodaan uusi muuttuja kirjoittamalla sana 'var' (tulee sanasta variable). Seuraavaksi määritellään muuttujalle nimi. Muuttujan nimessä ei saa olla välilyöntejä, minkä takia muuttujat yleensä nimetään ns. camelCasella. CamelCasessa lauseen ensimmäinen kirjain kirjoitetaan pienellä, minkä jälkeen jokaisen muun sanan ensimmäinen kirjain kirjoitetaan isolla kirjaimella ja muut pienellä. Esimerkiksi lause "ohjelmointi on kivaa" kirjoitettaisiin camelCasessa "ohjelmointiOnKivaa". Yhtäsuuruus-merkillä annetaan muuttujalle arvo, ja itse arvo kirjoitetaan yhtäsuuruus-merkin oikealle puolelle. Merkkijonon sisältävän muuttujan voi alustaa kirjoittamalla <code>var merkkijono = "Terve, mitä kuuluu?"</code>. Huomaa, että merkkijono-tyylisiä muuttujia alustaessa pitää käyttää lainausmerkkejä muuttujan arvon ympärillä.
   </p>
 
-  <% partial 'partials/exercise', locals: { name: 'Muuttujien harjoittelua', additional_content: '<strong>Odotettu vastaus:</strong> Näytölle pitäisi ilmestyä muutujalle annettu arvo, esim. oma etunimesi.' } do %>
-    Harjoitellaan seuraavaksi hiukan muuttujien käyttöä. Tässä tehtävässä luodaan aluksi muuttuja <i>etunimi</i>, johon talletetaan merkkijono. Sen jälkeen tulostetaan etunimi näytölle. Tehtäväpohjassa on valmiiksi kirjoitettu muuttujan <i>etunimi</i> tulostus: <code>console.log(etunimi);</code>. Tehtävänäsi on lisätä tiedoston ensimmäiselle riville muuttujan alustus eli luonti. Tässä ja useissa myöhemmissä tehtävistä osa koodista on lukittu ja voit editoida vain vapaita alueita. Lukitun alueen tunnistaa harmaasta taustaväristä, kun taas lukitsemattoman alueen taustaväri on valkoinen.
+  <% partial 'partials/hint' do %>
+    Tässä ja useissa myöhemmissä tehtävistä osa koodista on lukittu ja voit editoida vain vapaita alueita. Lukitun alueen tunnistaa harmaasta taustaväristä, kun taas lukitsemattoman alueen taustaväri on valkoinen.
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: 'Muuttujan luonti', additional_content: '<strong>Odotettu vastaus:</strong> Näytölle tulostuu etunimesi.' } do %>
+    Tehtäväpohjassa on valmiina komento, joka tulostaa muuttujan <code>etunimi</code> sisällön. Ohjelma kuitenkaan ei toimi, koska etunimi-nimistä muuttujaa ei ole luotu. Luo muuttuja <code>etunimi</code> ja laita sen sisällöksi merkkijono, joka on etunimesi.
   <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2288'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Muuttujat pelissä', additional_content: '<strong>Odotettu vastaus: </strong> Peli toimii samalla tavalla kuin ensimmäisessä tehtävässä.' } do %>
-    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne. Katso tarvittaessa apua ensimmäisestä tehtävästä tai editorin alla olevista vihjeistä.
+    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne.
   <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2290'></div>
@@ -91,10 +102,10 @@ Kolmas rivi.</code></pre>
     Muuttujilla voidaan tehdä <i>operaatioita</i>. Operaatiot ovat erilaisia toimintoja. Numeroilla ne mahdollistavat esimerkiksi muuttujien yhteenlaskun, vähennyslaskun, kertolaskun ja jakolaskun. Lukujen laskutoimitukset toimivat täysin samalla tavalla kuin matematiikassa. Esimerkiksi alla oleva ohjelma tulostaa luvut: 7, -2, 12, 2:
   </p>
 
-  <pre><code class="javascript">console.log(5 + 2);
-console.log(5 - 7);
-console.log(2 * 6);
-console.log(8 / 4);</code></pre>
+  <pre><code class="javascript">console.log(5 + 2)
+console.log(5 - 7)
+console.log(2 * 6)
+console.log(8 / 4)</code></pre>
 
   <% partial 'partials/exercise', locals: { name: 'Operaatioden harjoittelua' } do %>
     Alla olevassa tehtäväpohjassa on alustettu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tässä tehtävässä tehdään näillä muuttujilla laskutoimituksia. Tee joku laskutoimitus, jonka tulos on <code>30</code>.
@@ -108,16 +119,16 @@ console.log(8 / 4);</code></pre>
     Operaattoreilla voidaan myös yhdistää merkkijonoja. Se onnistuu ketjuttamalla halutut merkkijonot <code>+</code>-operattorilla, kuten yhteenlaskussa. Esimerkiksi kaikki alla olevat koodinpätkät tulostavat: "Hei, mitä kuuluu?".
   </p>
 
-  <pre><code class="javascript">var hei = "Hei";
-var kuuluu = ", mitä kuuluu";
-var mitaKuuluu = hei + kuuluu;
-console.log(mitaKuuluu);</code></pre>
+  <pre><code class="javascript">var hei = "Hei"
+var kuuluu = ", mitä kuuluu"
+var mitaKuuluu = hei + kuuluu
+console.log(mitaKuuluu)</code></pre>
 
-  <pre><code class="javascript">var hei = "Hei";
-var kuuluu = ", mitä kuuluu";
-console.log(hei + kuuluu);</code></pre>
+  <pre><code class="javascript">var hei = "Hei"
+var kuuluu = ", mitä kuuluu"
+console.log(hei + kuuluu)</code></pre>
 
-  <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?");</code></pre>
+  <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?")</code></pre>
 
   <% partial 'partials/exercise', locals: { name: 'Lauseen muodostaminen' } do %>
     Tehtäväpohjassa on laitettu muuttujiin <code>a</code> ja <code>b</code>. Yhdistele muuttujia <code>+</code>-operaattorilla muuttujaan <code>yhdistetty</code> siten, että tehtävässä tulostuu järkevä lause. Sinun on siis pakko käyttää muuttujia <code>a</code> ja <code>b</code>.
@@ -129,11 +140,11 @@ console.log(hei + kuuluu);</code></pre>
     Voimme yhdistellä niin monta asiaa kun haluamme yhdellä rivillä. Voimme esimerkiksi yhidistellä 3, 4 tai viisi eri merkkijonoa toisiinsa ketjuttamalla ne peräkkäin. Esimerkiksi alla oleva esimerkki tulostaa: "Tämän päivän sää on ehkä poutainen".
   </p>
 
-  <pre><code class="javascript">var paivan = "Tämän päivän ";
-var saa = "sää on ";
+  <pre><code class="javascript">var paivan = "Tämän päivän "
+var saa = "sää on "
 var poutainen = " poutainen "
-var yhdistetty = paivan + saa + "ehkä" + poutainen;
-console.log(yhdistetty);</code></pre>
+var yhdistetty = paivan + saa + "ehkä" + poutainen
+console.log(yhdistetty)</code></pre>
 
   <% partial 'partials/exercise', locals: { name: 'Pitkän lauseen muodostaminen' } do %>
     Tehtäväpohjassa on laitettu muuttujiin sanoja. Yhdistele muuttujia muuttujaan <code>yhdistetty</code> siten, että tehtävässä tulostuu järkevä lause.
@@ -141,3 +152,5 @@ console.log(yhdistetty);</code></pre>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2832'></div>
 </div>
+
+<p>Valmista? Jatka seuraavaksi <%= link_to 'listoihin', 'listat.html' %>.</p>

@@ -14,7 +14,7 @@ exercise_page: true
     Funktio määritellään kirjoittamalla <code>function funktionNimi() { koodi }</code>. Funktion määritellyssä aaltosulkujen välissä on koodi, joka tallennetaan odottamaan funktion kutsumista.  Voimme esimerkiksi määritellä funktion, joka tulostaa tervehdyksen.
   </p>
     <pre><code class="javascript">function tervehdi() {
-  console.log("Terve!");
+  console.log("Terve!")
 }</code></pre>
 </div>
 
@@ -22,13 +22,13 @@ exercise_page: true
 <div class="chapter">
 
   <p>
-    Kun haluamme suorittaa jonkin funktion sisällä määriteltyä koodia, joudumme kutsumaan funktiota. Meidän onneksemme funktiot vastaavat omaan nimeensä, jos käytämme tiettyä kutsutapaa. Funktion kutsu onnistuu kirjoittamalla kutsuttavan funktion nimi, jonka perään laitetaan sulut <code>()</code>. Funktion kutsu onnistuu siis tyyliin: <code>kutsuttavanFunktionNimi();</code> Tässä on funktion kutsun perässä vielä puolipiste, koska kutsun jälkeen loppuu rivi.
+    Kun haluamme suorittaa jonkin funktion sisällä määriteltyä koodia, joudumme kutsumaan funktiota. Meidän onneksemme funktiot vastaavat omaan nimeensä, jos käytämme tiettyä kutsutapaa. Funktion kutsu onnistuu kirjoittamalla kutsuttavan funktion nimi, jonka perään laitetaan sulut <code>()</code>. Funktion kutsu onnistuu siis tyyliin: <code>kutsuttavanFunktionNimi()</code> Tässä on funktion kutsun perässä vielä puolipiste, koska kutsun jälkeen loppuu rivi.
   </p>
   <p>
-    Funktion nimi katsomalla funktion määritelmää. Nimi on <code>function</code>-sanan jälkeinen sana. Esimerkiksi voimme kutsua tervehdys-funktiota kirjoittamalla <code>tervehdi();</code>, koska saimme funktion nimen selville funktion määritelmästä: <code>function <span class="highlight-background">tervehdi</span>()</code>. Funktion kutsuminen suorittaa sen sisällä määritellyn koodin. Esimerkiksi alla oleva koodi tulostaisi "Terve!".
+    Funktion nimi katsomalla funktion määritelmää. Nimi on <code>function</code>-sanan jälkeinen sana. Esimerkiksi voimme kutsua tervehdys-funktiota kirjoittamalla <code>tervehdi()</code>, koska saimme funktion nimen selville funktion määritelmästä: <code>function <span class="highlight-background">tervehdi</span>()</code>. Funktion kutsuminen suorittaa sen sisällä määritellyn koodin. Esimerkiksi alla oleva koodi tulostaisi "Terve!".
   </p>
 
-  <pre><code class="javascript">tervehdi();</code></pre>
+  <pre><code class="javascript">tervehdi()</code></pre>
 
 
   <% partial 'partials/exercise', locals: { name: 'Funktion kutsuminen' } do %>
@@ -49,3 +49,5 @@ exercise_page: true
 
   <div data-type='tmc-exercise' data-id='2826'></div>
 </div>
+
+<p>Valmista? Jatka seuraavaksi <%= link_to 'ehtoihin', 'ehdot.html' %>.</p>

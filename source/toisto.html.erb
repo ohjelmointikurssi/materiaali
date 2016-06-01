@@ -11,22 +11,22 @@ exercise_page: true
   </p>
 
   <p>
-    <pre><code class="javascript">ylos();
-ylos();
-oikealle();
-oikealle();
-ylos();
-ylos();
-oikealle();
-oikealle();
-ylos();
-ylos();
-oikealle();
-oikealle();
-ylos();
-ylos();
-oikealle();
-oikealle();</code></pre>
+    <pre><code class="javascript">ylos()
+ylos()
+oikealle()
+oikealle()
+ylos()
+ylos()
+oikealle()
+oikealle()
+ylos()
+ylos()
+oikealle()
+oikealle()
+ylos()
+ylos()
+oikealle()
+oikealle()</code></pre>
     </p>
 
     <p>
@@ -42,7 +42,7 @@ oikealle();</code></pre>
     </p>
     <p>
       <pre><code class="javascript">while(true) {
-  console.log("Tervehdys!");
+  console.log("Tervehdys!")
 }</code></pre>
     </p>
 
@@ -55,12 +55,12 @@ oikealle();</code></pre>
       Jotta while-silmukan suoritus loppuisi joskus, käytetään usein ns. indeksi-muuttujaa. Tämän muuttujan tarkoituksena on tallentaa nykyisen kierroksen numero ja lopettaa while-silmukan suoritus, kun kierrosluku on tarpeeksi suuri. Indeksi-muuttujan arvoa pitää muistaa kasvattaa aina while-silmukan sisällä, jotta sen arvo kasvaa. While-silmukan loppuun voidaan lisätä if-lause, jossa tarkistetaan, pitääkö silmukan suoritus lopettaa. Silmukan suorituksen voi lopettaa <code>break</code> -komennolla. Alla esimerkki indeksi-muuttujan käytöstä while-silmukan kanssa:
     </p>
     <p>
-      <pre><code class="javascript">var indeksi = 1;
+      <pre><code class="javascript">var indeksi = 1
 while(true) {
-console.log("Tervehdys!");  // Tulostetaan tervehdys
-  indeksi = indeksi + 1;      // Lisätään indeksin arvoa
+console.log("Tervehdys!")  // Tulostetaan tervehdys
+  indeksi = indeksi + 1      // Lisätään indeksin arvoa
   if (indeksi > 50) {         // Tarkistetaan, pitäisikö silmukan suoritus lopetetaan
-    break;                    // Lopetetaan silmukan suoritus, jos indeksi oli tarpeeksi suuri
+    break                    // Lopetetaan silmukan suoritus, jos indeksi oli tarpeeksi suuri
   }
 }</code></pre>
       </p>
@@ -89,13 +89,13 @@ console.log("Tervehdys!");  // Tulostetaan tervehdys
   Alla esimerkki koodista, joka tulostaa yksitellen kaikki listan alkiot:
 </p>
 <p>
-<pre><code class="javascript">var lista = [1, 3, 3, 7];
-var indeksi = 0;
+<pre><code class="javascript">var lista = [1, 3, 3, 7]
+var indeksi = 0
 while(true) {
-  console.log(lista[indeksi]);        // Tulostetaan listan alkio indeksin kohdalta
-  indeksi = indeksi + 1;              // Kasvatetaan indeksiä
+  console.log(lista[indeksi])        // Tulostetaan listan alkio indeksin kohdalta
+  indeksi = indeksi + 1              // Kasvatetaan indeksiä
   if (indeksi >= lista.length) {      // Tarkistetaan, pitääkö silmukan suoritus lopettaa.
-    break;                            // Lopetetaan silmukan suoritus, jos indeksi oli tarpeeksi suuri
+    break                            // Lopetetaan silmukan suoritus, jos indeksi oli tarpeeksi suuri
   }
 }</code></pre>
 </p>
@@ -114,3 +114,5 @@ while(true) {
 <% end %>
 
 <div data-type='tmc-exercise' data-id='2810'></div>
+
+<p>Valmista? Jatka seuraavaksi <%= link_to 'matopeliin', 'matopeli.html' %>.</p>
