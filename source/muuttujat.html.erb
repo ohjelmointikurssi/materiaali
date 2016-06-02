@@ -107,7 +107,7 @@ console.log(5 - 7)
 console.log(2 * 6)
 console.log(8 / 4)</code></pre>
 
-  <% partial 'partials/exercise', locals: { name: 'Operaatioden harjoittelua' } do %>
+  <% partial 'partials/exercise', locals: { name: 'Operaatioden harjoittelua', additional_content: '<strong>Huom</strong>: Et saa kirjoittaa lukuja suoraan vaan joudut käyttämään muuttujia <code>a</code> ja <code>b</code>.' } do %>
     Alla olevassa tehtäväpohjassa on alustettu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tässä tehtävässä tehdään näillä muuttujilla laskutoimituksia. Tee joku laskutoimitus, jonka tulos on <code>30</code>.
   <% end %>
 
@@ -130,7 +130,7 @@ console.log(hei + kuuluu)</code></pre>
 
   <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?")</code></pre>
 
-  <% partial 'partials/exercise', locals: { name: 'Lauseen muodostaminen' } do %>
+  <% partial 'partials/exercise', locals: { name: 'Lauseen muodostaminen', additional_content: '<strong>Huom</strong>: Et saa kirjoittaa sanoja suoraan vaan joudut käyttämään muuttujia <code>a</code> ja <code>b</code>.' } do %>
     Tehtäväpohjassa on laitettu muuttujiin <code>a</code> ja <code>b</code>. Yhdistele muuttujia <code>+</code>-operaattorilla muuttujaan <code>yhdistetty</code> siten, että tehtävässä tulostuu järkevä lause. Sinun on siis pakko käyttää muuttujia <code>a</code> ja <code>b</code>.
   <% end %>
 
@@ -146,7 +146,7 @@ var poutainen = " poutainen "
 var yhdistetty = paivan + saa + "ehkä" + poutainen
 console.log(yhdistetty)</code></pre>
 
-  <% partial 'partials/exercise', locals: { name: 'Pitkän lauseen muodostaminen' } do %>
+  <% partial 'partials/exercise', locals: { name: 'Pitkän lauseen muodostaminen', additional_content: '<strong>Huom</strong>: Et saa kirjoittaa sanoja suoraan vaan joudut käyttämään muuttujia <code>a</code>, <code>b</code> ja <code>c</code>.' } do %>
     Tehtäväpohjassa on laitettu muuttujiin sanoja. Yhdistele muuttujia muuttujaan <code>yhdistetty</code> siten, että tehtävässä tulostuu järkevä lause.
   <% end %>
 
