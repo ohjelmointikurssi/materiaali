@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-$narrow-width: 1000px;
+$narrow-width: 800px;
 
 #container {
   flex: 1;
@@ -13,7 +13,7 @@ body {
 }
 
 p {
-  text-align: justify;
+  line-height: 1.58;
 }
 
 nav {
@@ -71,16 +71,36 @@ body {
   counter-reset: h3counter;
 }
 
-h1 {
-  counter-reset: h2counter;
+h2, h3 {
+  // letter-spacing: -0.02em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
 }
 
-h2:before {
+#container > h1 {
+  counter-reset: h2counter;
+  font-weight: normal;
+  letter-spacing: -0.03em;
+  font-size: 36px;
+  border-bottom: 1px solid #EEEEEE;
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.chapter > h2:before {
     content: counter(h2counter) ".\0000a0\0000a0";
     counter-increment: h2counter;
     counter-reset: h3counter;
 }
-h3:before {
+
+h3 {
+  font-size: 24px;
+}
+
+.chapter > h3:before {
     counter-increment: h3counter;
     content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
 }
@@ -95,7 +115,7 @@ pre {
   code {
     border: 1px solid #DFDFDF;
     border-radius: 5px;
-    max-width: 1000px;
+    max-width: $narrow-width - 20px;
     margin: 0 auto;
   }
 }
@@ -132,11 +152,9 @@ p, h1, h2, h3, h4, h5, h6 {
 p.hint {
   display: flex;
   align-items: center;
-  $hint-padding: 20px 10px;
-  padding: $hint-padding;
+  padding: 10px;
   max-width: $narrow-width - 10px * 2;
   background-color: #7c3ed5;
-  font-size: 17px;
   color: white;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
