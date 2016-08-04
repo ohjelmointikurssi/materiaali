@@ -1,11 +1,12 @@
 ---
 title: Toisto
 exercise_page: true
+order: 7
 ---
 <h1>Toisto</h1>
 
-<h2>Toistolauseet</h2>
 <div class="chapter">
+  <h2>Toistolauseet</h2>
   <p>
     Monessa edellisistä piirtotehtävistä tuli väistämättä paljon toistuvaa koodia. Esimerkiksi portaikon piirtämisessä koodi näytti luultavasti suunnilleen tältä:
   </p>
@@ -33,7 +34,7 @@ oikealle()</code></pre>
       Koodissa on siis 4 riviä jokaista porrasta kohti. Jos portaikossa olisi 100 porrasta, koodin pituus olisi jo 400 riviä! Ohjelmoinnissa on kuitenkin keinoja välttää toistuvaa koodia. Opetellaan seuraavaksi toistolause, jota kutsutaan while-silmukaksi.
     </p>
 
-    <h3>While-silmukka</h3>
+    <h2>While-silmukka</h2>
     <p>
       While-silmukka toimii hiukan samalla tavalla kuin ensimmäisessä tehtäväsarjassa harjoitellut ehtolauseet. While-silmukka määritellään kirjoittamalla <code>while(ehto) { // suoritettava koodi niin kauan, kun ehto on voimassa }</code> Kuten if-lauseessa, myös while-loopissa pitää aina olla ehto. Ehto tarkistetaan jokaisen koodin suorituksen jälkeen.
     </p>
@@ -50,7 +51,7 @@ oikealle()</code></pre>
       Yllä oleva koodi tulostaisi loputtomasti lausetta "Tervehdys!". Loputtomuus johtuu siitä, että ehto <code>true</code> on aina voimassa. Selaimessa ikuinen silmukka ei toimi, vaan jäädyttää välilehden. Voit testata tätä tulevissa tehtävissä, jos uskallat. Ongelman voi korjata sulkemalla välilehden ja avaamalla materiaalin uudessa välilehdessä. Huom! Menetät tehdyn työn, jos joudut sulkemaan välilehden.
     </p>
 
-    <h3>Indeksi-muuttuja</h3>
+    <h2>Indeksi-muuttuja</h2>
     <p>
       Jotta while-silmukan suoritus loppuisi joskus, käytetään usein ns. indeksi-muuttujaa. Tämän muuttujan tarkoituksena on tallentaa nykyisen kierroksen numero ja lopettaa while-silmukan suoritus, kun kierrosluku on tarpeeksi suuri. Indeksi-muuttujan arvoa pitää muistaa kasvattaa aina while-silmukan sisällä, jotta sen arvo kasvaa. While-silmukan loppuun voidaan lisätä if-lause, jossa tarkistetaan, pitääkö silmukan suoritus lopettaa. Silmukan suorituksen voi lopettaa <code>break</code> -komennolla. Alla esimerkki indeksi-muuttujan käytöstä while-silmukan kanssa:
     </p>
@@ -76,7 +77,7 @@ console.log("Tervehdys!")  // Tulostetaan tervehdys
       <div data-type='tmc-exercise' data-id='2808'></div>
 
 
-<h2>Listat ja indeksi</h3>
+<h2>Listat ja indeksi</h2>
 <p>
   Tehtäväsarjassa 1 tutustuttiin listoihin, niiden luontiin, niiden loppuun tai alkuun lisäämiseen ja lopusta tai alusta poistamiseen.
 </p>

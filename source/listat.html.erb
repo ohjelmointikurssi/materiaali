@@ -1,12 +1,11 @@
 ---
 title: Listat
 exercise_page: true
+order: 3
 ---
 <h1>Listat</h1>
 
 <div class="chapter">
-  <h2>Listat</h2>
-
   <p>
     Lista on objekti, joka voi sisältää useita useita eri objekteja. Tyhjä lista luodaan merkinnällä <code>var lista = []</code>. Listan sisällä voi olla muita objekteja. Merkintä <code>var lista = [1, 2, 3, 4]</code> luo uuden listan, jonka sisällä on numerot 1, 2, 3 ja 4. Listoihin voi laittaan kaikentyyppisiä objekteja, kuten vaikka sanoja. Koodi <code>var lista = ["JavaScript", "Ohjelmointi"]</code> luo listan, jonka sisällä on merkkjonot <code>"JavaScript"</code> ja <code>"Ohjelmointi"</code>.
   </p>
@@ -34,7 +33,7 @@ var lista = [a, b, c]</code></pre>
     Listojen luonti sujuu melko näppärästi, mutta usein ohjelmoinnissa haluamme muokata listoja jotenkin. Olisi hyvä jos voisimme lisätä alkioita listaan, ottaa niitä pois ja niin edelleen.
   </p>
 
-  <h3>Listan loppuun lisääminen</h3>
+  <h2>Listan loppuun lisääminen</h2>
 
   <p>
     Olemassa olevan listan loppuun voidaan lisätä uusi alkio komennolla <code>lista.push(lisättävä_alkio)</code>. Jos haluamme vaikka lisätä listaan numeron 3, se onnistuu koodilla: <code>lista.push(3)</code>. Alla olevan koodin suorituksen jälkeen listan sisältö on <code>[3, 7, 4]</code>:
@@ -50,7 +49,7 @@ lista.push(4)</code></pre>
 
   <div data-type='tmc-exercise' data-id='2794'></div>
 
-  <h3>Listan alkuun lisääminen</h3>
+  <h2>Listan alkuun lisääminen</h2>
 
   <p>
     Nyt pystymme luomaan listoja ja lisäämään niiden loppuun alkiota. Valitettavasti kuitenkin tämä ei aina riitä. Tietyissä tilanteissa voitaisiin haluta lisätä alkioita listan alkuun. Javascriptissä on onneksi ratkaisu tähän ongelmaan. Koodi <code>lista.unshift(lisättävä_alkio)</code> tomii samalla tavalla kuin <code>lista.push</code>, mutta se lisää alkiota listan alkuun eikä loppuun. Alla oleva koodi luo listan, jonka sisältö on [9, 5, 1].
@@ -67,7 +66,7 @@ lista.unshift(9)</code></pre>
 
   <div data-type='tmc-exercise' data-id='2793'></div>
 
-  <h3>Listasta poistaminen</h3>
+  <h2>Listasta poistaminen</h2>
 
   <p>
     Voimme myös haluta poistaa listasta alkiota. Kuten varmaan jo edellisistä tehtävistä arvasitkin, voimme poistaa alkiota joko listan alusta tai listan lopusta. Koodi <code>lista.pop()</code> poistaa elementin listan lopusta ja koodi <code>lista.shift()</code> poistaa listan ensimmäisen alkion.
@@ -79,7 +78,7 @@ lista.unshift(9)</code></pre>
 
   <div data-type='tmc-exercise' data-id='2795'></div>
 
-  <h3>Listan pituus</h3>
+  <h2>Listan pituus</h2>
 
   <p>
     Listan pituus on luku, joka kertoo montako asiaa lista sisältää. Esimerkiksi listan <code class="javascript">[1, 3, 4]</code> pituus on 3. Kun lisäämme tai poistamme listasta alkiota listan pituus luonnollisesti muuttuu.

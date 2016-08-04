@@ -1,6 +1,7 @@
 ---
 title: Sarja 3
 exercise_page: true
+order: 8
 ---
 
 <div id='container'>
@@ -20,7 +21,7 @@ exercise_page: true
       Neliöistä piirretyistä viivoista tulee auttamatta mieleen matopeli. Jos loisimme madon viime viikon viivojen tapaan, laittaisimme sen olemaan tietyn pituinen ja lisäisimme omenan, meillä melkein olisi jo pieni peli valmiina. Kuullostaa paremmalta! Lähdetään liikkeelle!
     </p>
 
-    <h3>Madon luonti</h3>
+    <h2>Madon luonti</h2>
 
     <p>
       Tässä matopelissä uuden madon luonti on yksinkertaista. Se onnistuu asettamalla yksi madon palanen pelialueelle. Sen jälkeen mato alkaa itsestään kasvamaan, kunnes se saavuttaa oikean pituudensa. Madon pituus on tallennettu <code>koko</code>-muuttujaan.
@@ -46,7 +47,7 @@ exercise_page: true
 
     <div data-type='tmc-exercise' data-id='2797'></div>
 
-    <h3>Madon koon rajoittaminen</h3>
+    <h2>Madon koon rajoittaminen</h2>
 
     <p>
       Jos haluamme matopelin on olevan jotekin järkevä, haluamme rajoittaa sen kokoa. Tehtäviemme mato kasvaa kunnes se on saavuttanut pituuden, joka löytyy muuttujasta: <code>koko</code>. Funktiossa <code>create</code> asetetaan <code>koko</code>-muuttujaan madon alkukoko. Madon alkukoko määrää miten isoksi mato alussa kasvaa.
@@ -79,7 +80,7 @@ exercise_page: true
 
   <div class="chapter">
     <h2>Törmäysten tunnistaminen</h2>
-    <h3>Omenan syönti</h3>
+    <h2>Omenan syönti</h2>
 
     <p>
       Haluasimme tunnistaa, kun mato saa syötyä omenan. Olemme luoneet <code>törmäykset</code>-tiedostoon metodin <code>törmääOmenaan</code>, joka kertoo onko mato törmännyt omenaan. Jos mato on törmännyt omenaan, pelistä poistetaan nykyinen omena, pelin pisteitä kasvatetaan ja luodaan uusi omena.
@@ -106,7 +107,7 @@ exercise_page: true
 
     <div data-type='tmc-exercise' data-id='2816'></div>
 
-    <h3>Seinään törmääminen</h3>
+    <h2>Seinään törmääminen</h2>
 
     <p>
       Pelimme toimiin nyt hyvin, mutta haluamme sen myös loppuvan joskus. Toteutetaan seuraavaksi toiminnallisuus, jossa peli loppuu madon törmättyä seinään.
@@ -142,7 +143,7 @@ exercise_page: true
 
     <div data-type='tmc-exercise' data-id='2800'></div>
 
-    <h3>Itseensä törmääminen</h3>
+    <h2>Itseensä törmääminen</h2>
 
     <p>
       Pelin pitäisi myös loppua, kun mato törmää itseensä. Mato on törmännyt itseensä, silloin kun sen pää on osunut samoihin koordinaatteihin kun mikään sen osista. Tämä on kuitenkin hankalampaa kuin edelliset tarkistuksemme, sillä matopelin mato pidentyy pelin kuluessa ja emme voi tietää kuinka monta tarkastelua meidän täytyy tehdä.

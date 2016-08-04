@@ -1,6 +1,7 @@
 ---
 title: Ehdot
 exercise_page: true
+order: 5
 ---
 <h1>Ehdot</h1>
 
@@ -20,7 +21,7 @@ if (ika < 18) {
     Koodin ehdollinen suoritus onnistuu <code>if</code>-avainsanan avulla. If-ehtolauseen rakenne on <code> if ( ehto ) { koodi, joka suoritetaan ehdon ollessa tosi }</code>. Eli if-avainsanan jälkeen laitetaan jonkin ehto, jonka totuutta tarkastellaan ja sen jälkeen kirjoitetaan aaltosulkuihin koodi, joka tulee suorittaa ehdon ollesssa tosi. If-ehtolauseen jälkeen voi halutessaan kirjoittaa perään else-lohkon kuten yllä olevassa esimerkissä. Else-lohko suoritetaan siinä tapauksessa, että ehto ei ole tosi.
   </p>
 
-  <h3>Ehdot</h3>
+  <h2>Ehdot</h2>
 
   <p>
     Jotta voimme käyttää edellä esiteltyjä ehtolauseita, meidän täytyy osata kirjoittaa joitain ehtoja niille. Eräs yksinkertainen ehto on yhtäsuuruden vertailu. Se onnistuu merkinnällä <code>==</code>. Ehtolauseen <code>if (muuttuja == toinenMuuttuja ) { koodi }</code> koodi suoritetaan, jos <code>muuttuja</code> ja <code>toinenMuuttuja</code> sisältävät saman arvon.
@@ -30,7 +31,7 @@ if (ika < 18) {
     Luvuilla voimme yhtäsuuruuden lisäksi tarkastella niiden suuruuksia. Voimme esimerkiksi tarkistaa, onko luku pienempi tai suurempi kuin toinen luku. Suuruuden vertailu onnisttuu operaattoreilla <code><</code>, <code>></code>, <code><=</code> ja <code>>=</code>. Operaattorit <code><</code> ja <code>></code> eivät ota yhtäsuuruutta huomioon kun taas operaattorit <code><=</code> ja <code>>=</code> ottavat.
   </p>
 
-  <h3>Esimerkkejä ehdoista</h3>
+  <h2>Esimerkkejä ehdoista</h2>
   <div class="multiple-columns">
     <div>
       Seuraavat ehdot ovat totta:
@@ -84,7 +85,7 @@ if (luku >= toinenLuku) {
 <div class="chapter">
   <h2>Kun ehto ei ole totta</h2>
 
-  <h3>Vastakkainen ehto</h3>
+  <h2>Vastakkainen ehto</h2>
 
   <p>
     Ehtolauseet ovat hyödyllisiä, mutta useita ohjelmia yksinkertaistaisi jos voisimme suorittaa koodia tapauksessa, jossa ehto ei ollut tosi. Yksi tapa tehdä tämä on tehdä päinvastainen ehto ensimmäisen ehdon jälkeen. Esimerkiksi jos ensimmäinen ehto olisi <code>if ( x > 3)</code> ehto <code>if ( x <= 3)</code> suoritetaan aina, kun ensimmäinen ei ole totta.
@@ -96,7 +97,7 @@ if (luku >= toinenLuku) {
 
   <div data-type='tmc-exercise' data-id='2829'></div>
 
-  <h3>Else</h3>
+  <h2>Else</h2>
 
   <p>
     Vastakkaisen ehdon kirjoittaminen toimii, mutta niiden kirjoittaminen on työlästä. Helpompaa olisi, jos meillä olisi tapa ilmaista että haluamme suorittaa tiettyä koodia, kun ehto ei ole totta.

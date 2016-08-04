@@ -1,11 +1,12 @@
 ---
 title: Piirtäminen
 exercise_page: true
+order: 6
 ---
 <h1>Piirtäminen</h1>
 
-<h2>Koordinaatisto</h2>
 <div class="chapter">
+  <h2>Koordinaatisto</h2>
 
   <div class="multiple-columns narrow">
     <div>
@@ -19,7 +20,7 @@ exercise_page: true
     <%= image_tag './images/koordinaatisto.png', class: 'coordinates' %>
   </div>
 
-  <h3>Pisteiden asettelu koordinaatistoon</h3>
+  <h2>Pisteiden asettelu koordinaatistoon</h2>
 
   <% partial 'partials/exercise', locals: { name: 'Pisteiden asettelu koordinaatistoon', image: './images/naama.png' } do %>
     Tehtäväpohjassa on olemassa funktio <code>luoPala(x, y)</code>, joka sijoittaa palan pelialueelle annettuihin koordinaatteihin. Esimerkiksi kutsu <code>luoPala(5, 2)</code> luo uuden palan koordinaatteihin <code>(5, 2)</code>. Kutsu funktiota <code>luoPala()</code> monta kertaa niin, että pelialueelle piirtyy vierellä oleva kuvio.
@@ -29,8 +30,8 @@ exercise_page: true
 
 </div>
 
-<h2>Liikkuminen</h2>
 <div class="chapter">
+  <h2>Liikkuminen</h2>
   <p>
     Olisi kiva, jos voisimme piirtää asiota.
   </p>
