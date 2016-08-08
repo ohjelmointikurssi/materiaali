@@ -8,30 +8,53 @@ order: 2
 
 <div class="chapter">
   <p>
-    Usein haluamme käyttää tietoa useammassa paikassa. Jotta tämä olisi mahdollista haluamme jonkin tavan säilöä tietoa, jotta siihen pääsee myöhemmin käsiksi. Ohjelmoinnissa voimme ottaa tietoa talteen <i>muuttujiin</i>. Muuttujat toimivat samaan tapaan kuin matematiikassa. Matematiikassa voisi olla esimerkiksi yhtälöt <code>x = 3</code> ja <code>y = x + 2</code>, joissa <code>x</code> ja <code>y</code> olisivat muuttujia. Tällöin tietäisimme, että <code>y = 3 + 2 = 5</code>. Jos taas vaihdettaisiin, että <code>x = 5</code>, tietäisimme että <code>y = 7</code>.
+    Usein haluamme käyttää tietoa useammassa paikassa. Jotta tämä olisi mahdollista haluamme jonkin tavan säilöä tietoa, jotta siihen pääsee myöhemmin käsiksi. Ohjelmoinnissa voimme ottaa tietoa talteen <i>muuttujiin</i>.
   </p>
 
-  <% partial 'partials/hint' do %>
-    Näissä tehtävissä olemme piiloittaneet suurimman osan koodista ja jättäneet näkyville vain osat, joita sinun täytyy muokata.
-  <% end %>
-
-  <% partial 'partials/exercise', locals: { name: 'Muuttujien kokeilemista' } do %>
-    <p>
-      Kokeile ajaa tehtävä. Huomaat, että näytölle avautuu peli, joka on hieman hankala.
-    </p>
-
-    <p>Tehtäväpohjassa on määritetty kaksi muuttujaa, jotka määräävät pelihahmon ja rubiinien liikkumisnopeuden. Muuta muuttujien arvoja siten, että pelistä tulee helpompi.</p>
-  <% end %>
-
-  <div class="code-area" data-type='tmc-exercise' data-id='5027'></div>
+  <h2>Merkkijonomuuttujat</h2>
 
   <p>
-    Toisin kuin matematiikassa, ohjelmoinnissa muuttujan arvo voi olla myös jotain muuta kuin lukuja, esimerkiksi merkkijonoja (englanniksi string). Merkkijonot ovat mitä tahansa kirjaimista tai merkeistä koostuvia lauseita tai sanoja. Ohjelmoinnissa muuttujien käyttö on hyödyllistä muun muassa siksi, ettei samaa lukuarvoa tarvitse toistaa ohjelmakoodissa aina kun sitä tarvitaan.
+    Edellisessä osiossa tulostettiin kaikenlaisia lauseita ja kuviota. Tulostuskomennolle piti antaa tulostettava asia lainausmerkeissä, jotta tietokone ymmärtäisi asian olevan merkkijono. Näitä samoja merkkijonoja voidaan tallettaa muuttujiin.
   </p>
 
   <p>
-    Ohjelmoinnissa muuttujat pitää luoda eli <i>alustaa</i> (englanniksi initialize) ennen kuin niitä voi käyttää. JavaScriptissä muuttujat alustetaan kirjoittamalla <code>var muuttujanNimi = muuttujanArvo</code>. Aluksi määritellään, että nyt luodaan uusi muuttuja kirjoittamalla sana 'var' (tulee sanasta variable). Seuraavaksi määritellään muuttujalle nimi. Muuttujan nimessä ei saa olla välilyöntejä, minkä takia muuttujat yleensä nimetään ns. camelCasella. CamelCasessa lauseen ensimmäinen kirjain kirjoitetaan pienellä, minkä jälkeen jokaisen muun sanan ensimmäinen kirjain kirjoitetaan isolla kirjaimella ja muut pienellä. Esimerkiksi lause "ohjelmointi on kivaa" kirjoitettaisiin camelCasessa "ohjelmointiOnKivaa". Yhtäsuuruus-merkillä annetaan muuttujalle arvo, ja itse arvo kirjoitetaan yhtäsuuruus-merkin oikealle puolelle. Merkkijonon sisältävän muuttujan voi alustaa kirjoittamalla <code>var merkkijono = "Terve, mitä kuuluu?"</code>. Huomaa, että merkkijono-tyylisiä muuttujia alustaessa pitää käyttää lainausmerkkejä muuttujan arvon ympärillä.
+    Muuttujilla pitää aina olla nimi, jonka avulla niitä voidaan käyttää myöhemmin. Nimeksi voi valita melkein minkä tahansa sanan. Nimen lisäksi muuttuja tarvitsee sisällön. Sisältö tarkoittaa sitä tietoa, jonka haluamme tallettaa muuttujaan.
   </p>
+
+  <p>
+    Merkkijonomuuttujat luodaan kirjoittamalla: <code>var muuttujanNimi = "Muuttujan sisältö"</code>. Kirjoitimme muuttujan sisällön lainausmerkkeihin, koska halusimme tietokoneen ymmärtävän sen olevan merkkijono. Kun olemme luoneet muuttujan, voimme käyttää sitä kirjoittamalla muuttujan nimen esimerkiksi tulostuskomennon sisään.
+  </p>
+
+  <pre><code class="javascript">var nokkelastiNimettyMuuttuja = "Olen nokkelasti nimetty muuttuja!"
+console.log(nokkelastiNimettyMuuttuja)</code></pre>
+
+  <p>
+    Yllä olevassa koodinpätkässä loimme muuttujan nimeltä <code>nokkelastiNimettyMuuttuja</code> ja tulostimme sen. Emme laittaneet tulostuskomennon sisään lainausmerkkejä, koska halusimme kertoa tietokoneelle, että tulostettava asia on muuttuja. Esimerkki tulostaa: <code>Olen nokkelasti nimetty muuttuja!</code>
+  </p>
+
+  <% partial 'partials/exercise', locals: { name: 'Muuttujan arvon vaihtaminen' } do %>
+    Alla olevassa tehtäväpohjassa on luotu muuttuja nimeltä <code>salainenViesti</code>, joka luonnin jälkeen tulostetaan. Valitettavasti kuitenkin viesti on väärä. Muuta tehtävää siten, että viestiksi tulee: <code>Ave Caesar!</code>.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5034'></div>
+
+  <h2>Tuntemattomat muuttujat</h2>
+
+  <p>
+    Jos ohjelmassa yritetään käyttää muuttujaa, jota ei ole koskaan luotu, tietokone ei tiedä mitä sillä pitäisi tehdä ja keskeytää ohjelman suorituksen. Esimerkiksi, jos yritetään tulostaa jotakin muuttujaa, jota ei ole luotu:
+  </p>
+
+    <pre><code class="javascript">console.log(muuttujaJotaEiOleLuotu)</code></pre>
+
+  <p>
+    Tietokone antaakin meille arvoituksellisen virheen: <code>ReferenceError: muuttujaJotaEiOleLuotu is not defined</code>. Tämä tietokonen tapa sanoa, että ohjelmassa yritettiin käyttää muuttujaa nimeltä: <code>muuttujaJotaEiOleLuotu</code>, ja tietokone ei tunne tämän nimistä muuttujaa. Virheen voi korjata luomalla oikean nimisen muuttujan ennen sen käyttämistä.
+  </p>
+
+  <% partial 'partials/exercise', locals: { name: 'Väärin nimetty muuttuja' } do %>
+    Alla olevassa tehtäväpohjassa yritetään tulostaa muuttuja nimeltä <code>tulostettavaMuuttuja</code>, mutta se ei onnistu koska muuttujan luonnissa muuttujan nimeen on tullut kirjoitusvirhe. Korjaa muuttujan nimi siten, että koodi toimii.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5036'></div>
 
   <% partial 'partials/hint' do %>
     Osa tehtävien koodista on lukittu. Voit muokata vain vapaita alueita. Lukituissa alueissa on harmaa tausta ja lukitsemattomassa on valkoinen tausta.
@@ -41,35 +64,12 @@ order: 2
     Tehtäväpohjassa on valmiina komento, joka tulostaa muuttujan <code>etunimi</code> sisällön. Ohjelma kuitenkaan ei toimi, koska etunimi-nimistä muuttujaa ei ole luotu. Luo muuttuja <code>etunimi</code> ja laita sen sisällöksi merkkijono, joka on etunimesi.
   <% end %>
 
-  <div class="code-area" data-type='tmc-exercise' data-id='5026'></div>
-
-  <% partial 'partials/exercise', locals: { name: 'Muuttujien korjaaminen', additional_content: '<strong>Odotettu vastaus: </strong> Peli toimii samalla tavalla kuin ensimmäisessä tehtävässä.' } do %>
-    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne.
-  <% end %>
-
-  <div class="code-area" data-type='tmc-exercise' data-id='5025'></div>
-
-  <h2>Muuttujilla laskeminen</h2>
-
-  <p>
-    Muuttujilla voidaan tehdä <i>operaatioita</i>. Operaatiot ovat erilaisia toimintoja. Numeroilla ne mahdollistavat esimerkiksi muuttujien yhteenlaskun, vähennyslaskun, kertolaskun ja jakolaskun. Lukujen laskutoimitukset toimivat täysin samalla tavalla kuin matematiikassa. Esimerkiksi alla oleva ohjelma tulostaa luvut: 7, -2, 12, 2:
-  </p>
-
-  <pre><code class="javascript">console.log(5 + 2)
-console.log(5 - 7)
-console.log(2 * 6)
-console.log(8 / 4)</code></pre>
-
-  <% partial 'partials/exercise', locals: { name: 'Operaatioden harjoittelua', additional_content: '<strong>Huom</strong>: Et saa kirjoittaa lukuja suoraan vaan joudut käyttämään muuttujia <code>a</code> ja <code>b</code>.' } do %>
-    Alla olevassa tehtäväpohjassa on alustettu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tässä tehtävässä tehdään näillä muuttujilla laskutoimituksia. Tee tulostuskomennon sisään joku laskutoimitus, jonka tulos on <code>37</code>. Voit käyttää muuttujia niin monta kertaa kun haluat.
-  <% end %>
-
-  <div class="code-area" data-type='tmc-exercise' data-id='5008'></div>
+  <div data-type='tmc-exercise' data-id='5026'></div>
 
   <h2>Tekstin yhdistäminen</h2>
 
   <p>
-    Operaattoreilla voidaan myös yhdistää merkkijonoja. Se onnistuu ketjuttamalla halutut merkkijonot <code>+</code>-operattorilla, kuten yhteenlaskussa. Esimerkiksi kaikki alla olevat koodinpätkät tulostavat: "Hei, mitä kuuluu?".
+    Merkkijonoja voidaan yhdistellä toisiinsa. Se onnistuu ketjuttamalla halutut merkkijonot <code>+</code>-operattorilla. Esimerkiksi kaikki alla olevat koodinpätkät tulostavat: "Hei, mitä kuuluu?".
   </p>
 
   <pre><code class="javascript">var hei = "Hei"
@@ -104,6 +104,119 @@ console.log(yhdistetty)</code></pre>
   <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='5009'></div>
+
+  <h2>Numeromuuttujat</h2>
+
+  <p>
+    Merkkijonot eivät ole ainoa asia, joita muuttujiin voidaan tallettaa. Eräs hyödyllisimmistä asioista, joita voidaan laittaa muuttujiin ovat numerot. Numeroiden etu merkkijonoihin on, että niillä voidaan helposti tehdä laskutoimituksia ja niiden suuruutta on helppo vertailla keskenään.
+  </p>
+
+  <p>
+    Numeromuuttujat luodaan samaan tyyliin kuin merkkijonomuuttujat, paitsi lainausmerkkikohdan tilalle kirjoitetaan haluttu numero <i>ilman</i> lainausmerkkejä. Esimerkiksi alla olevassa esimerkissä luodaan numeromuuttuja nimeltä <code>parasNumero</code>, jonka arvo on <code>3</code>.
+  </p>
+
+  <pre><code class="javascript">var parasNumero = 3</code></pre>
+
+  <% partial 'partials/hint' do %>
+    Näissä tehtävissä olemme piiloittaneet suurimman osan koodista ja jättäneet näkyville vain osat, joita sinun täytyy muokata.
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: 'Muuttujien kokeilemista' } do %>
+    <p>
+      Kokeile ajaa tehtävä. Huomaat, että näytölle avautuu peli, joka on hieman hankala.
+    </p>
+
+    <p>Tehtäväpohjassa on määritetty kaksi muuttujaa, jotka määräävät pelihahmon ja rubiinien liikkumisnopeuden. Muuta muuttujien arvoja siten, että pelistä tulee helpompi.</p>
+  <% end %>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='5027'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Muuttujien korjaaminen', additional_content: '<strong>Odotettu vastaus: </strong> Peli toimii samalla tavalla kuin ensimmäisessä tehtävässä.' } do %>
+    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne.
+  <% end %>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='5025'></div>
+
+  <h2>Numeroilla laskeminen</h2>
+
+  <p>Merkkijonoilla voi yrittää tehdä laskuja, mutta niiden tulokset ovat harvoin haluttuja. Esimerkiksi alla oleva esimerkki tulostaisi: <code>12</code>, koska merkkijonoja yhdistellessä merkkijot laitetaan aina peräkkäin.</p>
+
+  <pre><code class="javascript">var eka = "1"
+var toka = "2"
+console.log(eka + toka)</code></pre>
+
+  <p>
+    Jos laskemme saman laskutoimituksen luvuilla, tulostuu oikea vastaus <code>3</code>.
+  </p>
+
+  <pre><code class="javascript">var eka = 1
+var toka = 2
+console.log(eka + toka)</code></pre>
+
+  <p>
+    Numeroita voidaan laskea yhteen <code>+</code>-merkillä, niitä voidaan vähentää toisistaan <code>-</code>-merkillä, niitä voidaan kertoa <code>*</code>-merkillä ja niitä voidaan jakaa <code>/</code>-merkillä.
+  </p>
+
+  <% partial 'partials/exercise', locals: { name: 'Laskutoimituksen korjaus', additional_content: '<strong>Huom</strong>: Älä kirjoita lukuja suoraan vaan käytä muuttujia <code>a</code> ja <code>b</code>.' } do %>
+    Alla olevassa tehtäväpohjassa on luotu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tehtäväpohjassa olevan tulostuskomennon sisällä tehdään laskutoimitus. Korjaa laskutoimitus sellaiseksi, että tulokseksi tulee <code>12</code>.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5032'></div>
+
+  <p>
+    Muuttujia voidaan käyttää niin monta kertaa kun halutaan. Esimerkiksi alla oleva koodi tulostaa: <code>6</code>.
+  </p>
+
+  <pre><code class="javascript">var a = 2
+console.log(a + a + a)</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: 'Operaatioden harjoittelua', additional_content: '<strong>Huom</strong>: Et saa kirjoittaa lukuja suoraan vaan joudut käyttämään muuttujia <code>a</code> ja <code>b</code>.' } do %>
+    Alla olevassa tehtäväpohjassa on luotu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tee tulostuskomennon sisään joku laskutoimitus, jonka tulos on <code>37</code>. Voit käyttää muuttujia niin monta kertaa kun haluat.
+  <% end %>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='5008'></div>
+
+  <p>
+    Numeromuuttujiin voidaan myös lisätä suoraan lukuja. Alla oleva esimerkki tulostaa luvun 12.
+  </p>
+
+  <pre><code class="javascript">var a = 2
+console.log(a + 10)</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: 'Luvun lisääminen suoraan muuttujaan' } do %>
+    Alla olevassa tehtäväpohjassa on luotu muuttuja <code>a</code>. Tehtäväpohjassa on myös tulostuskomento, missä tulostetaan laskutoimituksen <code>a * 2</code> tulos. Muuta luku <code>2</code> sellaiseksi luvuksi, että laskutoimituksen tulokseksi tulee <code>45</code>.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5033'></div>
+
+  <h2>Uusi arvo muuttujaan</h2>
+
+  <p>
+    Kun muuttuja on luotu <code>var</code>-sanan avulla, sen arvoa voidaan vielä myöhemmin muutttaa. Uuden arvon asettaminen muuttujalle onnistuu koodilla <code>muuuttujanNimi = uusiArvo</code>. Alla olevassa esimerkissä asetetaan muuttujalle uusi arvo. Esimerkki tulostaa <code>14</code>.
+  </p>
+
+  <pre><code class="javascript">var a = 6
+a = 14
+console.log(a)</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: 'Muuttujalle uusi arvo' } do %>
+    Alla olevassa tehtäväpohjassa on luotu muuttuja <code>a</code>. Aseta sen uudeksi arvoksi <code>42</code>.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5035'></div>
+
+  <p>
+    Ohjelmoinnissa tulee usein vastaan tilanne, jossa haluame muuttaa nykyistä arvoa siten, että uusi arvo tuleekin osittain muuttujan nykyisestä arvosta. Esimerkiksi jos meillä on muuttuja <code>a</code>, jonka arvo on 2, voimme haluta kasvattaa <code>a</code>:n arvoa <code>5</code>:llä. Tämä onnistuu käyttämällä muuttujan nimeä uudestaan arvoa asetettaessa. Alla oleva esimerkki nostaa <code>a</code>:n arvoa lukuun <code>7</code>.
+  </p>
+
+  <pre><code class="javascript">var a = 2
+a = a + 5</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: 'Muuttujan arvon kasvatus' } do %>
+    Alla olevassa tehtäväpohjassa on luotu muuttuja <code>a</code>. Kasvata sen arvoa <code>214</code>-kertaiseksi.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5031'></div>
 </div>
 
 <p>Valmista? Jatka seuraavaksi <%= link_to 'listoihin', 'listat.html' %>.</p>
