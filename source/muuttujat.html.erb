@@ -8,17 +8,17 @@ order: 2
 
 <div class="chapter">
   <p>
-    Usein haluamme käyttää tietoa useammassa paikassa. Jotta tämä olisi mahdollista haluamme jonkin tavan säilöä tietoa, jotta siihen pääsee myöhemmin käsiksi. Ohjelmoinnissa voimme ottaa tietoa talteen <i>muuttujiin</i>.
+    Muuttujia käytetään tiedon tallentamiseen. Niitä tarvitaan silloin, kun tietoa halutaan käsitellä useammassa kohdassa ohjelmaa. Ohjelma voi esimerkiksi aluksi arpoa käyttäjälle nimen, jota käytetään osana ohjelmaan liittyvää tarinaa.
   </p>
 
   <h2>Merkkijonomuuttujat</h2>
 
   <p>
-    Edellisessä osiossa tulostettiin kaikenlaisia lauseita ja kuviota. Tulostuskomennolle piti antaa tulostettava asia lainausmerkeissä, jotta tietokone ymmärtäisi asian olevan merkkijono. Näitä samoja merkkijonoja voidaan tallettaa muuttujiin.
+    Edellisessä osiossa tulostettiin kaikenlaisia lauseita ja kuviota. Tulostuskomennolle piti antaa tulostettava asia lainausmerkeissä, jotta tietokone ymmärtäisi asian olevan merkkijono. Merkkijonoja voidaan tallettaa muuttujiin.
   </p>
 
   <p>
-    Muuttujilla pitää aina olla nimi, jonka avulla niitä voidaan käyttää myöhemmin. Nimeksi voi valita melkein minkä tahansa sanan. Nimen lisäksi muuttuja tarvitsee sisällön. Sisältö tarkoittaa sitä tietoa, jonka haluamme tallettaa muuttujaan.
+    Jokaisella muuttujalla tulee olla nimi, ja muuttujaa luodessa nimeen liitetään sisältö eli muuttujan arvo. Nimeksi voi valita melkein minkä tahansa sanan.
   </p>
 
   <p>
@@ -32,6 +32,10 @@ console.log(nokkelastiNimettyMuuttuja)</code></pre>
     Yllä olevassa koodinpätkässä loimme muuttujan nimeltä <code>nokkelastiNimettyMuuttuja</code> ja tulostimme sen. Emme laittaneet tulostuskomennon sisään lainausmerkkejä, koska halusimme kertoa tietokoneelle, että tulostettava asia on muuttuja. Esimerkki tulostaa: <code>Olen nokkelasti nimetty muuttuja!</code>
   </p>
 
+  <% partial 'partials/hint' do %>
+    Osa tehtävien koodista on lukittu. Voit muokata vain vapaita alueita. Lukituissa alueissa on harmaa tausta ja lukitsemattomassa on valkoinen tausta.
+  <% end %>
+
   <% partial 'partials/exercise', locals: { name: 'Muuttujan arvon vaihtaminen' } do %>
     Alla olevassa tehtäväpohjassa on luotu muuttuja nimeltä <code>salainenViesti</code>, joka luonnin jälkeen tulostetaan. Valitettavasti kuitenkin viesti on väärä. Muuta tehtävää siten, että viestiksi tulee: <code>Ave Caesar!</code>.
   <% end %>
@@ -41,14 +45,18 @@ console.log(nokkelastiNimettyMuuttuja)</code></pre>
   <h2>Tuntemattomat muuttujat</h2>
 
   <p>
-    Jos ohjelmassa yritetään käyttää muuttujaa, jota ei ole koskaan luotu, tietokone ei tiedä mitä sillä pitäisi tehdä ja keskeytää ohjelman suorituksen. Esimerkiksi, jos yritetään tulostaa jotakin muuttujaa, jota ei ole luotu:
+    Jos ohjelmassa yritetään käyttää muuttujaa, jota ei ole ennen käyttöyritystä luotu, ohjelma ei tiedä mitä muuttujalla pitäisi tehdä. Tämä johtuu siitä, että tietokone ei voi käyttää muuttujia, joita ei ole vielä nimetty. Tällöin tietokone keskeyttää ohjelman suorituksen. Jos yritetään tulostaa mitä tahansa muuttujaa, jota ei ole luotu:
   </p>
 
-    <pre><code class="javascript">console.log(muuttujaJotaEiOleLuotu)</code></pre>
-
+  <pre><code class="javascript">console.log(muuttujaJotaEiOleLuotu)</code></pre>
   <p>
-    Tietokone antaakin meille arvoituksellisen virheen: <code>ReferenceError: muuttujaJotaEiOleLuotu is not defined</code>. Tämä tietokonen tapa sanoa, että ohjelmassa yritettiin käyttää muuttujaa nimeltä: <code>muuttujaJotaEiOleLuotu</code>, ja tietokone ei tunne tämän nimistä muuttujaa. Virheen voi korjata luomalla oikean nimisen muuttujan ennen sen käyttämistä.
+    Tietokone antaa meille virheen: <code>ReferenceError: muuttujaJotaEiOleLuotu is not defined</code>. Tämä on tietokonen tapa sanoa, että ohjelmassa yritettiin käyttää muuttujaa nimeltä: <code>muuttujaJotaEiOleLuotu</code>, ja tietokone ei tunne tämän nimistä muuttujaa. Virheen voi korjata luomalla oikean nimisen muuttujan ennen sen käyttämistä.
   </p>
+
+
+  <pre><code class="javascript">var muuttujaJotaEiOleLuotu = "onpas!"
+console.log(muuttujaJotaEiOleLuotu)</code></pre>
+
 
   <% partial 'partials/exercise', locals: { name: 'Väärin nimetty muuttuja' } do %>
     Alla olevassa tehtäväpohjassa yritetään tulostaa muuttuja nimeltä <code>tulostettavaMuuttuja</code>, mutta se ei onnistu koska muuttujan luonnissa muuttujan nimeen on tullut kirjoitusvirhe. Korjaa muuttujan nimi siten, että koodi toimii.
@@ -56,12 +64,8 @@ console.log(nokkelastiNimettyMuuttuja)</code></pre>
 
   <div data-type='tmc-exercise' data-id='5036'></div>
 
-  <% partial 'partials/hint' do %>
-    Osa tehtävien koodista on lukittu. Voit muokata vain vapaita alueita. Lukituissa alueissa on harmaa tausta ja lukitsemattomassa on valkoinen tausta.
-  <% end %>
-
   <% partial 'partials/exercise', locals: { name: 'Muuttujan luonti', additional_content: '<strong>Odotettu vastaus:</strong> Näytölle tulostuu etunimesi.' } do %>
-    Tehtäväpohjassa on valmiina komento, joka tulostaa muuttujan <code>etunimi</code> sisällön. Ohjelma kuitenkaan ei toimi, koska etunimi-nimistä muuttujaa ei ole luotu. Luo muuttuja <code>etunimi</code> ja laita sen sisällöksi merkkijono, joka on etunimesi.
+    Tehtäväpohjassa on valmiina komento, joka tulostaa muuttujan <code>etunimi</code> sisällön. Ohjelma ei toimi, sillä etunimi-nimistä muuttujaa ei ole luotu. Luo muuttuja <code>etunimi</code> ja aseta sen sisällöksi merkkijono, joka on etunimesi.
   <% end %>
 
   <div data-type='tmc-exercise' data-id='5026'></div>
@@ -77,20 +81,23 @@ var kuuluu = ", mitä kuuluu"
 var mitaKuuluu = hei + kuuluu
 console.log(mitaKuuluu)</code></pre>
 
-  <pre><code class="javascript">var hei = "Hei"
-var kuuluu = ", mitä kuuluu"
-console.log(hei + kuuluu)</code></pre>
-
-  <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?")</code></pre>
-
   <% partial 'partials/exercise', locals: { name: 'Lauseen muodostaminen', additional_content: '<strong>Huom</strong>: Et saa kirjoittaa sanoja suoraan vaan joudut käyttämään muuttujia <code>a</code> ja <code>b</code>.' } do %>
     Tehtäväpohjassa on laitettu muuttujiin <code>a</code> ja <code>b</code>. Yhdistele muuttujia <code>+</code>-operaattorilla muuttujaan <code>yhdistetty</code> siten, että tehtävässä tulostuu järkevä lause. Sinun on siis pakko käyttää muuttujia <code>a</code> ja <code>b</code>.
   <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='5007'></div>
 
+  <p>Saman tulostuksen voi saada aikaan erilaisilla tavoilla.</p>
+
+  <pre><code class="javascript">var hei = "Hei"
+var kuuluu = ", mitä kuuluu"
+console.log(hei + kuuluu)</code></pre>
+
+  <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?")</code></pre>
+
+
   <p>
-    Voimme yhdistellä niin monta asiaa kun haluamme yhdellä rivillä. Voimme esimerkiksi yhidistellä 3, 4 tai viisi eri merkkijonoa toisiinsa ketjuttamalla ne peräkkäin. Esimerkiksi alla oleva esimerkki tulostaa: "Tämän päivän sää on ehkä poutainen".
+    Voimme yhdistellä niin monta asiaa kuin haluamme yhdellä rivillä. Voimme esimerkiksi yhidistellä 3, 4 tai 5 eri merkkijonoa toisiinsa ketjuttamalla ne peräkkäin. Esimerkiksi alla oleva esimerkki tulostaa: "Tämän päivän sää on ehkä poutainen".
   </p>
 
   <pre><code class="javascript">var paivan = "Tämän päivän "
@@ -105,10 +112,19 @@ console.log(yhdistetty)</code></pre>
 
   <div class="code-area" data-type='tmc-exercise' data-id='5009'></div>
 
+  <p>Tyypillinen virhe merkkijonojen yhdistämisessä on se, että unohtaa <code>+</code>-operaattorin jostain kohdasta ohjelmakoodia. Esimerkiksi alla oleva koodi ei toimi.</p>
+
+  <pre><code class="javascript">var paivan = "Tämän päivän "
+var saa = "sää on "
+var poutainen = " poutainen "
+var yhdistetty = paivan + saa + "ehkä" poutainen
+console.log(yhdistetty)</code></pre>
+
+
   <h2>Numeromuuttujat</h2>
 
   <p>
-    Merkkijonot eivät ole ainoa asia, joita muuttujiin voidaan tallettaa. Eräs hyödyllisimmistä asioista, joita voidaan laittaa muuttujiin ovat numerot. Numeroiden etu merkkijonoihin on, että niillä voidaan helposti tehdä laskutoimituksia ja niiden suuruutta on helppo vertailla keskenään.
+    Muuttujiin voidaan tallentaa muutakin kuin merkkijonoja. Eräs hyödyllisimmistä asioista, joita voidaan laittaa muuttujiin ovat numerot. Numeroiden etu merkkijonoihin on se, että niillä voidaan helposti tehdä laskutoimituksia ja niiden suuruutta on helppo vertailla keskenään.
   </p>
 
   <p>
@@ -118,7 +134,7 @@ console.log(yhdistetty)</code></pre>
   <pre><code class="javascript">var parasNumero = 3</code></pre>
 
   <% partial 'partials/hint' do %>
-    Näissä tehtävissä olemme piiloittaneet suurimman osan koodista ja jättäneet näkyville vain osat, joita sinun täytyy muokata.
+    Seuraavissa tehtävissä iso osa ohjelman koodista on piilossa. Näkyvissä on vain ne osat, joita sinun täytyy muokata.
   <% end %>
 
   <% partial 'partials/exercise', locals: { name: 'Muuttujien kokeilemista' } do %>
@@ -132,7 +148,7 @@ console.log(yhdistetty)</code></pre>
   <div class="code-area" data-type='tmc-exercise' data-id='5027'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Muuttujien korjaaminen', additional_content: '<strong>Odotettu vastaus: </strong> Peli toimii samalla tavalla kuin ensimmäisessä tehtävässä.' } do %>
-    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne.
+    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä kuitenkin muuttujien arvot ovat hassusti. Korjaa peli niin, että rubiineja voi kerätä. Korjaa myös liikkuminen toimimaan järkevästi.
   <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='5025'></div>
