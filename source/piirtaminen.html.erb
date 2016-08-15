@@ -56,4 +56,4 @@ order: 6
 
 </div>
 
-<p>Valmista? Jatka seuraavaksi <%= link_to 'toistoon', 'toisto.html' %>.</p>
+<%= partial 'partials/next_chapter', locals: { link: link_to('toistoon', 'toisto.html') } %>

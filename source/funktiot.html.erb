@@ -20,7 +20,7 @@ order: 4
 <div class="chapter">
   <h2>Funktion kutsuminen</h2>
   <p>
-    Kun haluamme suorittaa jonkin funktion sisällä määriteltyä koodia, joudumme kutsumaan funktiota. Meidän onneksemme funktiot vastaavat omaan nimeensä, jos käytämme tiettyä kutsutapaa. Funktion kutsu onnistuu kirjoittamalla kutsuttavan funktion nimi, jonka perään laitetaan sulut <code>()</code>. Funktion kutsu onnistuu siis tyyliin: <code>kutsuttavanFunktionNimi()</code> Tässä on funktion kutsun perässä vielä puolipiste, koska kutsun jälkeen loppuu rivi.
+    Kun haluamme suorittaa jonkin funktion sisällä määriteltyä koodia, joudumme kutsumaan funktiota. Meidän onneksemme funktiot vastaavat omaan nimeensä, jos käytämme tiettyä kutsutapaa. Funktion kutsu onnistuu kirjoittamalla kutsuttavan funktion nimi, jonka perään laitetaan sulut <code>()</code>. Funktion kutsu onnistuu siis tyyliin: <code>kutsuttavanFunktionNimi()</code>.
   </p>
   <p>
     Funktion nimi katsomalla funktion määritelmää. Nimi on <code>function</code>-sanan jälkeinen sana. Esimerkiksi voimme kutsua tervehdys-funktiota kirjoittamalla <code>tervehdi()</code>, koska saimme funktion nimen selville funktion määritelmästä: <code>function <span class="highlight-background">tervehdi</span>()</code>. Funktion kutsuminen suorittaa sen sisällä määritellyn koodin. Esimerkiksi alla oleva koodi tulostaisi "Terve!".
@@ -35,6 +35,10 @@ order: 4
 
   <div data-type='tmc-exercise' data-id='4989'></div>
 
+  <% partial 'partials/exercise', locals: { name: 'Useamman funktion kutsuminen' } do %>
+    Tehtävä: Alla on määritelty kaksi funktiota.
+  <% end %>
+
   <h2>Funktion kutsuminen monesti</h2>
 
   <p>
@@ -46,6 +50,157 @@ order: 4
   <% end %>
 
   <div data-type='tmc-exercise' data-id='4990'></div>
+
+  <h2>Funktion määrittäminen</h2>
+
+  <p>
+    Uusi funktio määritellään sanan <code>function</code> avulla. Määrittämisen syntaksi menee alla olevalla tavalla.
+  </p>
+
+  <pre><code class="javascript">function funktionNimi() {
+  console.log("Tämä on funkition siältö.")
+}</code></pre>
+
+  <p>
+    Funktion sisällä voidaan tehdä kaikkea mitä olemme tehnneet aikaisemmin tällä kurssilla. Luomaan muuttujia, tulostamaan ja niin edelleen. Harjoitellaan seuraavaksi funktioiden luomista.
+  </p>
+
+  <% partial 'partials/exercise', locals: { name: '1' } do %>
+    T
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: '2' } do %>
+    T
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: '3' } do %>
+    T
+  <% end %>
+
+  <p>
+    Funktio määritellään...
+  </p>
+
+  <h2>Muuttujien käyttäminen funktion ulkopuolelta</h2>
+
+  <p>
+    Funktiossa pystytään käyttämään funktion ulkopuolisia muuttujia, jotka ovat luotu ennen muuttujan määritelmää. Esimerkiksi alla oleva funktio toimisi hyvin.
+  </p>
+
+  <pre><code class="javascript">var viesti = "Hei"
+function tulostaViesti() {
+  console.log(viesti)
+}</code></pre>
+
+  <p>
+    Muuttuja kannattaa luoda ennen funktiota, jos halutaan esimerkiksi muistaa jotakin funktioden kutsujen välillä. Esimerkiksi alla oleva funktio tulostaa kuinka monta kertaa sitä on kutsuttu.
+  </p>
+
+  <pre><code class="javascript">var kertaa = 0
+function tulostaViesti() {
+  kertaa = kertaa + 1
+  console.log("Minua on kutsuttu " + kertaa + " kertaa!")
+}</code></pre>
+
+  <p>
+    Jos kutsuisimme tätä funktiota kolme kertaa, saisimme tulostukseksi:
+  </p>
+
+  <pre><code class="javascript">Minua on kutsuttu 1 kertaa!
+Minua on kutsuttu 2 kertaa!
+Minua on kutsuttu 3 kertaa!</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: '1' } do %>
+    T
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: '2' } do %>
+    T
+  <% end %>
+
+  <h2>Funktioiden argumentit</h2>
+
+  <p>
+    Funktiolle voidaan antaa kutsuttaessa argumenttejä. Argumentit kirjoitetaan kutsuessa sulkujen sisään. Olemme itseasiassa käyttäneet argumenttejä monesti, aina kun tulostamme jotakin. Esimerkiksi tulostuksessa: <code>console.log("terve")</code> merkkijono <code>"terve"</code> onkin tulostuskomennolle annettu argumentti.
+  </p>
+
+  <p>
+    Jotta funktiossa voidaan käyttä argumenttejä, funktion määrittelyssä täytyy sanoa mitä argumenttejä funktio käyttää. Tämä onnistuu kirjoitamalla argumentin nimen funktion määritelmään sulkujen väliin -- vähäsen samaan tapaan kuin funkition kutsumisessa.
+  </p>
+
+  <pre><code class="javascript">function tulostaArgumentti(argumentti) {
+  console.log(argumentti)
+}
+tulostaArgumentti("Hello")</code></pre>
+
+  <p>
+    Funktiota voi ottaa vastaan useita argumenttejä. Useamman argumentin voi määrittää listamalla kaikkien muuttujien nimet pilkuilla erotettuina. Alla oleva esimerkki tulostaisi: <code>Terve, Essi Esimerkki</code>.
+  </p>
+
+  <pre><code class="javascript">function tervehdi(etunimi, sukunimi) {
+  console.log("Terve, " + etunumi + " " + sukunimi)
+}
+tervehdi("Essi", "Esimerkki")</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: '1' } do %>
+    T
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: '2' } do %>
+    T
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: '3' } do %>
+    T
+  <% end %>
+
+  <h2>Funktion paluuarvo</h2>
+
+  <p>
+    Usein funktiot tekevät jonkinlasta työtä ja tällä työllä on yleensä myös tulos. Olisi näppärää, jos pystyisimme antamaan tämän tuloksen takaisin alkuperäiselle koodille.
+  </p>
+
+  <p>
+    Esimerkiksi alla meillä on koodi, joka nostaa lukua yhdellä. Valitettavasti funktio vain tulostaa laskunsa tuloksen. Emme voi käyttää tulosta esimerkiksi uudelleen kutsuttavassa koodissa.
+  </p>
+
+  <pre><code class="javascript">function kasvata(luku) {
+  console.log(luku + 1)
+}
+kasvata(1)</code></pre>
+
+  <p>
+    Funktiosta voidaan palauttaa asiota kutsuvan koodin käyttöön <code>return</code>-sanalla. Esimerkiksi sanomalla <code>return 1</code>, funktio palauttaa luvun <code>1</code> alkuperäisen koodin käyttöön. Alla on edellinen luvun kasvattava funktio uudelleenkirjoitettu return-sanaa käyttäen.
+  </p>
+
+  <pre><code class="javascript">function kasvata(luku) {
+  return luku + 1;
+}
+var paaluuarvo = kasvata(1)
+console.log("Paluuarvo oli: " + paluuarvo)</code></pre>
+
+  <% partial 'partials/exercise', locals: { name: 'Funktion paluuarvo' } do %>
+    Tehtäväpohjassa on määritetty funktio, joka ottaa vastaan luvun ja palauttaa kyseisen luvun neliön. Kutsu funktiota jollakin numerolla ja talleta sen paluuarvo muuttujaan <code>paluuarvo</code>.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5038'></div>
+
+  <% partial 'partials/exercise', locals: { name: '1' } do %>
+    T
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: '2' } do %>
+    T
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: '3' } do %>
+    T
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: 'Murtoluvun muodostaminen' } do %>
+    Tehtäväpohjassa on määritetty funktio <code>teeMurtoluku</code>. Funktio ottaa vastaan kolme parametriä: <code>luku</code>, <code>osoittaja</code> ja <code>nimittäjä</code>.
+  <% end %>
+
 </div>
 
-<p>Valmista? Jatka seuraavaksi <%= link_to 'ehtoihin', 'ehdot.html' %>.</p>
+<%= partial 'partials/next_chapter', locals: { link: link_to('ehtoihin', 'ehdot.html') } %>

@@ -42,6 +42,14 @@ console.log(nokkelastiNimettyMuuttuja)</code></pre>
 
   <div data-type='tmc-exercise' data-id='5034'></div>
 
+  <% partial 'partials/exercise', locals: { name: 'Kaksi muuttujaa' } do %>
+    Tehtäväpohjassa on määritetty kaksi muutujaa. Muuta muuttujien arvoja siten, että tulostukseksi tulee:
+    <pre><code class="javascript">Eilen oli poutaista.
+Haloo? Ei kuulu mitään!</code></pre>
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5040'></div>
+
   <h2>Tuntemattomat muuttujat</h2>
 
   <p>
@@ -111,6 +119,12 @@ console.log(yhdistetty)</code></pre>
   <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='5009'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Vielä pidemmän lauseen mudodostaminen' } do %>
+    Tehtäväpohjassa on määritelty muuttujia. Yhdistele näitä muuttujia muuttujaan <code>yhdistetty</code> siten, että tehtävään muodostuu järkevä lause.
+  <% end %>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='5041'></div>
 
   <p>Tyypillinen virhe merkkijonojen yhdistämisessä on se, että unohtaa <code>+</code>-operaattorin jostain kohdasta ohjelmakoodia. Esimerkiksi alla oleva koodi ei toimi.</p>
 
@@ -221,6 +235,12 @@ console.log(a)</code></pre>
 
   <div data-type='tmc-exercise' data-id='5035'></div>
 
+  <% partial 'partials/exercise', locals: { name: 'Usealle muuttujalle uusi arvo' } do %>
+    Tehtäväpohjassa on määritetty muuttujat <code>a</code> ja <code>b</code>. Määritä niille uudet arvot siten, että tulostukseksi tulee: <code>Paras numero on 7</code>.
+  <% end %>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='5042'></div>
+
   <p>
     Ohjelmoinnissa tulee usein vastaan tilanne, jossa haluame muuttaa nykyistä arvoa siten, että uusi arvo tuleekin osittain muuttujan nykyisestä arvosta. Esimerkiksi jos meillä on muuttuja <code>a</code>, jonka arvo on 2, voimme haluta kasvattaa <code>a</code>:n arvoa <code>5</code>:llä. Tämä onnistuu käyttämällä muuttujan nimeä uudestaan arvoa asetettaessa. Alla oleva esimerkki nostaa <code>a</code>:n arvoa lukuun <code>7</code>.
   </p>
@@ -233,6 +253,18 @@ a = a + 5</code></pre>
   <% end %>
 
   <div data-type='tmc-exercise' data-id='5031'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Muuttujan arvon nosto' } do %>
+    Tehtäväpohjassa on luotu muuttuja <code>x</code>. Kasvata sen arvoa <code>351</code>:llä.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5043'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Muuttujan arvon muuttaminen useasti' } do %>
+    Tehtäväpohjassa on määritetty muuttuja <code>numero</code>. Muuta muuttujaa kaksi kertaa niin että ensiksi pienennät muuttujan arvoa kolmasosaan ja sitten pienennät muuttujan arvoa <code>451</code>:llä. Tehtäväpohjassa on merkitty kommenteilla, missä arvon muutokset tulee tehdä.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5044'></div>
 </div>
 
-<p>Valmista? Jatka seuraavaksi <%= link_to 'listoihin', 'listat.html' %>.</p>
+<%= partial 'partials/next_chapter', locals: { link: link_to('listoihin', 'listat.html') } %>

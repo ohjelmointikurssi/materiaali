@@ -29,7 +29,7 @@
       <%= nav_link_to 'Toisto', 'toisto.html' %>
       <%= nav_link_to 'Matopeli', 'matopeli.html' %>
     </nav>
-    <div id='container' <% if current_page.data.exercise_page %>class='exercise-page'<%end%> style='counter-reset: h1counter <%= current_page.data.order %>'>
+    <div id='content-container' <% if current_page.data.exercise_page %>class='exercise-page'<%end%> style='counter-reset: h1counter <%= current_page.data.order %>'>
       <a href="#" class='tmc-exercise-logout' title='Logout'>Logout</a>
       <%= yield %>
     </div>

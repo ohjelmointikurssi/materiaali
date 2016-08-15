@@ -119,4 +119,4 @@ if (ika < 18) {
   <div data-type='tmc-exercise' data-id='4986'></div>
 </div>
 
-<p>Valmista? Jatka seuraavaksi <%= link_to 'piirtämiseen', 'piirtaminen.html' %>.</p>
+<%= partial 'partials/next_chapter', locals: { link: link_to('piirtämiseen', 'piirtaminen.html') } %>
