@@ -23,23 +23,35 @@ var lista = [a, b, c]</code></pre>
     luo uuden taulukon, jonka sisältö on 1, 3 ja kissa. Voimme merkitä tälläistä listaa merkinnällä <code>[1, 3, "kissa"]</code>.
   </p>
 
+  <% partial 'partials/exercise', locals: { name: 'Listaan sijoittaminen' } do %>
+    Alla olevassa tehtäväpohjassa on luotu muuttujat <code>numero</code> ja <code>sana</code>. Lisäksi tehtäväpohjassa on alustettu tyhjä lista, joka tulostetaan. Aseta muuttujat listaan <code>hauskaLista</code> niin, että listan sisällöksi tulee: <code>["Papukaija", 22]</code>.
+  <% end %>
+
+  <div class="code-area" data-type='tmc-exercise' data-id='5045'></div>
+
+  <p>
+    Listoihin ei tarvitse sijoittaa muuttujia. Voit myös kirjoittaa listan sisällön suoraan listan määrittelyn sisään.
+  </p>
+
+  <pre><code class="javascript">var lista = [1, 3, "kissa"]</code></pre>
+
   <% partial 'partials/exercise', locals: { name: 'Listojen harjoittelua' } do %>
-    Muuta alla olevaa tehtäväpohjaa siten, että muuttujan <code>lista</code> sisältö on <code>[1, 2, "listat", "ovat", "hauskoja!"]</code>
+    Muuta alla olevaa tehtäväpohjaa siten, että muuttujan <code>lista</code> sisältö on <code>[1, 2, "listat", "ovat", "hauskoja!"]</code>.
   <% end %>
 
   <div class="code-area" data-type='tmc-exercise' data-id='4996'></div>
 
-  <% partial 'partials/exercise', locals: { name: '1' } do %>
-    T
+  <% partial 'partials/exercise', locals: { name: 'Uuden listan luonti' } do %>
+    Tehtäväpohjassa yritetään tulostaa lista nimeltä <code>uusiLista</code>. Luo lista ja laita sen sisällöksi kolme valitsemaasi numeroa.
   <% end %>
 
-  <% partial 'partials/exercise', locals: { name: '2' } do %>
-    T
+  <div class="code-area" data-type='tmc-exercise' data-id='5046'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Usean listan luonti' } do %>
+    Luo kaksi listaa: listassa <code>ruuat</code> listaat lempiruokasi ja listassa <code>varit</code> on lista lempiväreistäsi.
   <% end %>
 
-  <% partial 'partials/exercise', locals: { name: '3' } do %>
-    T
-  <% end %>
+  <div class="code-area" data-type='tmc-exercise' data-id='5047'></div>
 
   <p>
     Listojen luonti sujuu melko näppärästi, mutta usein ohjelmoinnissa haluamme muokata listoja jotenkin. Olisi hyvä jos voisimme lisätä alkioita listaan, ottaa niitä pois ja niin edelleen.
@@ -56,19 +68,22 @@ lista.push(7)
 lista.push(4)</code></pre>
 
   <% partial 'partials/exercise', locals: { name: 'Listan loppuun lisääminen' } do %>
-    Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan loppuun alkiota niin, että listan sisällöksi tulee 4, 5, 6.
+    Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan loppuun alkioita niin, että listan sisällöksi tulee 4, 5, 6.
   <% end %>
 
   <div data-type='tmc-exercise' data-id='4993'></div>
 
-  <% partial 'partials/exercise', locals: { name: 'Hard' } do %>
-    T
+  <% partial 'partials/exercise', locals: { name: 'Vaiheittainen loppuun lisääminen' } do %>
+    Tehtäväpohjassa on luotu lista <code>numerot</code>. Tehtävä on jaettu useampaan alueeseen. Lisää listaan alkioita kommenttejen perusteella.
   <% end %>
+
+  <div data-type='tmc-exercise' data-id='5048'></div>
+
 
   <h2>Listan alkuun lisääminen</h2>
 
   <p>
-    Nyt pystymme luomaan listoja ja lisäämään niiden loppuun alkiota. Valitettavasti kuitenkin tämä ei aina riitä. Tietyissä tilanteissa voitaisiin haluta lisätä alkioita listan alkuun. Javascriptissä on onneksi ratkaisu tähän ongelmaan. Koodi <code>lista.unshift(lisättävä_alkio)</code> tomii samalla tavalla kuin <code>lista.push</code>, mutta se lisää alkiota listan alkuun eikä loppuun. Alla oleva koodi luo listan, jonka sisältö on [9, 5, 1].
+    Nyt pystymme luomaan listoja ja lisäämään niiden loppuun alkioita. Valitettavasti kuitenkin tämä ei aina riitä. Tietyissä tilanteissa voitaisiin haluta lisätä alkioita listan alkuun. Javascriptissä on onneksi ratkaisu tähän ongelmaan. Koodi <code>lista.unshift(lisättävä_alkio)</code> tomii samalla tavalla kuin <code>lista.push</code>, mutta se lisää alkioita listan alkuun eikä loppuun. Alla oleva koodi luo listan, jonka sisältö on [9, 5, 1].
   </p>
 
     <pre><code class="javascript">var lista = [1]
@@ -76,20 +91,28 @@ lista.unshift(5)
 lista.unshift(9)</code></pre>
 
   <% partial 'partials/exercise', locals: { name: 'Listan alkuun lisääminen' } do %>
-    Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan alkuun alkiota niin, että listan sisällöksi tulee 2, 3, 4.
+    Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan alkuun alkioita niin, että listan sisällöksi tulee 2, 3, 4.
   <% end %>
 
 
   <div data-type='tmc-exercise' data-id='4992'></div>
 
-  <% partial 'partials/exercise', locals: { name: 'Hard' } do %>
-    T
+  <% partial 'partials/exercise', locals: { name: 'Vaiheittainen alkuun lisääminen' } do %>
+    Tehtäväpohjassa on luotu lista <code>numerot</code>. Tehtävä on jaettu useampaan alueeseen. Lisää listaan alkioita kommenttejen perusteella.
   <% end %>
+
+  <div data-type='tmc-exercise' data-id='5049'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Loppuun ja alkuun lisääminen' } do %>
+    Tehtäväpohjassa on luotu lista <code>numerot</code>. Tehtävä on jaettu useampaan alueeseen. Lisää listaan alkioita kommenttejen perusteella.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5050'></div>
 
   <h2>Listasta poistaminen</h2>
 
   <p>
-    Voimme myös haluta poistaa listasta alkiota. Kuten varmaan jo edellisistä tehtävistä arvasitkin, voimme poistaa alkiota joko listan alusta tai listan lopusta. Koodi <code>lista.pop()</code> poistaa elementin listan lopusta ja koodi <code>lista.shift()</code> poistaa listan ensimmäisen alkion.
+    Voimme myös haluta poistaa listasta alkioita. Kuten varmaan jo edellisistä tehtävistä arvasitkin, voimme poistaa alkioita joko listan alusta tai listan lopusta. Koodi <code>lista.pop()</code> poistaa elementin listan lopusta ja koodi <code>lista.shift()</code> poistaa listan ensimmäisen alkion.
   </p>
 
   <% partial 'partials/exercise', locals: { name: 'Listasta poistaminen' } do %>
@@ -98,14 +121,16 @@ lista.unshift(9)</code></pre>
 
   <div data-type='tmc-exercise' data-id='4995'></div>
 
-  <% partial 'partials/exercise', locals: { name: 'Hard' } do %>
-    T
+  <% partial 'partials/exercise', locals: { name: 'Vaiheittainen poistaminen' } do %>
+    Tehtäväpohjassa on luotu lista <code>numerot</code>. Poista listasta alkioita kommenttejen perusteella.
   <% end %>
+
+  <div data-type='tmc-exercise' data-id='5051'></div>
 
   <h2>Listan pituus</h2>
 
   <p>
-    Listan pituus on luku, joka kertoo montako asiaa lista sisältää. Esimerkiksi listan <code class="javascript">[1, 3, 4]</code> pituus on 3. Kun lisäämme tai poistamme listasta alkiota listan pituus luonnollisesti muuttuu.
+    Listan pituus on luku, joka kertoo montako asiaa lista sisältää. Esimerkiksi listan <code class="javascript">[1, 3, 4]</code> pituus on 3. Kun lisäämme tai poistamme listasta alkioita listan pituus luonnollisesti muuttuu.
   </p>
 
   <p>
@@ -127,14 +152,6 @@ console.log(eeppinenLista.length)
   <% end %>
 
   <div data-type='tmc-exercise' data-id='4991'></div>
-
-  <% partial 'partials/exercise', locals: { name: 'All' } do %>
-    T
-  <% end %>
-
-  <% partial 'partials/exercise', locals: { name: 'All 2' } do %>
-    T
-  <% end %>
 </div>
 
 <%= partial 'partials/next_chapter', locals: { link: link_to('funktioihin', 'funktiot.html') } %>
