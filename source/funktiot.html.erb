@@ -39,6 +39,8 @@ order: 4
     Tehtävä: Alla on määritelty kaksi funktiota.
   <% end %>
 
+  <div data-type='tmc-exercise' data-id='5052'></div>
+
   <h2>Funktion kutsuminen monesti</h2>
 
   <p>
@@ -58,7 +60,7 @@ order: 4
   </p>
 
   <pre><code class="javascript">function funktionNimi() {
-  console.log("Tämä on funkition siältö.")
+  console.log("Tämä on funkition sisältö.")
 }</code></pre>
 
   <p>
@@ -66,20 +68,22 @@ order: 4
   </p>
 
   <% partial 'partials/exercise', locals: { name: '1' } do %>
-    T
+    Tehtäväpohjassa on määritetty funktio nimeltä <code>vaaraNimi</code>. Kokeile ajaa koodi. Saamasi virhe johtuu siitä, että funktion määritelmässä nimi on väärin ja alempana oleva kutsu onnistu. Muuta funktion nimeksi <code>oikeaNimi</code>.
   <% end %>
 
-  <% partial 'partials/exercise', locals: { name: '2' } do %>
-    T
+  <div data-type='tmc-exercise' data-id='5053'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Tulosta funktion sisällä' } do %>
+    Tehtäväpohjassa on määritetty funktio <code>tulostaJotakinHauskaa</code>. Sen sisällä ei ole vielä yhtään koodia. Tulosta jotakin funktion sisällä.
   <% end %>
 
-  <% partial 'partials/exercise', locals: { name: '3' } do %>
-    T
+  <div data-type='tmc-exercise' data-id='5054'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Koko funktion määrittäminen' } do %>
+    Määritä funktio <code>nimi</code>, joka tulostaa nimesi.
   <% end %>
 
-  <p>
-    Funktio määritellään...
-  </p>
+  <div data-type='tmc-exercise' data-id='5055'></div>
 
   <h2>Muuttujien käyttäminen funktion ulkopuolelta</h2>
 
@@ -103,7 +107,7 @@ function tulostaViesti() {
 }</code></pre>
 
   <p>
-    Jos kutsuisimme tätä funktiota kolme kertaa, saisimme tulostukseksi:
+    Jos tätä funktiota kutsutaan kolme kertaa, tulostukseksi tulee:
   </p>
 
   <pre><code class="javascript">Minua on kutsuttu 1 kertaa!
@@ -133,8 +137,34 @@ Minua on kutsuttu 3 kertaa!</code></pre>
 }
 tulostaArgumentti("Hello")</code></pre>
 
+  <% partial 'partials/exercise', locals: { name: 'Argumentin käyttäminen' } do %>
+    Tehtävässä on määritetty funktio, joka saa argumentin. Tulosta argumentti.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5058'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Väärän niminen argumentti' } do %>
+    Tehtäväpohjan funktiossa argumentti on väärän niminen. Korjaa virhe.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5059'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Uusi argumentti' } do %>
+    Lisää tehtäväpohjan funktiolle argumentti ja tulosta se.
+  <% end %>
+
+  <div data-type='tmc-exercise' data-id='5060'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Argumentilla kutsuminen' } do %>
+    Kutsu funktiota argumentilla.
+  <% end %>
+
+  <% partial 'partials/exercise', locals: { name: 'Muuttuja argumenttina' } do %>
+    Tehtäväpohjassa on muuttuja, anna se funktiolle argumenttina.
+  <% end %>
+
   <p>
-    Funktiota voi ottaa vastaan useita argumenttejä. Useamman argumentin voi määrittää listamalla kaikkien muuttujien nimet pilkuilla erotettuina. Alla oleva esimerkki tulostaisi: <code>Terve, Essi Esimerkki</code>.
+    Funktio voi ottaa vastaan useita argumenttejä. Useamman argumentin voi määrittää listamalla kaikkien muuttujien nimet pilkuilla erotettuina. Alla oleva esimerkki tulostaisi: <code>Terve, Essi Esimerkki</code>.
   </p>
 
   <pre><code class="javascript">function tervehdi(etunimi, sukunimi) {
@@ -142,16 +172,12 @@ tulostaArgumentti("Hello")</code></pre>
 }
 tervehdi("Essi", "Esimerkki")</code></pre>
 
-  <% partial 'partials/exercise', locals: { name: '1' } do %>
-    T
+  <% partial 'partials/exercise', locals: { name: 'Usean argumentin käyttäminen kutsussa' } do %>
+    Tehtäväpohjan funktio ottaa kolme argumenttia vastaan. Kutsu funktiota kolmella argumentilla.
   <% end %>
 
-  <% partial 'partials/exercise', locals: { name: '2' } do %>
-    T
-  <% end %>
-
-  <% partial 'partials/exercise', locals: { name: '3' } do %>
-    T
+  <% partial 'partials/exercise', locals: { name: 'Argumenttinen määrän korjaaminen' } do %>
+    Lisää tehtäväpohjan funkiolle uusi argumentti.
   <% end %>
 
   <h2>Funktion paluuarvo</h2>
@@ -179,23 +205,27 @@ kasvata(1)</code></pre>
 var paaluuarvo = kasvata(1)
 console.log("Paluuarvo oli: " + paluuarvo)</code></pre>
 
+  <% partial 'partials/exercise', locals: { name: 'Paluuarvon käyttäminen' } do %>
+    Tehtäväpohjassa kutsutaan funktiota <code>palautaNumero</code>, mutta sen paluuarvoa ei hyödynnetä. Ota paluuarvo talteen muuttujaan <code>paluuArvo</code>.
+  <% end %>
+
   <% partial 'partials/exercise', locals: { name: 'Funktion paluuarvo' } do %>
     Tehtäväpohjassa on määritetty funktio, joka ottaa vastaan luvun ja palauttaa kyseisen luvun neliön. Kutsu funktiota jollakin numerolla ja talleta sen paluuarvo muuttujaan <code>paluuarvo</code>.
   <% end %>
 
   <div data-type='tmc-exercise' data-id='5038'></div>
 
-  <% partial 'partials/exercise', locals: { name: '1' } do %>
-    T
+  <% partial 'partials/exercise', locals: { name: '2' } do %>
+    Tehtäväpohjassa on funktio, joka palautta saa argumenttina luvun. Palauta luku sellaisenaan.
   <% end %>
 
-  <% partial 'partials/exercise', locals: { name: '2' } do %>
-    T
-  <% end %>
+  <div data-type='tmc-exercise' data-id='5056'></div>
 
   <% partial 'partials/exercise', locals: { name: '3' } do %>
-    T
+    Tehtäväpohjassa on funktio, joka palautta saa argumenttina luvun. Palauta luvun kolmas potenssi.
   <% end %>
+
+  <div data-type='tmc-exercise' data-id='5057'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Murtoluvun muodostaminen' } do %>
     Tehtäväpohjassa on määritetty funktio <code>teeMurtoluku</code>. Funktio ottaa vastaan kolme parametriä: <code>luku</code>, <code>osoittaja</code> ja <code>nimittäjä</code>.
