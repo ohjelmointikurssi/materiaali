@@ -1,10 +1,15 @@
-window.onload = function() {
+var warned = false;
+function browserCheck() {
   if (bowser === undefined) {
     console.warn('Unable to detect browser!');
     return;
   }
-  if (bowser.msie || bowser.msedge) {
+  if ((bowser.msie || bowser.msedge) && !warned) {
+    warned = true;
     var browserWarningContainer = document.getElementById('warning-container');
     browserWarningContainer.className += ' visible';
   }
 }
+
+
+window.onload = browserCheck;

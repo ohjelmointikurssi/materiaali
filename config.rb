@@ -25,6 +25,11 @@ configure :development do
   activate :livereload
 end
 
+activate :autoprefixer do |config|
+  config.browsers = ['last 3 versions', 'Explorer >= 9']
+  config.remove = false
+end
+
 ###
 # Helpers
 ###
