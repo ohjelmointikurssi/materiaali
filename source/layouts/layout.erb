@@ -14,7 +14,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/color-brewer.min.css">
     <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
   </head>
 
   <body class="<%= page_classes %>">
@@ -30,6 +29,14 @@
       <%= nav_link_to 'Matopeli', 'matopeli.html' %>
     </nav>
     <div id='content-container' <% if current_page.data.exercise_page %>class='exercise-page'<%end%> style='counter-reset: h1counter <%= current_page.data.order %>'>
+      <div id="warning-container">
+        <div class="browser-warning">
+          <div class="warning-title"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Ohjelmointikurssi ei toimi kunnolla selaimessasi.</div>
+          <div>
+            Ohjelmointikurssi ei valitettavasti toimi Internet Explorer -selailemella. Suosittelemme että teet kurssia joko uusimmalla Chromella tai uusimalla Firefoxilla.
+          </div>
+        </div>
+      </div>
       <%= yield %>
     </div>
 
@@ -43,6 +50,7 @@
 
     <% if current_page.data[:exercise_page] %>
       <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.0.0/bowser.min.js"></script>
       <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
       <script src='//cdnjs.cloudflare.com/ajax/libs/jszip/2.2.2/jszip.js'></script>
       <script src='//stuk.github.io/jszip-utils/dist/jszip-utils.js'></script>
@@ -61,5 +69,6 @@
         });
       </script>
     <% end %>
+    <%= javascript_include_tag :all %>
   </body>
 </html>
