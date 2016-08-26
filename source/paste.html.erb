@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Demo</title>
+  <link rel='stylesheet' href='//ohjelmointikurssi.github.io/cdn/tmc-web-client.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <% if build? %>
+    <%= partial 'partials/analytics' %>
+  <% end %>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Jaettu peli</h1>
+
+    <section class="notice">
+      <strong><i class="fa fa-info-circle"></i> Haluatko oppia tekemään tämänlaisia pelejä?</strong> Vieraile <a href="https://ohjelmointikurssi.github.io/">kurssimateriaalissa</a>.
+    </section>
+
+    <p>
+      Voit muokata pelin logiikkaa alla olevassa editorissa ja ajaa sitä painamalle "Run"-näppäintä.
+    </p>
+    <div id="tmc-paste"></div>
+  </div>
+  <%= partial 'partials/environment_dependencies' %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.0.0/bowser.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    TMCWebClient.initializePaste();
+  });
+  </script>
+</body>
+
+</html>
