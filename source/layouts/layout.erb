@@ -14,6 +14,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/color-brewer.min.css">
     <%= stylesheet_link_tag :site %>
+    <% if build? %>
+      <%= partial 'partials/analytics' %>
+    <% end %>
   </head>
 
   <body class="<%= page_classes %>">
@@ -67,6 +70,7 @@
           TMCWebClient.initialize();
         });
       </script>
+
     <% end %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.0.0/bowser.min.js"></script>
     <%= javascript_include_tag :all %>
