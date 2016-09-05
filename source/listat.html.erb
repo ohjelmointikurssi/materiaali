@@ -27,7 +27,7 @@ var lista = [a, b, c]</code></pre>
     Alla olevassa tehtäväpohjassa on luotu muuttujat <code>numero</code> ja <code>sana</code>. Lisäksi tehtäväpohjassa on alustettu tyhjä lista, joka tulostetaan. Aseta muuttujat listaan <code>hauskaLista</code> niin, että listan sisällöksi tulee: <code>["Papukaija", 22]</code>.
   <% end %>
 
-  <div class="code-area" data-type='tmc-exercise' data-id='5045'></div>
+  <div data-type='tmc-exercise' data-id='20944'></div>
 
   <p>
     Listoihin ei tarvitse sijoittaa muuttujia. Voit myös kirjoittaa listan sisällön suoraan listan määrittelyn sisään.
@@ -39,19 +39,19 @@ var lista = [a, b, c]</code></pre>
     Muuta alla olevaa tehtäväpohjaa siten, että muuttujan <code>lista</code> sisältö on <code>[1, 2, "listat", "ovat", "hauskoja!"]</code>.
   <% end %>
 
-  <div class="code-area" data-type='tmc-exercise' data-id='4996'></div>
+  <div data-type='tmc-exercise' data-id='20949'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Uuden listan luonti' } do %>
     Tehtäväpohjassa yritetään tulostaa lista nimeltä <code>uusiLista</code>. Luo lista ja laita sen sisällöksi kolme valitsemaasi numeroa.
   <% end %>
 
-  <div class="code-area" data-type='tmc-exercise' data-id='5046'></div>
+  <div data-type='tmc-exercise' data-id='20952'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Usean listan luonti' } do %>
     Luo kaksi listaa: listassa <code>ruuat</code> listaat lempiruokasi ja listassa <code>varit</code> on lista lempiväreistäsi.
   <% end %>
 
-  <div class="code-area" data-type='tmc-exercise' data-id='5047'></div>
+  <div data-type='tmc-exercise' data-id='20951'></div>
 
   <p>
     Listojen luonti sujuu melko näppärästi, mutta usein ohjelmoinnissa haluamme muokata listoja jotenkin. Olisi hyvä jos voisimme lisätä alkioita listaan, ottaa niitä pois ja niin edelleen.
@@ -71,14 +71,13 @@ lista.push(4)</code></pre>
     Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan loppuun alkioita niin, että listan sisällöksi tulee 4, 5, 6.
   <% end %>
 
-  <div data-type='tmc-exercise' data-id='4993'></div>
+  <div data-type='tmc-exercise' data-id='20946'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Vaiheittainen loppuun lisääminen' } do %>
     Tehtäväpohjassa on luotu lista <code>numerot</code>. Tehtävä on jaettu useampaan alueeseen. Lisää listaan alkioita kommenttejen perusteella.
   <% end %>
 
-  <div data-type='tmc-exercise' data-id='5048'></div>
-
+  <div data-type='tmc-exercise' data-id='20954'></div>
 
   <h2>Listan alkuun lisääminen</h2>
 
@@ -95,19 +94,19 @@ lista.unshift(9)</code></pre>
   <% end %>
 
 
-  <div data-type='tmc-exercise' data-id='4992'></div>
+  <div data-type='tmc-exercise' data-id='20945'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Vaiheittainen alkuun lisääminen' } do %>
     Tehtäväpohjassa on luotu lista <code>numerot</code>. Tehtävä on jaettu useampaan alueeseen. Lisää listaan alkioita kommenttejen perusteella.
   <% end %>
 
-  <div data-type='tmc-exercise' data-id='5049'></div>
+  <div data-type='tmc-exercise' data-id='20953'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Loppuun ja alkuun lisääminen' } do %>
     Tehtäväpohjassa on luotu lista <code>numerot</code>. Tehtävä on jaettu useampaan alueeseen. Lisää listaan alkioita kommenttejen perusteella.
   <% end %>
 
-  <div data-type='tmc-exercise' data-id='5050'></div>
+  <div data-type='tmc-exercise' data-id='20950'></div>
 
   <h2>Listasta poistaminen</h2>
 
@@ -119,13 +118,13 @@ lista.unshift(9)</code></pre>
     Tehtävä: Poista listan alusta kaksi elementtiä ja lopusta yksi elementti. Mitä tulee tulokseksi?
   <% end %>
 
-  <div data-type='tmc-exercise' data-id='4995'></div>
+  <div data-type='tmc-exercise' data-id='20948'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Vaiheittainen poistaminen' } do %>
     Tehtäväpohjassa on luotu lista <code>numerot</code>. Poista listasta alkioita kommenttejen perusteella.
   <% end %>
 
-  <div data-type='tmc-exercise' data-id='5051'></div>
+  <div data-type='tmc-exercise' data-id='20955'></div>
 
   <h2>Listan pituus</h2>
 
@@ -145,13 +144,13 @@ console.log(eeppinenLista.length)
     Tehtäväpohjassa on valmiina lista. Tulosta sen pituus materiaalissa opetetulla tavalla.
   <% end %>
 
-  <div data-type='tmc-exercise' data-id='4994'></div>
+  <div data-type='tmc-exercise' data-id='20947'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Jalokivikokoelma', additional_content: '<strong>Odotettu vastaus</strong>: Ohjelma tulostaa ostettettavien jalokivien määrän, mikä on <i>yksi</i> numero.'  } do %>
     Joukko kavereita haluaa ostaa jalokivikokoelman. Kaikkien kavereiden nimet ovat talletettu listaan <code>nimet</code>. Jokaiselle listassa olevalle kaverille ostetaan kaikki listassa <code>jalokivet</code> olevat jalokivet. Tulosta kuinka paljon jalokiviä ostetaan yhteensä.
   <% end %>
 
-  <div data-type='tmc-exercise' data-id='4991'></div>
+  <div data-type='tmc-exercise' data-id='20943'></div>
 </div>
 
 <%= partial 'partials/next_chapter', locals: { link: link_to('funktioihin', 'funktiot.html') } %>
