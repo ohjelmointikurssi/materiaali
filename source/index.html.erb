@@ -7,7 +7,7 @@
   <div class="course-description">
     Ilmainen ohjelmointikurssi peruskoululaisille, suoraan selaimessasi.
   </div>
-  <% link_to 'tulostaminen.html' do %>
+  <% link_to 'tulostaminen.html', onclick: "ga('send', 'event', 'start_course_button', 'click', 'tulostaminen.html')" do %>
     <button class="start-course">Aloita kurssi</button>
   <% end %>
 </div>

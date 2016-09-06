@@ -40,6 +40,7 @@ end
 helpers do
   def nav_link_to(body, url, options = {})
     options[:class] = :active if url_for(url) == current_resource.url
+    options[:onclick] = "ga('send', 'event', 'navigation_topic_link', 'click', '#{url}')"
     link_to(body, url, options)
   end
 end

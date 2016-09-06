@@ -5,6 +5,6 @@
   <div>
     <div>Valmis?</div>
     <div>Jatka seuraavaksi</div>
-    <div><%= link %>.</div>
+    <div><%= link_to(name, target, onclick: "ga('send', 'event', 'next_topic_link', 'click', '#{target}')") %>.</div>
   </div>
 </div>
