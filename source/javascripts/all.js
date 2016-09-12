@@ -4,7 +4,7 @@ function browserCheck() {
     console.warn('Unable to detect browser!');
     return;
   }
-  if ((bowser.msie || bowser.msedge) && !warned) {
+  if (bowser.msie && !warned) {
     warned = true;
     var browserWarningContainer = document.getElementById('warning-container');
     browserWarningContainer.className += ' visible';
