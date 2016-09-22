@@ -230,6 +230,7 @@ pre {
 }
 
 .multiple-columns {
+  @extend .narrow;
   display: flex;
   justify-content: space-around;
 
