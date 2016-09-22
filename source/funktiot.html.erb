@@ -118,9 +118,13 @@ Minua on kutsuttu 3 kertaa!</code></pre>
     Tehtäväpojassa olevassa funktiossa tulostetaan funktion sisällä oleva muuttuja. Muuta tulostuskomento tulostamaan funktion ulkopuolella määritetty muuttuja.
   <% end %>
 
-  <% partial 'partials/exercise', locals: { name: '2' } do %>
-    T
+  <div data-type='tmc-exercise' data-id='20936'></div>
+
+  <% partial 'partials/exercise', locals: { name: 'Luo muuttuja funktion ulkopuolelle' } do %>
+    Tehtävässä oleva funktio yrittää käyttää muuttujaa <code>x</code>. Muuttujan arvo pitäisi säilyä kutsujen välillä. Määritä siis muuttuja ennen funktiota ja aseta sen arvoksi <code>100</code>.
   <% end %>
+
+  <div data-type='tmc-exercise' data-id='21203'></div>
 
   <h2>Funktioiden argumentit</h2>
 
@@ -156,12 +160,16 @@ tulostaArgumentti("Hello")</code></pre>
   <div data-type='tmc-exercise' data-id='20941'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Argumentilla kutsuminen' } do %>
-    Kutsu funktiota argumentilla.
+    Tehtäväpohjassa kutsutaan funktiota <code>kaannaLause</code> mielenkiintoisella lauseella. Muuta kutsuun annettua argumenttia siten, että funktio tulostaa: <code>Kukkakaalin hinta on nousussa</code>.
   <% end %>
+
+  <div data-type='tmc-exercise' data-id='21528'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Muuttuja argumenttina' } do %>
     Tehtäväpohjassa on muuttuja, anna se funktiolle argumenttina.
   <% end %>
+
+  <div data-type='tmc-exercise' data-id='21743'></div>
 
   <p>
     Funktio voi ottaa vastaan useita argumenttejä. Useamman argumentin voi määrittää listamalla kaikkien muuttujien nimet pilkuilla erotettuina. Alla oleva esimerkki tulostaisi: <code>Terve, Essi Esimerkki</code>.
@@ -221,14 +229,14 @@ console.log("Paluuarvo oli: " + paluuarvo)</code></pre>
 
   <div data-type='tmc-exercise' data-id='20938'></div>
 
-  <% partial 'partials/exercise', locals: { name: '3' } do %>
+  <% partial 'partials/exercise', locals: { name: 'Kolmas potenssi' } do %>
     Tehtäväpohjassa on funktio, joka palautta saa argumenttina luvun. Palauta luvun kolmas potenssi.
   <% end %>
 
   <div data-type='tmc-exercise' data-id='20937'></div>
 
   <% partial 'partials/exercise', locals: { name: 'Murtoluvun muodostaminen' } do %>
-    Tehtäväpohjassa on määritetty funktio <code>teeMurtoluku</code>. Funktio ottaa vastaan kolme parametriä: <code>luku</code>, <code>osoittaja</code> ja <code>nimittäjä</code>.
+    Tehtäväpohjassa on määritetty funktio <code>likiarvo</code>. Funktio ottaa vastaan kolme parametriä: <code>kanta</code>, <code>osoittaja</code> ja <code>nimittäjä</code>. Näillä argumentella funktio laskee ja palauttaa likiarvon murtoluvulle. Esimerkiksi kutsulla <code>likiarvo(1, 1, 2)</code> funktion pitäisi palauttaa <code>1.5</code> ja kutsulla <code>likiarvo(2, 3, 4)</code> funktion pitäisi palauttaa <code>2.75</code>.
   <% end %>
 
 </div>
