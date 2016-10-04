@@ -35,6 +35,10 @@ order: 8
       Kuten viime viikon piirtotehtävissä, koordinaatisto alkaa pelialueen vasemmasta yläkulmasta. Pelialueella x-koordinaatti voi saada arvoja välillä <code>0..39</code> ja y-koordinaatti voi saada arvoja välillä <code>0..29</code>. Jos esimerkiksi haluaisit lisätä madon osan pelialueen vasempaan yläkulmaan, se onnistuisi komennolla: <code>luoMadonOsa(0, 0)</code>. Madon osan piirtäminen pelialueen oikeaan alakulmaan onnistuu komennolle <code>luoMadonOsa(39, 29)</code>.
     </p>
 
+    <% partial 'partials/hint' do %>
+      Matopelin tehtävät eivät tällä hetkellä toimi.
+    <% end %>
+
     <% partial 'partials/exercise', locals: { name: 'Madon luonti', additional_content: '<strong>Vihje</strong>: sallitut suunnat ovat: "oikealle", "vasemmalle", "ylös" ja "alas".' } do %>
       Mato lähtee liikkelle vähäsen hassusta paikasta. Saatko madon lähtemään liikkumaan pelialueen keskeltä. Lisäksi keksitkö miten mato alkaa liikkumaan oikealle pelin alussa?
     <% end %>
